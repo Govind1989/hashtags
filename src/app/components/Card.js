@@ -47,7 +47,7 @@ const Card = ({
           >
             <Link
               href={`/products/product1`}
-              className="leading-2 text-xl text-white sm:text-lg whitespace-nowrap  px-2"
+              className="leading-2 text-xl text-white sm:text-lg whitespace-normal  px-2"
             >
               {productName}
             </Link>
@@ -74,7 +74,7 @@ const Card = ({
               showHoverContent ? "flex" : "hidden"
             } rounded-lg py-1 items-center`}
           >
-            <MdOutlineAddHome className=" text-white shadow-md whitespace-nowrap" />
+            <MdOutlineAddHome className=" text-white shadow-md whitespace-normal" />
             <p className="justify-end text-sm ml-1 mt-1 text-white">{vendor}</p>
           </div>
           <div
