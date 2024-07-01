@@ -12,13 +12,12 @@ import { BsBookmarkPlus, BsBookmarkStar, BsPlusSquare } from "react-icons/bs";
 import { FaSort } from "react-icons/fa";
 // import { cardData } from "@/data/cardData";
 
-export default function Home() {
+export default function HomeBack() {
   const [item, setItem] = useState(0);
 
   const [active, setActive] = useState(0);
   const [isFilter, setIsFilter] = useState(false);
   const [selectedFilters, setSelectedFilters] = useState(["categories"]);
-  const [isCollections, setIsCollections] = useState(false);
 
   const categories = [...new Set(cardData.map((item) => item.category))];
   const brands = [...new Set(cardData.map((item) => item.brand))];
@@ -31,8 +30,6 @@ export default function Home() {
     collections: "border-green-300",
     vendors: "border-blue-300",
   };
-
-  const collectionMenu = ["Most Selling", "New Arrivals", "On Sale"];
 
   const handleFilterChange = (filter) => {
     setSelectedFilters((prevFilters) =>
@@ -67,32 +64,29 @@ export default function Home() {
       ];
     }
     // Shuffle the filtered data array
-    // const shuffledData = shuffleArray(filteredData);
-    // return shuffledData;
+    const shuffledData = shuffleArray(filteredData);
+    return shuffledData;
 
-    return filteredData;
+    // return filteredData;
   };
   // Function to shuffle array items
-  // const shuffleArray = (array) => {
-  //   const shuffledArray = [...array];
-  //   for (let i = shuffledArray.length - 1; i > 0; i--) {
-  //     const j = Math.floor(Math.random() * (i + 1));
-  //     [shuffledArray[i], shuffledArray[j]] = [
-  //       shuffledArray[j],
-  //       shuffledArray[i],
-  //     ];
-  //   }
-  //   return shuffledArray;
-  // };
+  const shuffleArray = (array) => {
+    const shuffledArray = [...array];
+    for (let i = shuffledArray.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffledArray[i], shuffledArray[j]] = [
+        shuffledArray[j],
+        shuffledArray[i],
+      ];
+    }
+    return shuffledArray;
+  };
 
   const navMenu = getFilteredData();
 
   const handleClick = (e, index) => {
     setItem({ name: e.target.textContent.toLowerCase() });
     setActive(index);
-  };
-  const handleCollectionClick = () => {
-    setIsCollections(!isCollections);
   };
   const toggleFilter = () => {
     setIsFilter(!isFilter);
@@ -172,7 +166,7 @@ export default function Home() {
       {/* Pass categories data to Category component */}
       {/* <Category categories={categories} /> */}
       {/* categories */}
-      <div className="grid grid-cols-12 ml-0 md:ml-2 xl:ml-8 lg:ml-12 items-center">
+      <div className="grid grid-cols-12 ml-0 md:ml-2 xl:ml-8 lg:ml-12">
         <div className="lg:col-span-1 md:col-span-2 col-span-3 py-0 justify-center md:order-first mt-1   ">
           <button
             onClick={toggleFilter}
@@ -196,7 +190,7 @@ export default function Home() {
                 onClick={() => setIsFilter(false)}
                 className="absolute -left-4 justify-start top-10 z-20 w-55 py-0 mt-0 origin-top-right bg-white rounded-md shadow-xl dark:bg-gray-800 transition transform ease-out duration-100 scale-90"
               >
-                <label className="group flex px-8 py-2 items-center whitespace-nowrap text-heading text-sm cursor-pointer">
+                <label className="group flex px-4 py-2 items-center whitespace-nowrap text-heading text-sm cursor-pointer">
                   <input
                     type="checkbox"
                     className="form-checkbox w-5 h-5 border border-indigo-300 rounded cursor-pointer transition duration-500 ease-in-out focus:ring-offset-0 hover:border-heading focus:outline-none focus:ring-0 focus-visible:outline-none checked:bg-heading checked:hover:bg-heading checked:focus:bg-heading active"
@@ -212,7 +206,7 @@ export default function Home() {
 
                 <hr className="border-green-800 dark:border-gray-700" />
 
-                <label className="group flex px-8 py-2 items-center whitespace-nowrap text-heading text-sm cursor-pointer">
+                <label className="group flex px-4 py-2 items-center whitespace-nowrap text-heading text-sm cursor-pointer">
                   <input
                     type="checkbox"
                     className="form-checkbox w-5 h-5 border border-red-300 rounded cursor-pointer transition duration-500 ease-in-out focus:ring-offset-0 hover:border-heading focus:outline-none focus:ring-0 focus-visible:outline-none checked:bg-heading checked:hover:bg-heading checked:focus:bg-heading active"
@@ -227,7 +221,7 @@ export default function Home() {
                 </label>
                 <hr className="border-red-300 dark:border-gray-700" />
 
-                <label className="group flex px-8 py-2 items-center whitespace-nowrap text-heading text-sm cursor-pointer">
+                <label className="group flex px-4 py-2 items-center whitespace-nowrap text-heading text-sm cursor-pointer">
                   <input
                     type="checkbox"
                     className="form-checkbox w-5 h-5 border border-blue-300 rounded cursor-pointer transition duration-500 ease-in-out focus:ring-offset-0 hover:border-heading focus:outline-none focus:ring-0 focus-visible:outline-none checked:bg-heading checked:hover:bg-heading checked:focus:bg-heading active"
@@ -242,7 +236,7 @@ export default function Home() {
                 </label>
                 <hr className="border-blue-300 dark:border-gray-700" />
 
-                <div className="flex items-center px-8 py-2 group gap-0 w-full">
+                <div className="flex items-center px-2 py-2 group gap-0 w-full">
                   <FaSort className="w-4 h-auto" />
                   <Link
                     href="#"
@@ -253,18 +247,18 @@ export default function Home() {
                 </div>
                 <hr className="border-gray-200 dark:border-gray-700" />
 
-                <div className="flex items-center px-8 py-2 group gap-0 w-full">
+                <div className="flex items-center px-2 py-2 group gap-0 w-full">
                   <BsPlusSquare className="w-4 h-auto" />
-                  <button
-                    onClick={handleCollectionClick}
+                  <Link
+                    href="#"
                     className="text-sm text-gray-600 transition-colors duration-300 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white whitespace-nowrap ml-2"
                   >
                     Collections
-                  </button>
+                  </Link>
                 </div>
                 <hr className="border-gray-200 dark:border-gray-700" />
 
-                <div className="flex items-center px-2 py-2 group gap-0 w-full">
+                {/* <div className="flex items-center px-2 py-2 group gap-0 w-full">
                   <CountDownTimer Duration="Daily" />
                   <Link
                     href="#"
@@ -272,73 +266,37 @@ export default function Home() {
                   >
                     Flash Sale
                   </Link>
-                </div>
+                </div> */}
               </div>
             )}
           </button>
         </div>
 
-        <div className="lg:col-span-11 md:col-span-10 col-span-9 py-0 items-center ">
-          {!isCollections && (
-            <ul
-              className={`w-full flex flex-row md:justify-start justify-start items-center text-[#005761] overflow-hidden hover:overflow-x-scroll whitespace-nowrap flex-container`}
-            >
-              {navMenu.map((item, index) => {
-                // Determine the border color based on the item's type
-                const borderColor =
-                  filterColors[item.type] || "border-gray-300";
+        <div className="lg:col-span-11 md:col-span-9 col-span-9 py-0 items-center ">
+          <ul className="w-full flex flex-row md:justify-start justify-start items-center text-[#005761] overflow-hidden hover:overflow-x-scroll whitespace-nowrap flex-container">
+            {navMenu.map((item, index) => {
+              // Determine the border color based on the item's type
+              const borderColor = filterColors[item.type] || "border-gray-300";
 
-                return (
-                  <li
-                    onClick={(e) => handleClick(e, index)}
-                    className="cursor-pointer capitalize p-4"
-                    key={index}
+              return (
+                <li
+                  onClick={(e) => handleClick(e, index)}
+                  className="cursor-pointer capitalize p-4"
+                  key={index}
+                >
+                  <span
+                    className={`capitalize py-3 px-3 rounded-md text-sm font-medium whitespace-nowrap shadow-md transition-transform transform hover:scale-105 ${
+                      active === index
+                        ? `border-gray-800 border-b-2 border-t-2`
+                        : `border-b-2 ${borderColor}`
+                    }`}
                   >
-                    <span
-                      className={`capitalize py-3 px-3 rounded-md text-sm font-medium whitespace-nowrap shadow-md transition-transform transform hover:scale-105 ${
-                        active === index
-                          ? `border-gray-800 border-b-2 border-t-2`
-                          : `border-b-2 ${borderColor}`
-                      }`}
-                    >
-                      {item.item}
-                    </span>
-                  </li>
-                );
-              })}
-            </ul>
-          )}
-          {isCollections && (
-            <ul
-              className={`w-full flex flex-row md:justify-start justify-start items-center text-[#005761] overflow-hidden hover:overflow-x-scroll whitespace-nowrap flex-container`}
-            >
-              {collectionMenu.map((item, index) => {
-                // Determine the border color based on the item's type
-
-                return (
-                  <>
-                    <li
-                      onClick={(e) => handleClick(e, index)}
-                      className="cursor-pointer capitalize p-4"
-                      key={index}
-                    >
-                      <span
-                        className={`capitalize py-3 px-3 rounded-md text-sm font-medium whitespace-nowrap shadow-md transition-transform transform hover:scale-105 ${
-                          active === index
-                            ? `border-[#005761] border-b-2`
-                            : `shadow-md`
-                        }`}
-                      >
-                        {item}
-                      </span>
-                    </li>
-
-                    <hr className="border-gray-200 dark:border-gray-700" />
-                  </>
-                );
-              })}
-            </ul>
-          )}
+                    {item.item}
+                  </span>
+                </li>
+              );
+            })}
+          </ul>
         </div>
       </div>
       {/* Masonary */}

@@ -3,14 +3,16 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
+  --foreground-rgb: 38, 38, 38;
+  /* Equivalent to text-gray-800 */
+  --background-start-rgb: 255, 255, 255;
   --background-end-rgb: 255, 255, 255;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
+    --foreground-rgb: 229, 229, 229;
+    /* Equivalent to text-gray-200 */
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
@@ -18,12 +20,16 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: linear-gradient(to bottom, rgb(var(--background-start-rgb)), rgb(var(--background-end-rgb)));
+}
+
+header,
+footer {
+  background-color: rgb(var(--background-start-rgb));
+}
+
+p {
+  color: rgb(var(--foreground-rgb));
 }
 
 @layer utilities {
@@ -31,3 +37,17 @@ body {
     text-wrap: balance;
   }
 }
+
+/* Apply scrollbar styling when the container is hovered */
+.flex-container:hover::-webkit-scrollbar {
+  width: 1px;
+  height: 2px;
+
+  /* Width and height of the scrollbar */
+}
+
+
+
+/* src/app/globals.css */
+
+
