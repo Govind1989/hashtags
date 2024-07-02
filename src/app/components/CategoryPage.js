@@ -392,7 +392,7 @@ const CategoryPage = ({ slug }) => {
           )}
           {isFlashSale && (
             <div className="flex justify-between items-center w-full">
-              <span className="text-gray-800 text-lg ml-4 mt-2">
+              <span className="text-gray-800 text-xs sm:text-md md:text-lg xl:ml-4 mt-2">
                 {countdownTitle}
               </span>
               <div className="items-end mt-2">

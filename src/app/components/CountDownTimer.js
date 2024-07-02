@@ -88,7 +88,7 @@ const CountDownTimer = ({ Duration }) => {
 
   const label = Duration === "HappyHourStart" ? "Starts In: " : "Ends In: ";
   timerComponents.push(
-    <span className="text-sm text-gray-500" key="label">
+    <span className="hidden md:block text-sm text-gray-500" key="label">
       {label}
     </span>
   );
@@ -116,7 +116,7 @@ const CountDownTimer = ({ Duration }) => {
     //   )}
     // </div>
 
-    <div className="flex items-center space-x-2 text-red-600 text-md">
+    <div className="flex items-center space-x-2 text-red-600 text-xs sm:text-md">
       {timerComponents.length ? timerComponents : <span>Time up!</span>}
     </div>
   );
