@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import ReelsCarousel from "./components/ReelsCarousel.js";
 import { cardData } from "@/data.js";
@@ -7,7 +7,7 @@ import { cardData } from "@/data.js";
 import Masonry from "./components/Masonry.js";
 import Category from "./components/Category.js";
 import CountDownTimer from "./components/CountDownTimer.js";
-import { MdOutlineDiscount } from "react-icons/md";
+import { MdAlarmOn, MdOutlineDiscount } from "react-icons/md";
 import { BsBookmarkPlus, BsBookmarkStar, BsPlusSquare } from "react-icons/bs";
 import { FaSort } from "react-icons/fa";
 // import { cardData } from "@/data/cardData";
@@ -19,6 +19,7 @@ export default function Home() {
   const [isFilter, setIsFilter] = useState(false);
   const [selectedFilters, setSelectedFilters] = useState(["categories"]);
   const [isCollections, setIsCollections] = useState(false);
+  const [isFlashSale, setIsFlashSale] = useState(false);
 
   const categories = [...new Set(cardData.map((item) => item.category))];
   const brands = [...new Set(cardData.map((item) => item.brand))];
@@ -93,10 +94,28 @@ export default function Home() {
   };
   const handleCollectionClick = () => {
     setIsCollections(!isCollections);
+    setIsFlashSale(false);
+    if (isCollections) {
+      setSelectedFilters([]);
+    }
+  };
+  const handleFlashSaleClick = () => {
+    setIsFlashSale(!isFlashSale);
+    setIsCollections(false);
+    if (isFlashSale) {
+      setSelectedFilters([]);
+    }
   };
   const toggleFilter = () => {
     setIsFilter(!isFilter);
   };
+
+  useEffect(() => {
+    if (selectedFilters.length > 0) {
+      setIsCollections(false);
+      setIsFlashSale(false);
+    }
+  }, [selectedFilters]);
   // Extracting unique categories from cardData
   // const categories = [...new Set(cardData.map((item) => item.category))];
   return (
@@ -264,14 +283,15 @@ export default function Home() {
                 </div>
                 <hr className="border-gray-200 dark:border-gray-700" />
 
-                <div className="flex items-center px-2 py-2 group gap-0 w-full">
-                  <CountDownTimer Duration="Daily" />
-                  <Link
-                    href="#"
+                <div className="flex items-center px-8 py-2 group gap-0 w-full">
+                  {/* <CountDownTimer Duration="Daily" /> */}
+                  <MdAlarmOn className="w-5 h-auto" />
+                  <button
+                    onClick={handleFlashSaleClick}
                     className="text-sm text-gray-600 transition-colors duration-300 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white whitespace-nowrap ml-2"
                   >
                     Flash Sale
-                  </Link>
+                  </button>
                 </div>
               </div>
             )}
@@ -279,7 +299,7 @@ export default function Home() {
         </div>
 
         <div className="lg:col-span-11 md:col-span-10 col-span-9 py-0 items-center ">
-          {!isCollections && (
+          {!isCollections && !isFlashSale && (
             <ul
               className={`w-full flex flex-row md:justify-start justify-start items-center text-[#005761] overflow-hidden hover:overflow-x-scroll whitespace-nowrap flex-container`}
             >
@@ -308,7 +328,7 @@ export default function Home() {
               })}
             </ul>
           )}
-          {isCollections && (
+          {isCollections && !isFlashSale && (
             <ul
               className={`w-full flex flex-row md:justify-start justify-start items-center text-[#005761] overflow-hidden hover:overflow-x-scroll whitespace-nowrap flex-container`}
             >
@@ -338,6 +358,16 @@ export default function Home() {
                 );
               })}
             </ul>
+          )}
+          {isFlashSale && (
+            <div className="flex justify-between items-center w-full">
+              <span className="text-gray-800 text-lg ml-4 mt-2">
+                Flash Sale
+              </span>
+              <div className="items-end mt-2">
+                <CountDownTimer Duration="Daily" />
+              </div>
+            </div>
           )}
         </div>
       </div>

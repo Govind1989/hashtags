@@ -69,18 +69,6 @@ const CountDownTimer = ({ Duration }) => {
     return timeLeft;
   };
 
-  const getTimeLabels = () => {
-    switch (Duration) {
-      case "Daily":
-        return { hoursLabel: "hr", minutesLabel: "min" };
-      case "Weekly":
-        return { hoursLabel: "day", minutesLabel: "hr" };
-      case "Monthly":
-        return { hoursLabel: "mon", minutesLabel: "day" };
-      default:
-        return { hoursLabel: "hr", minutesLabel: "min" };
-    }
-  };
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
   const [isClient, setIsClient] = useState(false);
 
@@ -96,16 +84,40 @@ const CountDownTimer = ({ Duration }) => {
   if (!isClient) {
     return null; // Render nothing on the server
   }
-  const { hoursLabel, minutesLabel } = getTimeLabels();
+  const timerComponents = [];
+
+  const label = Duration === "HappyHourStart" ? "Starts In: " : "Ends In: ";
+  timerComponents.push(
+    <span className="text-sm text-gray-500" key="label">
+      {label}
+    </span>
+  );
+
+  Object.keys(timeLeft).forEach((interval) => {
+    if (timeLeft[interval] === undefined) {
+      return;
+    }
+
+    timerComponents.push(
+      <span key={interval}>
+        {timeLeft[interval]} {interval}{" "}
+      </span>
+    );
+  });
+
   return (
-    <div className="flex items-center  text-red-600 text-[10px] whitespace-nowrap">
-      {timeLeft.hours !== undefined && (
-        <span>
-          {timeLeft.hours}
-          {hoursLabel} : {timeLeft.minutes}
-          {minutesLabel}
-        </span>
-      )}
+    // <div className="flex items-center  text-red-600 text-[10px] whitespace-nowrap">
+    //   {timeLeft.hours !== undefined && (
+    //     <span>
+    //       {timeLeft.hours}
+    //       {hoursLabel} : {timeLeft.minutes}
+    //       {minutesLabel}
+    //     </span>
+    //   )}
+    // </div>
+
+    <div className="flex items-center space-x-2 text-red-600 text-md">
+      {timerComponents.length ? timerComponents : <span>Time up!</span>}
     </div>
   );
 };
