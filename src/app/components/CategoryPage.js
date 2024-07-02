@@ -1,28 +1,39 @@
 "use client";
-import React, { useState } from "react";
+
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import ReelsCarousel from "./components/ReelsCarousel.js";
-import { cardData } from "@/data.js";
-// import Card from "./components/Card.js";
-import Masonry from "./components/Masonry.js";
-import Category from "./components/Category.js";
-import CountDownTimer from "./components/CountDownTimer.js";
-import { MdOutlineDiscount } from "react-icons/md";
+import ReelsCarousel from "./ReelsCarousel.js";
+import { cardData, categoryData } from "../../data.js";
+
+import Masonry from "./Masonry.js";
+
+import CountDownTimer from "./CountDownTimer.js";
+import { MdAlarmOn, MdOutlineDiscount } from "react-icons/md";
 import { BsBookmarkPlus, BsBookmarkStar, BsPlusSquare } from "react-icons/bs";
 import { FaSort } from "react-icons/fa";
-// import { cardData } from "@/data/cardData";
 
-export default function HomeBack() {
+const CategoryPage = ({ slug }) => {
   const [item, setItem] = useState(0);
 
   const [active, setActive] = useState(0);
   const [isFilter, setIsFilter] = useState(false);
   const [selectedFilters, setSelectedFilters] = useState(["categories"]);
+  const [isCollections, setIsCollections] = useState(false);
+  const [isFlashSale, setIsFlashSale] = useState(false);
 
-  const categories = [...new Set(cardData.map((item) => item.category))];
-  const brands = [...new Set(cardData.map((item) => item.brand))];
+  const formattedSlug =
+    slug.charAt(0).toUpperCase() + slug.slice(1).toLowerCase();
+  const categoryInfo = categoryData[formattedSlug];
+
+  // Filter cardData based on the mainCategory matching the uppercase version of slug
+  const filteredData = cardData.filter(
+    (item) => item.mainCategory.toLowerCase() === slug.toLowerCase()
+  );
+
+  const categories = [...new Set(filteredData.map((item) => item.category))];
+  const brands = [...new Set(filteredData.map((item) => item.brand))];
   // const collections = [...new Set(cardData.map((item) => item.collection))];
-  const vendors = [...new Set(cardData.map((item) => item.vendor))];
+  const vendors = [...new Set(filteredData.map((item) => item.vendor))];
 
   const filterColors = {
     categories: "border-green-800",
@@ -30,6 +41,8 @@ export default function HomeBack() {
     collections: "border-green-300",
     vendors: "border-blue-300",
   };
+
+  const collectionMenu = ["Most Selling", "New Arrivals", "On Sale"];
 
   const handleFilterChange = (filter) => {
     setSelectedFilters((prevFilters) =>
@@ -64,23 +77,23 @@ export default function HomeBack() {
       ];
     }
     // Shuffle the filtered data array
-    const shuffledData = shuffleArray(filteredData);
-    return shuffledData;
+    // const shuffledData = shuffleArray(filteredData);
+    // return shuffledData;
 
-    // return filteredData;
+    return filteredData;
   };
   // Function to shuffle array items
-  const shuffleArray = (array) => {
-    const shuffledArray = [...array];
-    for (let i = shuffledArray.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [shuffledArray[i], shuffledArray[j]] = [
-        shuffledArray[j],
-        shuffledArray[i],
-      ];
-    }
-    return shuffledArray;
-  };
+  // const shuffleArray = (array) => {
+  //   const shuffledArray = [...array];
+  //   for (let i = shuffledArray.length - 1; i > 0; i--) {
+  //     const j = Math.floor(Math.random() * (i + 1));
+  //     [shuffledArray[i], shuffledArray[j]] = [
+  //       shuffledArray[j],
+  //       shuffledArray[i],
+  //     ];
+  //   }
+  //   return shuffledArray;
+  // };
 
   const navMenu = getFilteredData();
 
@@ -88,9 +101,48 @@ export default function HomeBack() {
     setItem({ name: e.target.textContent.toLowerCase() });
     setActive(index);
   };
+  const handleCollectionClick = () => {
+    setIsCollections(!isCollections);
+    setIsFlashSale(false);
+    if (isCollections) {
+      setSelectedFilters([]);
+    }
+  };
+  const handleFlashSaleClick = () => {
+    setIsFlashSale(!isFlashSale);
+    setIsCollections(false);
+    if (isFlashSale) {
+      setSelectedFilters([]);
+    }
+  };
   const toggleFilter = () => {
     setIsFilter(!isFilter);
   };
+
+  useEffect(() => {
+    if (selectedFilters.length > 0) {
+      setIsCollections(false);
+      setIsFlashSale(false);
+    }
+  }, [selectedFilters]);
+
+  const durationMap = {
+    wearables: "Daily",
+    foods: "HappyHourStart",
+    furnitures: "Monthly",
+    electronics: "Monthly",
+    computers: "Weekly",
+    mobiles: "Weekly",
+  };
+  const dealsTitleMap = {
+    foods: "Happy Hours",
+    default: "Flash Deal",
+  };
+
+  // Get the duration based on the slug
+  const countdownDuration = durationMap[slug.toLowerCase()] || "Daily";
+  const countdownTitle =
+    dealsTitleMap[slug.toLowerCase()] || dealsTitleMap.default;
   // Extracting unique categories from cardData
   // const categories = [...new Set(cardData.map((item) => item.category))];
   return (
@@ -100,18 +152,19 @@ export default function HomeBack() {
         <div className="lg:col-span-2 col-span-6 py-0 md:order-first ">
           <div className="md:p-8  rounded-xl">
             <div className="">
-              <h1 className="text-sm font-bold text-gray-400 ">#Furnitures</h1>
-              <p className="text-gray-700">
-                Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet
-                velit. Aliquam vulputate velit imperdiet dolor tempor tristique.
-              </p>
+              <h1 className="text-sm font-bold text-gray-400 ">
+                # {categoryInfo.title}
+              </h1>
+              <p className="text-gray-700">{categoryInfo.description}</p>
             </div>
 
             <div className="hidden xl:flex  md:flex-wrap overflow-x-auto md:justify-center custom-hr-scroll">
               <div className="w-full md:w-1/2 p-2 flex-shrink items-center justify-center whitespace-nowrap">
                 <div className="w-full capitalize py-2 px-2 justify-center rounded-md text-sm font-medium whitespace-nowrap shadow-md text-gray-800  transition-transform transform hover:scale-105 text-center flex flex-col items-center">
                   <label className="group flex flex-col justify-center  items-center text-heading text-sm cursor-pointer">
-                    <span className="ms-2  -mt-0.5 text-gray-600">600+</span>
+                    <span className="ms-2  -mt-0.5 text-gray-600">
+                      {categoryInfo.product_tags}+
+                    </span>
                     <span className="ms-2  -mt-0.5 text-xs text-gray-400">
                       Product Tags
                     </span>
@@ -122,7 +175,7 @@ export default function HomeBack() {
                 <div className="w-full capitalize py-2 px-2 justify-center rounded-md text-sm font-medium whitespace-nowrap shadow-md text-gray-800 transition-transform transform hover:scale-105 text-center flex flex-col items-center">
                   <label className="group flex flex-col justify-center  items-center text-heading text-sm cursor-pointer">
                     <span className="ms-2 text-sm  -mt-0.5 text-gray-600">
-                      400+
+                      {categoryInfo.brands}+
                     </span>
                     <span className="ms-2  -mt-0.5 text-xs text-gray-400">
                       Brands
@@ -134,7 +187,7 @@ export default function HomeBack() {
                 <div className="w-full capitalize py-2 px-2 justify-center rounded-md text-sm font-medium whitespace-nowrap shadow-md text-gray-800 transition-transform transform hover:scale-105 text-center flex flex-col items-center">
                   <label className="group flex flex-col whitespace-nowrap items-center text-heading text-sm cursor-pointer">
                     <span className="ms-2 text-sm  -mt-0.5 text-gray-600">
-                      150+
+                      {categoryInfo.vendors}+
                     </span>
                     <span className="ms-2  -mt-0.5 text-xs text-gray-400">
                       Vendors
@@ -146,7 +199,7 @@ export default function HomeBack() {
                 <div className="w-full capitalize py-2 px-2 justify-center rounded-md text-sm font-medium whitespace-nowrap shadow-md text-gray-800 transition-transform transform hover:scale-105 text-center flex flex-col items-center">
                   <label className="group flex flex-col justify-center  items-center text-heading text-sm cursor-pointer">
                     <span className="ms-2 text-sm  -mt-0.5 text-gray-600">
-                      50+
+                      {categoryInfo.campaigns}+
                     </span>
                     <span className="ms-2  -mt-0.5 text-xs text-gray-400">
                       Campaigns
@@ -166,7 +219,7 @@ export default function HomeBack() {
       {/* Pass categories data to Category component */}
       {/* <Category categories={categories} /> */}
       {/* categories */}
-      <div className="grid grid-cols-12 ml-0 md:ml-2 xl:ml-8 lg:ml-12">
+      <div className="grid grid-cols-12 ml-0 md:ml-2 xl:ml-8 lg:ml-12 items-center">
         <div className="lg:col-span-1 md:col-span-2 col-span-3 py-0 justify-center md:order-first mt-1   ">
           <button
             onClick={toggleFilter}
@@ -177,7 +230,7 @@ export default function HomeBack() {
             </span>
             <svg
               aria-label="filter"
-              class="AR6 gUZ U9O kVc"
+              className="AR6 gUZ U9O kVc"
               height="16"
               role="img"
               viewBox="0 0 24 24"
@@ -190,7 +243,7 @@ export default function HomeBack() {
                 onClick={() => setIsFilter(false)}
                 className="absolute -left-4 justify-start top-10 z-20 w-55 py-0 mt-0 origin-top-right bg-white rounded-md shadow-xl dark:bg-gray-800 transition transform ease-out duration-100 scale-90"
               >
-                <label className="group flex px-4 py-2 items-center whitespace-nowrap text-heading text-sm cursor-pointer">
+                <label className="group flex px-8 py-2 items-center whitespace-nowrap text-heading text-sm cursor-pointer">
                   <input
                     type="checkbox"
                     className="form-checkbox w-5 h-5 border border-indigo-300 rounded cursor-pointer transition duration-500 ease-in-out focus:ring-offset-0 hover:border-heading focus:outline-none focus:ring-0 focus-visible:outline-none checked:bg-heading checked:hover:bg-heading checked:focus:bg-heading active"
@@ -205,23 +258,26 @@ export default function HomeBack() {
                 </label>
 
                 <hr className="border-green-800 dark:border-gray-700" />
+                {slug !== "foods" && (
+                  <>
+                    <label className="group flex px-8 py-2 items-center whitespace-nowrap text-heading text-sm cursor-pointer">
+                      <input
+                        type="checkbox"
+                        className="form-checkbox w-5 h-5 border border-red-300 rounded cursor-pointer transition duration-500 ease-in-out focus:ring-offset-0 hover:border-heading focus:outline-none focus:ring-0 focus-visible:outline-none checked:bg-heading checked:hover:bg-heading checked:focus:bg-heading active"
+                        name="brands"
+                        value="brands"
+                        onChange={() => handleFilterChange("brands")}
+                        checked={selectedFilters.includes("brands")}
+                      />
+                      <span className="ms-2 sm:ms-4 -mt-0.5  text-gray-600">
+                        Brands
+                      </span>
+                    </label>
+                    <hr className="border-red-300 dark:border-gray-700" />
+                  </>
+                )}
 
-                <label className="group flex px-4 py-2 items-center whitespace-nowrap text-heading text-sm cursor-pointer">
-                  <input
-                    type="checkbox"
-                    className="form-checkbox w-5 h-5 border border-red-300 rounded cursor-pointer transition duration-500 ease-in-out focus:ring-offset-0 hover:border-heading focus:outline-none focus:ring-0 focus-visible:outline-none checked:bg-heading checked:hover:bg-heading checked:focus:bg-heading active"
-                    name="brands"
-                    value="brands"
-                    onChange={() => handleFilterChange("brands")}
-                    checked={selectedFilters.includes("brands")}
-                  />
-                  <span className="ms-2 sm:ms-4 -mt-0.5  text-gray-600">
-                    Brands
-                  </span>
-                </label>
-                <hr className="border-red-300 dark:border-gray-700" />
-
-                <label className="group flex px-4 py-2 items-center whitespace-nowrap text-heading text-sm cursor-pointer">
+                <label className="group flex px-8 py-2 items-center whitespace-nowrap text-heading text-sm cursor-pointer">
                   <input
                     type="checkbox"
                     className="form-checkbox w-5 h-5 border border-blue-300 rounded cursor-pointer transition duration-500 ease-in-out focus:ring-offset-0 hover:border-heading focus:outline-none focus:ring-0 focus-visible:outline-none checked:bg-heading checked:hover:bg-heading checked:focus:bg-heading active"
@@ -236,7 +292,7 @@ export default function HomeBack() {
                 </label>
                 <hr className="border-blue-300 dark:border-gray-700" />
 
-                <div className="flex items-center px-2 py-2 group gap-0 w-full">
+                <div className="flex items-center px-8 py-2 group gap-0 w-full">
                   <FaSort className="w-4 h-auto" />
                   <Link
                     href="#"
@@ -247,61 +303,110 @@ export default function HomeBack() {
                 </div>
                 <hr className="border-gray-200 dark:border-gray-700" />
 
-                <div className="flex items-center px-2 py-2 group gap-0 w-full">
+                <div className="flex items-center px-8 py-2 group gap-0 w-full">
                   <BsPlusSquare className="w-4 h-auto" />
-                  <Link
-                    href="#"
+                  <button
+                    onClick={handleCollectionClick}
                     className="text-sm text-gray-600 transition-colors duration-300 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white whitespace-nowrap ml-2"
                   >
                     Collections
-                  </Link>
+                  </button>
                 </div>
                 <hr className="border-gray-200 dark:border-gray-700" />
 
-                {/* <div className="flex items-center px-2 py-2 group gap-0 w-full">
-                  <CountDownTimer Duration="Daily" />
-                  <Link
-                    href="#"
+                <div className="flex items-center px-8 py-2 group gap-0 w-full">
+                  {/* <CountDownTimer Duration="Daily" /> */}
+                  <MdAlarmOn className="w-5 h-auto" />
+                  <button
+                    onClick={handleFlashSaleClick}
                     className="text-sm text-gray-600 transition-colors duration-300 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white whitespace-nowrap ml-2"
                   >
-                    Flash Sale
-                  </Link>
-                </div> */}
+                    {countdownTitle}
+                  </button>
+                </div>
               </div>
             )}
           </button>
         </div>
 
-        <div className="lg:col-span-11 md:col-span-9 col-span-9 py-0 items-center ">
-          <ul className="w-full flex flex-row md:justify-start justify-start items-center text-[#005761] overflow-hidden hover:overflow-x-scroll whitespace-nowrap flex-container">
-            {navMenu.map((item, index) => {
-              // Determine the border color based on the item's type
-              const borderColor = filterColors[item.type] || "border-gray-300";
+        <div className="lg:col-span-11 md:col-span-10 col-span-9 py-0 items-center ">
+          {!isCollections && !isFlashSale && (
+            <ul
+              className={`w-full flex flex-row md:justify-start justify-start items-center text-[#005761] overflow-hidden hover:overflow-x-scroll whitespace-nowrap flex-container`}
+            >
+              {navMenu.map((item, index) => {
+                // Determine the border color based on the item's type
+                const borderColor =
+                  filterColors[item.type] || "border-gray-300";
 
-              return (
-                <li
-                  onClick={(e) => handleClick(e, index)}
-                  className="cursor-pointer capitalize p-4"
-                  key={index}
-                >
-                  <span
-                    className={`capitalize py-3 px-3 rounded-md text-sm font-medium whitespace-nowrap shadow-md transition-transform transform hover:scale-105 ${
-                      active === index
-                        ? `border-gray-800 border-b-2 border-t-2`
-                        : `border-b-2 ${borderColor}`
-                    }`}
+                return (
+                  <li
+                    onClick={(e) => handleClick(e, index)}
+                    className="cursor-pointer capitalize p-4 mt-2 "
+                    key={index}
                   >
-                    {item.item}
-                  </span>
-                </li>
-              );
-            })}
-          </ul>
+                    <span
+                      className={`capitalize py-2 px-3 rounded-md text-sm font-medium whitespace-nowrap shadow-md transition-transform transform hover:scale-105 ${
+                        active === index
+                          ? `border-gray-800 border-b-2 border-t-2`
+                          : `border-b-2 ${borderColor}`
+                      }`}
+                    >
+                      {item.item}
+                    </span>
+                  </li>
+                );
+              })}
+            </ul>
+          )}
+          {isCollections && !isFlashSale && (
+            <ul
+              className={`w-full flex flex-row md:justify-start justify-start items-center text-[#005761] overflow-hidden hover:overflow-x-scroll whitespace-nowrap flex-container`}
+            >
+              {collectionMenu.map((item, index) => {
+                // Determine the border color based on the item's type
+
+                return (
+                  <>
+                    <li
+                      onClick={(e) => handleClick(e, index)}
+                      className="cursor-pointer capitalize p-4"
+                      key={index}
+                    >
+                      <span
+                        className={`capitalize py-3 px-3 rounded-md text-sm font-medium whitespace-nowrap shadow-md transition-transform transform hover:scale-105 ${
+                          active === index
+                            ? `border-[#005761] border-b-2`
+                            : `shadow-md`
+                        }`}
+                      >
+                        {item}
+                      </span>
+                    </li>
+
+                    <hr className="border-gray-200 dark:border-gray-700" />
+                  </>
+                );
+              })}
+            </ul>
+          )}
+          {isFlashSale && (
+            <div className="flex justify-between items-center w-full">
+              <span className="text-gray-800 text-lg ml-4 mt-2">
+                {countdownTitle}
+              </span>
+              <div className="items-end mt-2">
+                <CountDownTimer Duration={countdownDuration} />
+              </div>
+            </div>
+          )}
         </div>
       </div>
       {/* Masonary */}
       {/* Pass cardData (products) to Masonry component */}
-      <Masonry products={cardData} />
+      <Masonry cardData={filteredData} slug={slug} />
     </div>
   );
-}
+};
+
+export default CategoryPage;

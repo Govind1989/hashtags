@@ -1,9 +1,9 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import { cardData } from "@/data"; // Ensure to import the cardData array
+// import { cardData } from "../../data.js"; // Ensure to import the cardData array
 import Card from "./Card"; // Ensure to import the Card component
 
-const Masonry = () => {
+const Masonry = ({ cardData, slug }) => {
   const [containerHeight, setContainerHeight] = useState(60); // Initial height of 60rem
   const [isAllCardsVisible, setIsAllCardsVisible] = useState(false);
 
