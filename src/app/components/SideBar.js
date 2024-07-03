@@ -1,19 +1,11 @@
 "use client";
 
 import React, { useState } from "react";
-import {
-  MdCalendarMonth,
-  MdOutlineShoppingBag,
-  MdOutlinePerson,
-  MdOutlineLanguage,
-} from "react-icons/md";
+import { useRouter } from "next/router";
+import { MdCalendarMonth, MdOutlineShoppingBag } from "react-icons/md";
 import Link from "next/link";
 const SideBar = () => {
-  const [isLanguage, setIsLanguage] = useState(false);
-
-  const toggleLanguage = () => {
-    setIsLanguage(!isLanguage);
-  };
+  const router = useRouter();
 
   return (
     <div
@@ -32,16 +24,17 @@ const SideBar = () => {
           </span>
         </button>
 
-        <button
-          className=" bg-white p-2 shadow-lg md:shadow-none shadow-gray-600   relative flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 text-gray-800 rounded-md border-2 border-transparent hover:text-gray-400 focus:outline-none focus:text-gray-500 transition duration-150 ease-in-out"
-          aria-label="Cart"
-          onClick="#"
-        >
-          <MdOutlineShoppingBag className="w-6 h-6 sm:w-8 sm:h-8" />
-          <span className="absolute inset-0 flex items-center justify-center -mt-4 -mr-7 bg-gray-600 text-white rounded-full w-6 h-6 sm:w-8 sm:h-8">
-            <span className="text-xs sm:text-sm">6</span>
-          </span>
-        </button>
+        <Link href="/cart">
+          <button
+            className=" bg-white p-2 shadow-lg md:shadow-none shadow-gray-600   relative flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 text-gray-800 rounded-md border-2 border-transparent hover:text-gray-400 focus:outline-none focus:text-gray-500 transition duration-150 ease-in-out"
+            aria-label="Cart"
+          >
+            <MdOutlineShoppingBag className="w-6 h-6 sm:w-8 sm:h-8" />
+            <span className="absolute inset-0 flex items-center justify-center -mt-4 -mr-7 bg-gray-600 text-white rounded-full w-6 h-6 sm:w-8 sm:h-8">
+              <span className="text-xs sm:text-sm">6</span>
+            </span>
+          </button>
+        </Link>
       </div>
     </div>
   );
