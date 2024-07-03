@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import Card from "./Card"; // Ensure to import the Card component
 
 const Masonry = ({ cardData, slug }) => {
+  console.log(cardData);
   const [containerHeight, setContainerHeight] = useState(60); // Initial height of 60rem
   const [isAllCardsVisible, setIsAllCardsVisible] = useState(false);
 
@@ -47,7 +48,7 @@ const Masonry = ({ cardData, slug }) => {
       {!isAllCardsVisible && (
         <div className="flex justify-center ">
           <button
-            className="text-gray-800 hover:text-gray-400 underline"
+            className="text-gray-800 hover:text-gray-400 dark:text-gray-200 underline"
             onClick={handleViewMore}
           >
             View More

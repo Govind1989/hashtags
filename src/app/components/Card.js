@@ -102,7 +102,7 @@ const Card = ({
       </div>
       <div className="no-space-y">
         <div onClick={toggleHoverContent} className="cursor-pointer">
-          <MdMoreHoriz className="w-6 h-6 text-black" />
+          <MdMoreHoriz className="w-6 h-6 text-black dark:text-gray-400" />
         </div>
       </div>
     </div>

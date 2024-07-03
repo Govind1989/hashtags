@@ -155,53 +155,55 @@ const CategoryPage = ({ slug }) => {
               <h1 className="text-sm font-bold text-gray-400 ">
                 # {categoryInfo.title}
               </h1>
-              <p className="text-gray-700">{categoryInfo.description}</p>
+              <p className="text-gray-700 dark:text-gray-200">
+                {categoryInfo.description}
+              </p>
             </div>
 
             <div className="hidden xl:flex  md:flex-wrap overflow-x-auto md:justify-center custom-hr-scroll">
               <div className="w-full md:w-1/2 p-2 flex-shrink items-center justify-center whitespace-nowrap">
-                <div className="w-full capitalize py-2 px-2 justify-center rounded-md text-sm font-medium whitespace-nowrap shadow-md text-gray-800  transition-transform transform hover:scale-105 text-center flex flex-col items-center">
+                <div className="w-full capitalize py-2 px-2 justify-center rounded-md text-sm font-medium whitespace-nowrap bg-white dark:bg-gray-800 shadow-md text-gray-800  transition-transform transform hover:scale-105 text-center flex flex-col items-center">
                   <label className="group flex flex-col justify-center  items-center text-heading text-sm cursor-pointer">
-                    <span className="ms-2  -mt-0.5 text-gray-600">
+                    <span className="ms-2  -mt-0.5 text-gray-600 dark:text-gray-200">
                       {categoryInfo.product_tags}+
                     </span>
-                    <span className="ms-2  -mt-0.5 text-xs text-gray-400">
+                    <span className="ms-2  -mt-0.5 text-xs text-gray-400 dark:text-gray-200">
                       Product Tags
                     </span>
                   </label>
                 </div>
               </div>
               <div className="w-full md:w-1/2 p-2 flex-shrink items-center justify-center">
-                <div className="w-full capitalize py-2 px-2 justify-center rounded-md text-sm font-medium whitespace-nowrap shadow-md text-gray-800 transition-transform transform hover:scale-105 text-center flex flex-col items-center">
+                <div className="w-full capitalize py-2 px-2 justify-center rounded-md text-sm font-medium whitespace-nowrap bg-white dark:bg-gray-800 shadow-md text-gray-800 transition-transform transform hover:scale-105 text-center flex flex-col items-center">
                   <label className="group flex flex-col justify-center  items-center text-heading text-sm cursor-pointer">
-                    <span className="ms-2 text-sm  -mt-0.5 text-gray-600">
+                    <span className="ms-2 text-sm  -mt-0.5 text-gray-600 dark:text-gray-200">
                       {categoryInfo.brands}+
                     </span>
-                    <span className="ms-2  -mt-0.5 text-xs text-gray-400">
+                    <span className="ms-2  -mt-0.5 text-xs text-gray-400 dark:text-gray-200">
                       Brands
                     </span>
                   </label>
                 </div>
               </div>
               <div className="w-full md:w-1/2 p-2 flex-shrink items-center justify-center">
-                <div className="w-full capitalize py-2 px-2 justify-center rounded-md text-sm font-medium whitespace-nowrap shadow-md text-gray-800 transition-transform transform hover:scale-105 text-center flex flex-col items-center">
+                <div className="w-full capitalize py-2 px-2 justify-center rounded-md text-sm font-medium whitespace-nowrap bg-white dark:bg-gray-800 shadow-md text-gray-800 transition-transform transform hover:scale-105 text-center flex flex-col items-center">
                   <label className="group flex flex-col whitespace-nowrap items-center text-heading text-sm cursor-pointer">
-                    <span className="ms-2 text-sm  -mt-0.5 text-gray-600">
+                    <span className="ms-2 text-sm  -mt-0.5 text-gray-600 dark:text-gray-200">
                       {categoryInfo.vendors}+
                     </span>
-                    <span className="ms-2  -mt-0.5 text-xs text-gray-400">
+                    <span className="ms-2  -mt-0.5 text-xs text-gray-400 dark:text-gray-200">
                       Vendors
                     </span>
                   </label>
                 </div>
               </div>
               <div className="w-full md:w-1/2 p-2 flex-shrink items-center justify-center">
-                <div className="w-full capitalize py-2 px-2 justify-center rounded-md text-sm font-medium whitespace-nowrap shadow-md text-gray-800 transition-transform transform hover:scale-105 text-center flex flex-col items-center">
+                <div className="w-full capitalize py-2 px-2 justify-center rounded-md text-sm font-medium whitespace-nowrap bg-white dark:bg-gray-800 shadow-md text-gray-800 transition-transform transform hover:scale-105 text-center flex flex-col items-center">
                   <label className="group flex flex-col justify-center  items-center text-heading text-sm cursor-pointer">
-                    <span className="ms-2 text-sm  -mt-0.5 text-gray-600">
+                    <span className="ms-2 text-sm  -mt-0.5 text-gray-600 dark:text-gray-200">
                       {categoryInfo.campaigns}+
                     </span>
-                    <span className="ms-2  -mt-0.5 text-xs text-gray-400">
+                    <span className="ms-2  -mt-0.5 text-xs text-gray-400 dark:text-gray-200">
                       Campaigns
                     </span>
                   </label>
@@ -215,7 +217,6 @@ const CategoryPage = ({ slug }) => {
           <ReelsCarousel />
         </div>
       </div>
-
       {/* Pass categories data to Category component */}
       {/* <Category categories={categories} /> */}
       {/* categories */}
@@ -223,7 +224,7 @@ const CategoryPage = ({ slug }) => {
         <div className="lg:col-span-1 md:col-span-2 col-span-3 py-0 justify-center md:order-first mt-1   ">
           <button
             onClick={toggleFilter}
-            className="flex flex-shrink-0 gap-2 px-6 py-4 shadow-lg rounded-md items-center justify-center relative group"
+            className="flex flex-shrink-0 gap-2 px-6 py-4 shadow-lg bg-white dark:bg-gray-400 rounded-md items-center justify-center relative group"
           >
             <span className="text-gray-800 text-sm hidden md:block ">
               Filter
@@ -252,12 +253,12 @@ const CategoryPage = ({ slug }) => {
                     onChange={() => handleFilterChange("categories")}
                     checked={selectedFilters.includes("categories")}
                   />
-                  <span className="ms-2 sm:ms-4 -mt-0.5  text-gray-600">
+                  <span className="ms-2 sm:ms-4 -mt-0.5  text-gray-600 dark:text-gray-200">
                     Categories
                   </span>
                 </label>
 
-                <hr className="border-green-800 dark:border-gray-700" />
+                <hr className="border-green-800 " />
                 {slug !== "foods" && (
                   <>
                     <label className="group flex px-8 py-2 items-center whitespace-nowrap text-heading text-sm cursor-pointer">
@@ -269,11 +270,11 @@ const CategoryPage = ({ slug }) => {
                         onChange={() => handleFilterChange("brands")}
                         checked={selectedFilters.includes("brands")}
                       />
-                      <span className="ms-2 sm:ms-4 -mt-0.5  text-gray-600">
+                      <span className="ms-2 sm:ms-4 -mt-0.5  text-gray-600 dark:text-gray-200">
                         Brands
                       </span>
                     </label>
-                    <hr className="border-red-300 dark:border-gray-700" />
+                    <hr className="border-red-300 " />
                   </>
                 )}
 
@@ -286,17 +287,17 @@ const CategoryPage = ({ slug }) => {
                     onChange={() => handleFilterChange("vendors")}
                     checked={selectedFilters.includes("vendors")}
                   />
-                  <span className="ms-2 sm:ms-4 -mt-0.5  text-gray-600">
+                  <span className="ms-2 sm:ms-4 -mt-0.5  text-gray-600 dark:text-gray-200">
                     Vendors
                   </span>
                 </label>
-                <hr className="border-blue-300 dark:border-gray-700" />
+                <hr className="border-blue-300 " />
 
                 <div className="flex items-center px-8 py-2 group gap-0 w-full">
                   <FaSort className="w-4 h-auto" />
                   <Link
                     href="#"
-                    className="text-sm text-gray-600 transition-colors duration-300 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white whitespace-nowrap ml-2"
+                    className="text-sm text-gray-600  transition-colors duration-300 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white whitespace-nowrap ml-2"
                   >
                     Sort By Price
                   </Link>
@@ -307,7 +308,7 @@ const CategoryPage = ({ slug }) => {
                   <BsPlusSquare className="w-4 h-auto" />
                   <button
                     onClick={handleCollectionClick}
-                    className="text-sm text-gray-600 transition-colors duration-300 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white whitespace-nowrap ml-2"
+                    className="text-sm text-gray-600 transition-colors  duration-300 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white whitespace-nowrap ml-2"
                   >
                     Collections
                   </button>
@@ -319,7 +320,7 @@ const CategoryPage = ({ slug }) => {
                   <MdAlarmOn className="w-5 h-auto" />
                   <button
                     onClick={handleFlashSaleClick}
-                    className="text-sm text-gray-600 transition-colors duration-300 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white whitespace-nowrap ml-2"
+                    className="text-sm text-gray-600 transition-colors  duration-300 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white whitespace-nowrap ml-2"
                   >
                     {countdownTitle}
                   </button>
@@ -332,7 +333,7 @@ const CategoryPage = ({ slug }) => {
         <div className="lg:col-span-11 md:col-span-10 col-span-9 py-0 items-center ">
           {!isCollections && !isFlashSale && (
             <ul
-              className={`w-full flex flex-row md:justify-start justify-start items-center text-[#005761] overflow-hidden hover:overflow-x-scroll whitespace-nowrap flex-container`}
+              className={`w-full flex flex-row md:justify-start justify-start items-center text-[#005761] dark:text-white overflow-hidden hover:overflow-x-scroll whitespace-nowrap flex-container`}
             >
               {navMenu.map((item, index) => {
                 // Determine the border color based on the item's type
@@ -348,7 +349,7 @@ const CategoryPage = ({ slug }) => {
                     <span
                       className={`capitalize py-2 px-3 rounded-md text-sm font-medium whitespace-nowrap shadow-md transition-transform transform hover:scale-105 ${
                         active === index
-                          ? `border-gray-800 border-b-2 border-t-2`
+                          ? `border-gray-800 dark:border-gray-200 border-b-2 border-t-2`
                           : `border-b-2 ${borderColor}`
                       }`}
                     >
