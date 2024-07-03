@@ -17,7 +17,7 @@ const SideBar = () => {
 
   return (
     <div
-      className="fixed md:left-right md:top-0  h-full flex flex-col gap-4 z-50  justify-end md:justify-start py-24 px-4  "
+      className="fixed md:left-right md:top-0  h-full flex flex-col gap-4 z-15  justify-end md:justify-start py-24 px-4  "
       id="nav-content"
     >
       <div className="  flex flex-col gap-4 md:gap-8 py-8 ">

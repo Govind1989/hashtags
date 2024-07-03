@@ -20,7 +20,7 @@ const ReelsCarousel = () => {
     },
   };
   return (
-    <div className="container mx-auto ">
+    <div className="container mx-auto relative z-10">
       <div className=" ">
         <Carousel
           responsive={responsive}

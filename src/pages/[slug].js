@@ -13,7 +13,17 @@ const Index = () => {
   }
 
   // Define the categories you want to render CategoryPage for
-  const validCategories = ["wearables", "foods", "furnitures"]; // Add more as needed
+  const validCategories = [
+    "wearables",
+    "foods",
+    "furnitures",
+    "electronics",
+    "computers",
+    "mobiles",
+    "services",
+    "holidays",
+    "appointments",
+  ]; // Add more as needed
 
   // Check if the slug is one of the valid categories
   if (validCategories.includes(slug)) {

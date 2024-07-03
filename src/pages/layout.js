@@ -1,10 +1,10 @@
 "use client";
 import { Inter } from "next/font/google";
 import React, { useState } from "react";
-import Footer from "./components/Footer";
-import "./globals.css"; // Ensure to import any global styles
-import NavBar from "./components/NavBar";
-import SideBar from "./components/SideBar";
+import Footer from "../app/components/Footer";
+import "../app/globals.css"; // Ensure to import any global styles
+import NavBar from "../app/components/NavBar";
+import SideBar from "../app/components/SideBar";
 import { MdOutlineAdd, MdOutlineClose } from "react-icons/md";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -29,12 +29,12 @@ const Layout = ({ children }) => {
         {/* Add any additional meta tags or external stylesheets */}
       </head>
       <body className={inter.className}>
-        <NavBar page="Home" />
+        <NavBar />
 
-        {/* <div className="flex"> */}
-        {/* Sidebar Toggle Button */}
-        {/* <button
-            className="md:hidden fixed bottom-5 right-5 z-50 bg-gray-800 text-white rounded-full p-3 shadow-lg"
+        <div className="flex">
+          {/* Sidebar Toggle Button */}
+          <button
+            className="md:hidden fixed bottom-5 right-5 z-10 bg-gray-800 text-white rounded-full p-3 shadow-lg"
             onClick={toggleSideBar}
             aria-label="Open Sidebar"
           >
@@ -43,21 +43,21 @@ const Layout = ({ children }) => {
             ) : (
               <MdOutlineAdd className="w-6 h-6" />
             )}
-          </button> */}
-        {/* Sidebar */}
-        {/* <aside
-            className={`md:flex md:flex-col md:justify-start md:py-24 md:px-4  ${
+          </button>
+          {/* Sidebar */}
+          <aside
+            className={`md:flex md:flex-col md:justify-start md:py-24 md:px-6  ${
               isSideBarOpen ? "block" : "hidden"
             }`}
           >
             <SideBar />
-          </aside> */}
+          </aside>
 
-        {/* Main Content */}
-        <main className="flex-1 p-2">{children}</main>
-        {/* </div> */}
+          {/* Main Content */}
+          <main className="flex-1 p-2">{children}</main>
+        </div>
 
-        <Footer page="Home" />
+        <Footer />
       </body>
     </html>
   );

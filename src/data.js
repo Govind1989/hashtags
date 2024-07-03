@@ -562,7 +562,7 @@ export const categoryData = {
     campaigns: 30,
   },
   Electronics: {
-    title: "Electronics",
+    title: "Electronics & Accessories",
     description:
       "Integer aliquam purus. Quisque lorem tortor fringilla sed, vestibulum id, eleifend justo vel bibendum sapien massa ac turpis.",
     product_tags: 500,
@@ -571,7 +571,7 @@ export const categoryData = {
     campaigns: 40,
   },
   Computers: {
-    title: "Computers",
+    title: "Computers & Accessories",
     description:
       "Fusce neque. Nulla facilisis, risus in hendrerit gravida, justo velit ultricies ligula, ut convallis orci orci.",
     product_tags: 450,
@@ -580,12 +580,39 @@ export const categoryData = {
     campaigns: 35,
   },
   Mobiles: {
-    title: "Mobiles",
+    title: "Mobiles & Accessories",
     description:
       "Etiam vitae tortor. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh.",
     product_tags: 550,
     brands: 370,
     vendors: 190,
     campaigns: 45,
+  },
+  Services: {
+    title: "Services",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    product_tags: 200,
+    brands: 150,
+    vendors: 80,
+    campaigns: 20,
+  },
+  Holidays: {
+    title: "Holidays",
+    description:
+      "Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius turpis et commodo pharetra.",
+    product_tags: 300,
+    brands: 250,
+    vendors: 120,
+    campaigns: 30,
+  },
+  Appointments: {
+    title: "Appointments",
+    description:
+      "Integer aliquam purus. Quisque lorem tortor fringilla sed, vestibulum id, eleifend justo vel bibendum sapien massa ac turpis.",
+    product_tags: 500,
+    brands: 350,
+    vendors: 200,
+    campaigns: 40,
   },
 };
