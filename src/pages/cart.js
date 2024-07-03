@@ -29,14 +29,14 @@ const Cart = () => {
       <div className="flex flex-col lg:flex-row gap-4 md:gap-6 ">
         {/* CART ITEMS START */}
         <div className="flex-[2] h-auto  md:pb-10">
-          <div className="flex justify-between">
-            <div className="text-md font-bold uppercase">Products On Bag</div>
+          <div className="flex gap-4">
             <button
               className="pl-3 inline-block no-underline hover:text-black"
               onClick={handleGoBack}
             >
               <MdArrowBack className="w-6 h-auto" />
             </button>
+            <div className="text-md font-bold uppercase">Products On Bag</div>
           </div>
 
           <CartItems />
