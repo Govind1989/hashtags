@@ -31,30 +31,36 @@ const Layout = ({ children }) => {
       <body className={inter.className}>
         <NavBar />
 
-        <div className="flex">
+        <div className="flex ">
           {/* Sidebar Toggle Button */}
-          <button
-            className="md:hidden fixed bottom-5 right-5 z-10 bg-gray-800 text-white rounded-full p-3 shadow-lg"
-            onClick={toggleSideBar}
-            aria-label="Open Sidebar"
-          >
-            {isSideBarOpen ? (
-              <MdOutlineClose className="w-6 h-6" />
-            ) : (
-              <MdOutlineAdd className="w-6 h-6" />
-            )}
-          </button>
-          {/* Sidebar */}
-          <aside
-            className={`md:flex md:flex-col md:justify-start md:py-24 md:px-6  ${
-              isSideBarOpen ? "block" : "hidden"
-            }`}
-          >
-            <SideBar />
-          </aside>
-
+          <main className="z-10 px-2">{children}</main>
+          <div className="">
+            <button
+              className="md:hidden fixed bottom-5 right-5 z-20 bg-gray-800 text-white rounded-full p-3 shadow-lg"
+              onClick={toggleSideBar}
+              aria-label="Open Sidebar"
+            >
+              {isSideBarOpen ? (
+                <MdOutlineClose className="w-6 h-6" />
+              ) : (
+                <MdOutlineAdd className="w-6 h-6" />
+              )}
+            </button>
+            {/* Sidebar */}
+            <aside
+              className={`absolute md:relative right-[4.5rem]  md:right-0 md:flex md:flex-col md:justify-start md:py-24 md:px-0 -px-8 z-20  
+                ${isSideBarOpen ? "block" : "hidden"}
+              `}
+            >
+              <div
+                className="fixed md:left-0 md:top-0  h-full flex flex-col gap-4   justify-end md:justify-start py-28 px-1  "
+                id="nav-content"
+              >
+                <SideBar />
+              </div>
+            </aside>
+          </div>
           {/* Main Content */}
-          <main className="flex-1 p-2">{children}</main>
         </div>
 
         <Footer />

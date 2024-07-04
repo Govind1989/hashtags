@@ -59,7 +59,7 @@ const NavBar = ({ shopName }) => {
     <>
       <nav
         id="header"
-        className="sticky top-0 bg-white dark:bg-gray-800 z-20  pt-4"
+        className="sticky top-0 bg-white dark:bg-gray-800 z-20  pt-3"
       >
         <div className="w-full  items-center px-2 ">
           <div className=" flex flex-row gap-4 items-center justify-between whitespace-nowrap ">
