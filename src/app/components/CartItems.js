@@ -12,9 +12,9 @@ import Link from "next/link";
 import QuantityInput from "./QuantityInput";
 const CartItems = () => {
   return (
-    <div className="flex flex-col md:flex-row py-5 gap-3 md:gap-5 border-b ">
+    <div className="flex flex-row py-5 gap-3 md:gap-5 border-b ">
       {/* IMAGE START */}
-      <div className="shrink-0 aspect-square w-full md:w-[125px] ">
+      <div className="shrink-0   w-full  h-auto sm:w-screen max-w-[60px] ">
         <img
           className="hover:grow hover:shadow-lg"
           src="https://images.unsplash.com/photo-1449247709967-d4461a6a6103?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&h=400&q=80"
@@ -24,18 +24,18 @@ const CartItems = () => {
       <div className="w-full flex flex-col">
         <div className="flex md:flex-row justify-between ">
           {/* PRODUCT TITLE */}
-          <div className="text-md md:text-2xl font-semibold text-gray-800 whitespace-wrap">
+          <div className="text-md md:text-2xl font-semibold text-gray-800 dark:text-gray-200 whitespace-wrap">
             Product1
           </div>
 
           {/* PRODUCT PRICE */}
           <div className="flex gap-4 items-center">
-            <div className="text-sm md:text-md font-bold text-gray-800  whitespace-nowrap">
+            <div className="text-sm md:text-md font-bold text-gray-800 dark:text-gray-200  whitespace-nowrap">
               Rs. 36
             </div>
             <MdOutlineDelete
               onClick=""
-              className="cursor-pointer text-gray-800 hover:text-black text-[16px] md:text-[20px]"
+              className="cursor-pointer text-gray-800 dark:text-gray-200 hover:text-black text-[16px] md:text-[20px]"
             />
           </div>
         </div>
@@ -48,8 +48,8 @@ const CartItems = () => {
         <div className="flex justify-between items-center">
           <Link href={`/urban-furnishings`} className="sm:mt-1 mt-2 ">
             <div className="flex items-center gap-1">
-              <MdOutlineAddHome className="text-gray-600" />
-              <p className="leading-4 text-xs sm:text-sm text-gray-600 mt-1">
+              <MdOutlineAddHome className="text-gray-600 dark:text-gray-200" />
+              <p className="leading-4 text-xs sm:text-sm text-gray-600 dark:text-gray-200 mt-1">
                 Urban Furnishings
               </p>
             </div>
@@ -59,7 +59,7 @@ const CartItems = () => {
           </div>
         </div>
 
-        <div className="mt-1 flex gap-2 overflow-x-auto max-w-screen custom-scrollbar">
+        {/* <div className="mt-1 flex gap-2 overflow-x-auto max-w-screen custom-scrollbar">
           <div className="flex-shrink-0 min-w-screen border border-gray-300 text-gray-400 py-1  px-4 rounded-lg shadow-md relative">
             <h3 className="text-xs font-semibold mb-1 text-center">
               Loyalty Rewards
@@ -111,7 +111,7 @@ const CartItems = () => {
             <div className="w-6 h-6 bg-white rounded-full absolute top-1/2 transform -translate-y-1/2 left-0 -ml-3"></div>
             <div className="w-6 h-6 bg-white rounded-full absolute top-1/2 transform -translate-y-1/2 right-0 -mr-3"></div>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

@@ -226,14 +226,14 @@ const CategoryPage = ({ slug }) => {
             <div className="lg:col-span-1 md:col-span-2 col-span-3 py-0 justify-center md:order-first mt-1   ">
               <button
                 onClick={toggleFilter}
-                className="flex flex-shrink-0 gap-2 px-6 py-4 shadow-lg bg-white dark:bg-gray-400 rounded-md items-center justify-center relative group"
+                className="flex flex-shrink-0 gap-2 px-6 py-4 shadow-lg bg-white dark:bg-gray-800 rounded-md items-center justify-center relative group"
               >
-                <span className="text-gray-800 text-sm hidden md:block ">
+                <span className="text-gray-800 dark:text-gray-200 text-sm hidden md:block ">
                   Filter
                 </span>
                 <svg
                   aria-label="filter"
-                  className="AR6 gUZ U9O kVc"
+                  className="AR6 gUZ U9O kVc dark:text-gray-200"
                   height="16"
                   role="img"
                   viewBox="0 0 24 24"
