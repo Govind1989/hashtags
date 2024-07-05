@@ -1,6 +1,17 @@
 import React from "react";
 import Link from "next/link";
 const Footer = ({ shopName, page }) => {
+  const majorCategories = [
+    "Wearables",
+    "Foods",
+    "Furnitures",
+    "Electronics",
+    "Computers",
+    "Mobiles",
+    "Bookings",
+    "Holidays",
+    "Appointments",
+  ];
   return (
     <div className=" px-4 pt-4 mx-auto w-full">
       {page === "Home" && (
@@ -85,78 +96,15 @@ const Footer = ({ shopName, page }) => {
               Categories
             </p>
             <ul className="grid grid-cols-2">
-              <li className="py-1">
-                <Link
-                  href="#"
-                  className="text-gray-800 dark:text-gray-200 hover:text-gray-400"
-                >
-                  Wearables
-                </Link>
-              </li>
-              <li className="py-1">
-                <Link
-                  href="#"
-                  className="text-gray-800 dark:text-gray-200 hover:text-gray-400"
-                >
-                  Foods
-                </Link>
-              </li>
-              <li className="py-1">
-                <Link
-                  href="#"
-                  className="text-gray-800 dark:text-gray-200 hover:text-gray-400"
-                >
-                  Furnitures
-                </Link>
-              </li>
-              <li className="py-1">
-                <Link
-                  href="#"
-                  className="text-gray-800 dark:text-gray-200 hover:text-gray-400"
-                >
-                  Electronics
-                </Link>
-              </li>
-              <li className="py-1">
-                <Link
-                  href="#"
-                  className="text-gray-800 dark:text-gray-200 hover:text-gray-400"
-                >
-                  Computers
-                </Link>
-              </li>
-              <li className="py-1">
-                <Link
-                  href="#"
-                  className="text-gray-800 dark:text-gray-200 hover:text-gray-400"
-                >
-                  Mobiles
-                </Link>
-              </li>
-              <li className="py-1">
-                <Link
-                  href="#"
-                  className="text-gray-800 dark:text-gray-200 hover:text-gray-400"
-                >
-                  Bookings
-                </Link>
-              </li>
-              <li className="py-1">
-                <Link
-                  href="#"
-                  className="text-gray-800 dark:text-gray-200 hover:text-gray-400"
-                >
-                  Holidays
-                </Link>
-              </li>
-              <li className="py-1">
-                <Link
-                  href="#"
-                  className="text-gray-800 dark:text-gray-200 hover:text-gray-400"
-                >
-                  Appointments
-                </Link>
-              </li>
+              {majorCategories.map((category, index) => (
+                <li key={index} className="py-1">
+                  <Link href="#">
+                    <span className="text-gray-800 dark:text-gray-200 hover:text-gray-400">
+                      {category}
+                    </span>
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
           <div>

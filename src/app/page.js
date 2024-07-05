@@ -27,8 +27,6 @@ export default function Home() {
           className={`w-full flex flex-row md:justify-center justify-start items-center text-[#005761] overflow-hidden hover:overflow-x-scroll whitespace-nowrap flex-container`}
         >
           {homeMenu.map((item, index) => {
-            // Determine the border color based on the item's type
-
             return (
               <>
                 <li

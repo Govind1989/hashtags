@@ -55,7 +55,7 @@ const SideBar = ({ status }) => {
       </button>
       {isCart && (
         <div
-          className={`absolute px-4 md:px-8 right-0  md:left-10 lg:left-12 xl:left-12 z-20 w-screen py-0 md:-mt-8 bg-white rounded-md shadow-xl dark:bg-gray-800 transition transform ease-out duration-100 scale-90 h-screen sm:h-auto overflow-y-scroll`}
+          className={`absolute px-4 md:px-8 right-0  md:left-10 lg:left-12 xl:left-12 z-10 w-screen py-0 md:-mt-8 bg-white rounded-md shadow-xl dark:bg-gray-800 transition transform ease-out duration-100 scale-90 h-screen sm:h-auto overflow-y-scroll`}
           style={{
             // top: "5.5rem",
             top: window.innerWidth < 768 ? "0" : "5.5rem",

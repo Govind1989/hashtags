@@ -39,7 +39,7 @@ p {
 }
 
 /* Apply scrollbar styling when the container is hovered */
-.flex-container:hover::-webkit-scrollbar {
+.flex-container::-webkit-scrollbar {
   width: 1px;
   height: 2px;
 
