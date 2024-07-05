@@ -345,7 +345,7 @@ const CategoryPage = ({ slug }) => {
                     return (
                       <li
                         onClick={(e) => handleClick(e, index)}
-                        className="cursor-pointer capitalize p-4 mt-2 "
+                        className="cursor-pointer capitalize px-1 py-2 mt-2 shadow-md "
                         key={index}
                       >
                         <span
@@ -373,11 +373,11 @@ const CategoryPage = ({ slug }) => {
                       <>
                         <li
                           onClick={(e) => handleClick(e, index)}
-                          className="cursor-pointer capitalize p-4"
+                          className="cursor-pointer capitalize px-1 py-2 mt-2 shadow-md"
                           key={index}
                         >
                           <span
-                            className={`capitalize py-3 px-3 rounded-md text-sm font-medium whitespace-nowrap shadow-md transition-transform transform hover:scale-105 ${
+                            className={`capitalize py-2 px-3 rounded-md text-sm font-medium whitespace-nowrap shadow-md transition-transform transform hover:scale-105 ${
                               active === index
                                 ? `border-[#005761] border-b-2`
                                 : `shadow-md`

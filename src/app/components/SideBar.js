@@ -11,7 +11,7 @@ import {
 import { FaCoins } from "react-icons/fa";
 import CartItems from "../components/CartItems";
 import Link from "next/link";
-const SideBar = () => {
+const SideBar = ({ status }) => {
   const [isCart, setIsCart] = useState(false);
   const [isCalendar, setIsCalendar] = useState(false);
   const [openSection, setOpenSection] = useState(0);
@@ -33,7 +33,7 @@ const SideBar = () => {
     // >
     <div className="flex flex-col gap-4 md:gap-8 py-8 ">
       <button
-        className=" bg-white dark:bg-gray-800 py-2 px-2 shadow-lg md:shadow-none shadow-gray-600   relative flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 text-gray-800 rounded-md border-2 border-transparent hover:text-gray-400 focus:outline-none focus:text-gray-500 transition duration-150 ease-in-out"
+        className="bg-white bg-opacity-20 dark:bg-gray-800 dark:bg-opacity-20 backdrop-blur-sm py-2 px-2 shadow-lg md:shadow-none shadow-gray-600   relative flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 text-gray-800 rounded-md border-2 border-transparent hover:text-gray-400 focus:outline-none focus:text-gray-500 transition duration-150 ease-in-out"
         aria-label="Calendar"
         onClick={toggleCalendarMenu}
       >
@@ -44,7 +44,7 @@ const SideBar = () => {
       </button>
 
       <button
-        className=" bg-white dark:bg-gray-800  p-2 shadow-lg md:shadow-none shadow-gray-600   relative flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 text-gray-800 rounded-md border-2 border-transparent hover:text-gray-400 focus:outline-none focus:text-gray-500 transition duration-150 ease-in-out"
+        className=" bg-white bg-opacity-20 dark:bg-gray-800 dark:bg-opacity-20 backdrop-blur-sm py-2 px-2 shadow-lg md:shadow-none shadow-gray-600   relative flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 text-gray-800 rounded-md border-2 border-transparent hover:text-gray-400 focus:outline-none focus:text-gray-500 transition duration-150 ease-in-out"
         aria-label="Cart"
         onClick={toggleCartMenu}
       >

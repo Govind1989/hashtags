@@ -1,98 +1,59 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-
+import { cardData } from "../data";
+import Masonry from "./components/Masonry";
+import Category from "./components/Category";
 export default function Home() {
+  const [item, setItem] = useState(0);
+  const [active, setActive] = useState(0);
+  const handleClick = (e, index) => {
+    setItem({ name: e.target.textContent.toLowerCase() });
+    setActive(index);
+  };
+  const homeMenu = [
+    "Trending",
+    "Most Selling",
+    "New Arrivals",
+    "Highest Rated",
+    "Limited Offer",
+
+    "Free Shipping",
+  ];
   return (
-    <div class="w-full px-10 flex items-center justify-center min-h-screen">
-      {/* <div class="container mx-auto p-4">
-        <div class="flex justify-between items-center  mb-8">
-          <div class="w-1/4 p-4">
-            <div className="block w-full">
-              <div className="relative  min-h-50">
-                <img
-                  className="rounded-md w-full h-auto "
-                  src="https://i.pinimg.com/236x/7b/a2/61/7ba261004d2756510b2ceb30ed20f2c0.jpg"
-                  alt="homepage"
-                />
-              </div>
-            </div>
-          </div>
-          <div class="w-1/2 text-center">
-            <div class="bg-white shadow-md rounded-lg p-4">Text content</div>
-          </div>
-          <div class="w-1/4 p-4">
-            <div className="block w-full">
-              <div className="relative  min-h-50">
-                <img
-                  className="rounded-md w-full h-auto "
-                  src="https://i.pinimg.com/236x/7b/a2/61/7ba261004d2756510b2ceb30ed20f2c0.jpg"
-                  alt="homepage"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="flex justify-between mb-8 px-24">
-          <div class="w-1/4 p-4">
-            <div className="block w-full">
-              <div className="relative  min-h-50">
-                <img
-                  className="rounded-md w-full h-auto "
-                  src="https://i.pinimg.com/236x/7b/a2/61/7ba261004d2756510b2ceb30ed20f2c0.jpg"
-                  alt="homepage"
-                />
-              </div>
-            </div>
-          </div>
-          <div class="w-1/4 p-4">
-            <div className="block w-full">
-              <div className="relative  min-h-50">
-                <img
-                  className="rounded-md w-full h-auto "
-                  src="https://i.pinimg.com/236x/7b/a2/61/7ba261004d2756510b2ceb30ed20f2c0.jpg"
-                  alt="homepage"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="flex justify-center space-x-4">
-          <div class="w-1/4 p-4">
-            <div className="block w-full">
-              <div className="relative  min-h-50">
-                <img
-                  className="rounded-md w-full h-auto "
-                  src="https://i.pinimg.com/236x/7b/a2/61/7ba261004d2756510b2ceb30ed20f2c0.jpg"
-                  alt="homepage"
-                />
-              </div>
-            </div>
-          </div>
-          <div class="w-1/4 p-4">
-            <div className="block w-full">
-              <div className="relative  min-h-50">
-                <img
-                  className="rounded-md w-full h-auto "
-                  src="https://i.pinimg.com/236x/7b/a2/61/7ba261004d2756510b2ceb30ed20f2c0.jpg"
-                  alt="homepage"
-                />
-              </div>
-            </div>
-          </div>
-          <div class="w-1/4 p-4">
-            <div className="block w-full">
-              <div className="relative  min-h-50">
-                <img
-                  className="rounded-md w-full h-auto "
-                  src="https://i.pinimg.com/236x/7b/a2/61/7ba261004d2756510b2ceb30ed20f2c0.jpg"
-                  alt="homepage"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> */}
+    <div className="w-full px-2 items-center justify-center min-h-screen">
+      <div>
+        <ul
+          className={`w-full flex flex-row md:justify-center justify-start items-center text-[#005761] overflow-hidden hover:overflow-x-scroll whitespace-nowrap flex-container`}
+        >
+          {homeMenu.map((item, index) => {
+            // Determine the border color based on the item's type
+
+            return (
+              <>
+                <li
+                  onClick={(e) => handleClick(e, index)}
+                  className="cursor-pointer capitalize px-1 py-2 mt-2 "
+                  key={index}
+                >
+                  <span
+                    className={`capitalize py-2 px-3 rounded-md text-sm font-medium whitespace-nowrap  transition-transform transform hover:scale-105 ${
+                      active === index
+                        ? `border-[#005761] border-b-2`
+                        : `shadow-md`
+                    }`}
+                  >
+                    {item}
+                  </span>
+                </li>
+
+                <hr className="border-gray-200 dark:border-gray-700" />
+              </>
+            );
+          })}
+        </ul>
+      </div>
+      <Masonry cardData={cardData} page="Home" />
     </div>
   );
 }
