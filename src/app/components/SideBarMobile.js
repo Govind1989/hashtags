@@ -28,7 +28,9 @@ const SideBarMobile = () => {
   };
 
   const toggleSideBar = () => {
-    setIsSideBarOpen(!isSideBarOpen);
+    if (!isCart) {
+      setIsSideBarOpen(!isSideBarOpen);
+    }
   };
   return (
     <div>

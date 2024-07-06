@@ -21,7 +21,7 @@ export default function Home() {
     "Free Shipping",
   ];
   return (
-    <div className="w-full px-2 items-center justify-center min-h-screen">
+    <div className="w-full dark:bg-gray-800 px-2 items-center justify-center min-h-screen">
       <div>
         <ul
           className={`w-full flex flex-row md:justify-center justify-start items-center text-[#005761] overflow-hidden hover:overflow-x-scroll whitespace-nowrap flex-container`}
@@ -34,7 +34,7 @@ export default function Home() {
                   className="cursor-pointer capitalize px-1 py-2 mt-2"
                 >
                   <span
-                    className={`capitalize py-2 px-3 rounded-md text-sm font-medium whitespace-nowrap  transition-transform transform hover:scale-105 ${
+                    className={`capitalize py-2 px-3 dark:text-gray-200 rounded-md text-sm font-medium whitespace-nowrap  transition-transform transform hover:scale-105 ${
                       active === index
                         ? `border-[#005761] border-b-2`
                         : `shadow-md`

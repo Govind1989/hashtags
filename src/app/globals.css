@@ -9,6 +9,13 @@
   --background-end-rgb: 255, 255, 255;
 }
 
+.dark :root {
+  --foreground-rgb: 229, 229, 229;
+  /* Equivalent to text-gray-200 */
+  --background-start-rgb: 0, 0, 0;
+  --background-end-rgb: 0, 0, 0;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 229, 229, 229;
@@ -19,8 +26,9 @@
 }
 
 body {
+  background: rgb(var(--background-start-rgb));
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(to bottom, rgb(var(--background-start-rgb)), rgb(var(--background-end-rgb)));
+  transition: background 0.3s, color 0.3s;
 }
 
 header,
@@ -37,6 +45,8 @@ p {
     text-wrap: balance;
   }
 }
+
+
 
 /* Apply scrollbar styling when the container is hovered */
 .flex-container::-webkit-scrollbar {
