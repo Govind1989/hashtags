@@ -28,11 +28,10 @@ export default function Home() {
         >
           {homeMenu.map((item, index) => {
             return (
-              <>
+              <div key={index}>
                 <li
                   onClick={(e) => handleClick(e, index)}
-                  className="cursor-pointer capitalize px-1 py-2 mt-2 "
-                  key={index}
+                  className="cursor-pointer capitalize px-1 py-2 mt-2"
                 >
                   <span
                     className={`capitalize py-2 px-3 rounded-md text-sm font-medium whitespace-nowrap  transition-transform transform hover:scale-105 ${
@@ -44,9 +43,8 @@ export default function Home() {
                     {item}
                   </span>
                 </li>
-
                 <hr className="border-gray-200 dark:border-gray-700" />
-              </>
+              </div>
             );
           })}
         </ul>
