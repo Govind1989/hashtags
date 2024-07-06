@@ -6,11 +6,12 @@ import CartItems from "./CartItems";
 import { FaCoins } from "react-icons/fa";
 
 const Cart = ({ isCart }) => {
-  if (!isCart) return null;
   const [openSection, setOpenSection] = useState(0);
   const toggleSection = (section) => {
     setOpenSection(openSection === section ? null : section);
   };
+
+  if (!isCart) return null;
 
   return (
     <div
