@@ -148,7 +148,7 @@ const CategoryPage = ({ slug }) => {
   return (
     <>
       <Layout>
-        <div className="flex min-h-screen  flex-col p-4  justify-between ">
+        <div className="bg-white dark:bg-gray-800 flex min-h-screen  flex-col p-4  justify-between ">
           {/* Reels */}
           <div className="grid grid-cols-6 gap-2">
             <div className="lg:col-span-2 col-span-6 py-0 md:order-first ">
@@ -164,7 +164,7 @@ const CategoryPage = ({ slug }) => {
 
                 <div className="hidden xl:flex  md:flex-wrap overflow-x-auto md:justify-center custom-hr-scroll">
                   <div className="w-full md:w-1/2 p-2 flex-shrink items-center justify-center whitespace-nowrap">
-                    <div className="w-full capitalize py-2 px-2 justify-center rounded-md text-sm font-medium whitespace-nowrap bg-white dark:bg-gray-800 shadow-md text-gray-800  transition-transform transform hover:scale-105 text-center flex flex-col items-center">
+                    <div className="w-full capitalize py-2 px-2 justify-center rounded-md text-sm font-medium whitespace-nowrap bg-white dark:bg-gray-700 shadow-md text-gray-800  transition-transform transform hover:scale-105 text-center flex flex-col items-center">
                       <label className="group flex flex-col justify-center  items-center text-heading text-sm cursor-pointer">
                         <span className="ms-2  -mt-0.5 text-gray-600 dark:text-gray-200">
                           {categoryInfo.product_tags}+
@@ -176,7 +176,7 @@ const CategoryPage = ({ slug }) => {
                     </div>
                   </div>
                   <div className="w-full md:w-1/2 p-2 flex-shrink items-center justify-center">
-                    <div className="w-full capitalize py-2 px-2 justify-center rounded-md text-sm font-medium whitespace-nowrap bg-white dark:bg-gray-800 shadow-md text-gray-800 transition-transform transform hover:scale-105 text-center flex flex-col items-center">
+                    <div className="w-full capitalize py-2 px-2 justify-center rounded-md text-sm font-medium whitespace-nowrap bg-white dark:bg-gray-700 shadow-md text-gray-800 transition-transform transform hover:scale-105 text-center flex flex-col items-center">
                       <label className="group flex flex-col justify-center  items-center text-heading text-sm cursor-pointer">
                         <span className="ms-2 text-sm  -mt-0.5 text-gray-600 dark:text-gray-200">
                           {categoryInfo.brands}+
@@ -188,7 +188,7 @@ const CategoryPage = ({ slug }) => {
                     </div>
                   </div>
                   <div className="w-full md:w-1/2 p-2 flex-shrink items-center justify-center">
-                    <div className="w-full capitalize py-2 px-2 justify-center rounded-md text-sm font-medium whitespace-nowrap bg-white dark:bg-gray-800 shadow-md text-gray-800 transition-transform transform hover:scale-105 text-center flex flex-col items-center">
+                    <div className="w-full capitalize py-2 px-2 justify-center rounded-md text-sm font-medium whitespace-nowrap bg-white dark:bg-gray-700 shadow-md text-gray-800 transition-transform transform hover:scale-105 text-center flex flex-col items-center">
                       <label className="group flex flex-col whitespace-nowrap items-center text-heading text-sm cursor-pointer">
                         <span className="ms-2 text-sm  -mt-0.5 text-gray-600 dark:text-gray-200">
                           {categoryInfo.vendors}+
@@ -200,7 +200,7 @@ const CategoryPage = ({ slug }) => {
                     </div>
                   </div>
                   <div className="w-full md:w-1/2 p-2 flex-shrink items-center justify-center">
-                    <div className="w-full capitalize py-2 px-2 justify-center rounded-md text-sm font-medium whitespace-nowrap bg-white dark:bg-gray-800 shadow-md text-gray-800 transition-transform transform hover:scale-105 text-center flex flex-col items-center">
+                    <div className="w-full capitalize py-2 px-2 justify-center rounded-md text-sm font-medium whitespace-nowrap bg-white dark:bg-gray-700 shadow-md text-gray-800 transition-transform transform hover:scale-105 text-center flex flex-col items-center">
                       <label className="group flex flex-col justify-center  items-center text-heading text-sm cursor-pointer">
                         <span className="ms-2 text-sm  -mt-0.5 text-gray-600 dark:text-gray-200">
                           {categoryInfo.campaigns}+
@@ -219,14 +219,12 @@ const CategoryPage = ({ slug }) => {
               <ReelsCarousel />
             </div>
           </div>
-          {/* Pass categories data to Category component */}
-          {/* <Category categories={categories} /> */}
-          {/* categories */}
+
           <div className="grid grid-cols-12 ml-0 md:ml-2 xl:ml-8 lg:ml-12 items-center">
             <div className="lg:col-span-1 md:col-span-2 col-span-3 py-0 justify-center md:order-first mt-1   ">
               <button
                 onClick={toggleFilter}
-                className="flex flex-shrink-0 gap-2 px-6 py-4 shadow-lg bg-white dark:bg-gray-800 rounded-md items-center justify-center relative group"
+                className="flex flex-shrink-0 gap-2 px-6 py-4 shadow-lg bg-white dark:bg-gray-700 rounded-md items-center justify-center relative group"
               >
                 <span className="text-gray-800 dark:text-gray-200 text-sm hidden md:block ">
                   Filter

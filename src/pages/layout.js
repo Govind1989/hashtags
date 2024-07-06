@@ -22,7 +22,7 @@ const Layout = ({ children }) => {
     <div className={inter.className}>
       <NavBar page="Home" />
 
-      <main className="z-10 px-2">{children}</main>
+      <main className="z-10 px-2 bg-white dark:bg-gray-800">{children}</main>
       <aside className="">
         <SideBarDesktop />
       </aside>

@@ -13,7 +13,7 @@ const Footer = ({ shopName, page }) => {
     "Appointments",
   ];
   return (
-    <div className=" px-4 pt-4 mx-auto w-full">
+    <div className="bg-white dark:bg-gray-800 px-4 pt-4 mx-auto w-full">
       {page === "Home" && (
         <div className="grid gap-10 row-gap-6 mb-8 sm:grid-cols-2 lg:grid-cols-4">
           <div className="">

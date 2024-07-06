@@ -117,7 +117,7 @@ const NavBar = ({ shopName }) => {
                     <input
                       type="text"
                       id="search-bar"
-                      className="bg-gray-50 dark:bg-gray-600 border border-gray-300 dark:border-gray-400 text-gray-900 dark:text-gray-200 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 px-2 py-1"
+                      className="bg-gray-50 dark:bg-gray-600 border border-transparent text-gray-900 dark:text-gray-200 sm:text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 px-2 py-1 transition-colors duration-300"
                       placeholder="# products, @ shops"
                       value={inputValue}
                       onChange={handleInputChange}
@@ -141,15 +141,16 @@ const NavBar = ({ shopName }) => {
                     </button>
                   )}
                 </div>
-              </div>
-              {isInputClicked && !inputValue && (
-                <div
-                  className="absolute left-0 top-full p-2 bg-gray-100 dark:bg-gray-700 rounded shadow z-50
+                {isInputClicked && !inputValue && (
+                  <div
+                    className="absolute left-0 top-full p-2 bg-gray-100 dark:bg-gray-700 rounded shadow z-50
                       w-screen lg:w-full lg:hidden lg:left-0 lg:right-0"
-                >
-                  <p>Suggestions go here</p>
-                </div>
-              )}
+                  >
+                    <p>Suggestions go here</p>
+                  </div>
+                )}
+              </div>
+
               <div className="flex flex-row gap-0 items-center">
                 <button
                   className="relative flex items-center justify-center  text-gray-800 rounded-full border-2 border-transparent hover:text-gray-400 focus:outline-none focus:text-gray-500 transition duration-150 ease-in-out"
@@ -212,7 +213,7 @@ const NavBar = ({ shopName }) => {
                 <input
                   type="text"
                   id="search-bar"
-                  className="bg-gray-50 dark:bg-gray-600 border border-gray-300 dark:border-gray-400 text-gray-900 dark:text-gray-200 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 px-2 py-1"
+                  className="bg-gray-50 dark:bg-gray-600 border border-transparent text-gray-900 dark:text-gray-200 sm:text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 px-2 py-1 transition-colors duration-300"
                   placeholder="# products, @ shops"
                   value={inputValue}
                   onChange={handleInputChange}
