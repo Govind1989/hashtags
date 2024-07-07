@@ -5,13 +5,15 @@ import Footer from "../app/components/Footer";
 import "../app/globals.css"; // Ensure to import any global styles
 import NavBar from "../app/components/NavBar";
 import SideBar from "../app/components/SideBar";
-import { MdOutlineAdd, MdOutlineClose } from "react-icons/md";
+import { useRouter } from "next/router";
 import SideBarDesktop from "../app/components/SideBarDesktop";
 import SideBarMobile from "../app/components/SideBarMobile";
 
 const inter = Inter({ subsets: ["latin"] });
 
 const Layout = ({ children }) => {
+  const router = useRouter();
+  const { pathname } = router;
   const [isSideBarOpen, setIsSideBarOpen] = useState(false);
 
   const toggleSideBar = () => {
@@ -24,10 +26,10 @@ const Layout = ({ children }) => {
 
       <main className="z-10 px-2 bg-white dark:bg-gray-800">{children}</main>
       <aside className="">
-        <SideBarDesktop />
+        <SideBarDesktop pathname={pathname} />
       </aside>
       <div className="block md:hidden">
-        <SideBarMobile />
+        <SideBarMobile pathname={pathname} />
       </div>
 
       <Footer page="Home" />
