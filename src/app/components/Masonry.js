@@ -44,6 +44,7 @@ const Masonry = ({ cardData, slug, page }) => {
             key={index}
             imageUrl={item.imageUrl}
             productName={item.productName}
+            productSlug={item.productSlug}
             markedPrice={item.markedPrice}
             sellingPrice={item.sellingPrice}
             vendor={item.vendor}

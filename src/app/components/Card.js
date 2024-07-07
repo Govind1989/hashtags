@@ -8,7 +8,9 @@ import {
 } from "react-icons/md";
 
 const Card = ({
+  productSlug,
   imageUrl,
+  videoUrl,
   productName,
   markedPrice,
   sellingPrice,
@@ -17,6 +19,7 @@ const Card = ({
 }) => {
   const [addtoCart, setIAddToCart] = useState(false);
   const [showHoverContent, setShowHoverContent] = useState(false);
+  // const slug = generateSlug(productName);
 
   const toggleHoverContent = () => {
     setShowHoverContent(!showHoverContent);
@@ -28,13 +31,24 @@ const Card = ({
   };
 
   return (
-    <div className="block w-full">
+    <div className="inline-block w-full">
       <div className="relative  min-h-50">
-        <img
-          className="rounded-md w-full h-auto "
-          src={imageUrl}
-          alt={productName}
-        />
+        {videoUrl ? (
+          <video
+            className="rounded-md w-full max-w-42 h-auto"
+            src={videoUrl}
+            alt={productName}
+            autoPlay
+            loop
+            muted
+          />
+        ) : (
+          <img
+            className="rounded-md w-full h-auto"
+            src={imageUrl}
+            alt={productName}
+          />
+        )}
         <div
           className={`flex flex-col h-auto  justify-end absolute inset-0 bg-black  ${
             showHoverContent ? "opacity-70" : "opacity-10"
@@ -46,7 +60,9 @@ const Card = ({
             } flex-wrap`}
           >
             <Link
-              href={`/products/product1`}
+              href={{
+                pathname: `/products/${productSlug}`,
+              }}
               className="leading-2 text-sm md:text-xl text-white sm:text-lg whitespace-normal px-0"
             >
               {productName}

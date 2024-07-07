@@ -5,7 +5,10 @@ export const cardData = [
     id: 1,
     imageUrl:
       "https://i.pinimg.com/236x/7b/a2/61/7ba261004d2756510b2ceb30ed20f2c0.jpg",
+    videoUrl:
+      "https://videos.pexels.com/video-files/6467633/6467633-sd_960_506_25fps.mp4",
     productName: "Elegant Sofa",
+    productSlug: "elegant_sofa",
     markedPrice: "1400",
     sellingPrice: "1000",
     vendor: "Urban Furnishings",
@@ -18,6 +21,7 @@ export const cardData = [
     imageUrl:
       "https://i.pinimg.com/236x/ac/41/86/ac4186b14d6baecf0ca6138d770838e5.jpg",
     productName: "Table Top",
+    productSlug: "table_top",
     markedPrice: "1200",
     sellingPrice: "800",
     vendor: "Furniture Galore",
@@ -30,6 +34,7 @@ export const cardData = [
     imageUrl:
       "https://i.pinimg.com/236x/75/3c/c1/753cc1e0775e2bebdb5cffaf842c3f7a.jpg",
     productName: "Vintage Lamp",
+    productSlug: "vintage_lamp",
     markedPrice: "900",
     sellingPrice: "700",
     vendor: "Home Decors",
@@ -42,6 +47,7 @@ export const cardData = [
     imageUrl:
       "https://i.pinimg.com/236x/ce/5a/5c/ce5a5c8b0dfd91ed0eb52d9867d96d54.jpg",
     productName: "Wooden Chair",
+    productSlug: "wooden_chair",
     markedPrice: "1100",
     sellingPrice: "900",
     vendor: "Design Elements",
@@ -54,6 +60,7 @@ export const cardData = [
     imageUrl:
       "https://i.pinimg.com/236x/5a/fa/60/5afa60e00dd47a34a28e0b0664342af3.jpg",
     productName: "Wooden Closet",
+    productSlug: "wooden_closet",
     markedPrice: "1500",
     sellingPrice: "1100",
     vendor: "Furniture Hub",
@@ -66,6 +73,7 @@ export const cardData = [
     imageUrl:
       "https://i.pinimg.com/236x/7d/92/97/7d929794f5f7a08d2d2b95276b707529.jpg",
     productName: "Royal Bed",
+    productSlug: "royal_bed",
     markedPrice: "2000",
     sellingPrice: "1800",
     vendor: "Sleep Well",
@@ -78,6 +86,7 @@ export const cardData = [
     imageUrl:
       "https://i.pinimg.com/236x/5d/86/ba/5d86ba2ad186a0a5fc7d02904129cabb.jpg",
     productName: "Decorative Vase",
+    productSlug: "decorative_vase",
     markedPrice: "600",
     sellingPrice: "500",
     vendor: "Decor Delights",
@@ -90,6 +99,7 @@ export const cardData = [
     imageUrl:
       "https://i.pinimg.com/236x/5d/86/ba/5d86ba2ad186a0a5fc7d02904129cabb.jpg",
     productName: "Dining Table",
+    productSlug: "dining_table",
     markedPrice: "1300",
     sellingPrice: "1100",
     vendor: "Elegant Furnishings",
@@ -102,6 +112,7 @@ export const cardData = [
     imageUrl:
       "https://i.pinimg.com/236x/08/a1/d7/08a1d7d622e0cb84f7fafa0f6bfa6db7.jpg",
     productName: "Coffee Table",
+    productSlug: "coffee_table",
     markedPrice: "1800",
     sellingPrice: "1500",
     vendor: "Urban Outfitters",
@@ -114,6 +125,7 @@ export const cardData = [
     imageUrl:
       "https://i.pinimg.com/236x/1f/e2/c4/1fe2c4f88ad35d5fc2341d6faebe19a9.jpg",
     productName: "Classic Bookshelf",
+    productSlug: "classic_bookshelf",
     markedPrice: "2200",
     sellingPrice: "1900",
     vendor: "Book Nook",
@@ -126,6 +138,7 @@ export const cardData = [
     imageUrl:
       "https://i.pinimg.com/236x/e4/d4/fc/e4d4fc6d987c07ec9f58924d96db0822.jpg",
     productName: "Wooden Shelves",
+    productSlug: "wooden_shelves",
     markedPrice: "2500",
     sellingPrice: "2300",
     vendor: "Akon Furniture",
@@ -138,11 +151,12 @@ export const cardData = [
     imageUrl:
       "https://i.pinimg.com/236x/c4/f6/fe/c4f6fe9685034afe9635c90c6afc0a86.jpg",
     productName: "Luxury Sofa Set",
+    productSlug: "luxury_sofa_set",
     markedPrice: "3000",
     sellingPrice: "2700",
     vendor: "Luxury Living",
     mainCategory: "Furnitures",
-    category: "Living Room ",
+    category: "Living Room",
     brand: "LuxuryComfort",
   },
   {
@@ -150,6 +164,7 @@ export const cardData = [
     imageUrl:
       "https://i.pinimg.com/236x/9c/e1/c3/9ce1c34732c856b234fffbbd184e349c.jpg",
     productName: "Sofa Set",
+    productSlug: "sofa_set",
     markedPrice: "900",
     sellingPrice: "700",
     vendor: "Furniture World",
@@ -162,6 +177,7 @@ export const cardData = [
     imageUrl:
       "https://i.pinimg.com/236x/4b/ae/62/4bae6221913e340161fcda55165835f0.jpg",
     productName: "Office Desk",
+    productSlug: "office_desk",
     markedPrice: "1600",
     sellingPrice: "1400",
     vendor: "Office Essentials",
@@ -174,6 +190,7 @@ export const cardData = [
     imageUrl:
       "https://i.pinimg.com/236x/48/ed/3a/48ed3a66e40d9f5a78b9a8799b18c6af.jpg",
     productName: "Modern Armchair",
+    productSlug: "modern_armchair",
     markedPrice: "500",
     sellingPrice: "400",
     vendor: "Comfort Zone",
@@ -186,6 +203,7 @@ export const cardData = [
     imageUrl:
       "https://i.pinimg.com/236x/d8/90/d6/d890d69768fbe7da81690c64031355fb.jpg",
     productName: "Cozy Armchair",
+    productSlug: "cozy_armchair",
     markedPrice: "1800",
     sellingPrice: "1500",
     vendor: "Comfort Zone",
@@ -198,6 +216,7 @@ export const cardData = [
     imageUrl:
       "https://i.pinimg.com/236x/d8/90/d6/d890d69768fbe7da81690c64031355fb.jpg",
     productName: "Office Table",
+    productSlug: "office_table",
     markedPrice: "1800",
     sellingPrice: "1500",
     vendor: "Comfort Zone",
@@ -210,6 +229,7 @@ export const cardData = [
     imageUrl:
       "https://i.pinimg.com/236x/57/c8/04/57c80445adbe0e09b6f68cca09aa9051.jpg",
     productName: "Office Chairs",
+    productSlug: "office_chairs",
     markedPrice: "1800",
     sellingPrice: "1500",
     vendor: "Office Essentials",
@@ -222,6 +242,7 @@ export const cardData = [
     imageUrl:
       "https://i.pinimg.com/236x/30/4b/dc/304bdce25513536430e4ae8d30478835.jpg",
     productName: "Men's Blazer",
+    productSlug: "men's_blazer",
     markedPrice: "180",
     sellingPrice: "150",
     vendor: "Elegant Apparel",
@@ -234,6 +255,7 @@ export const cardData = [
     imageUrl:
       "https://i.pinimg.com/236x/ed/f9/47/edf94700281731272dd4fa1093fb13fc.jpg",
     productName: "Women Poncho",
+    productSlug: "women_poncho",
     markedPrice: "250",
     sellingPrice: "200",
     vendor: "Elegant Apparel",
@@ -246,6 +268,7 @@ export const cardData = [
     imageUrl:
       "https://i.pinimg.com/236x/74/c8/56/74c856c7899d078486377bb2be09dfed.jpg",
     productName: "Shirt",
+    productSlug: "shirt",
     markedPrice: "120",
     sellingPrice: "100",
     vendor: "Elegant Apparel",
@@ -258,6 +281,7 @@ export const cardData = [
     imageUrl:
       "https://i.pinimg.com/236x/3b/a2/72/3ba2729e75a5f9f253a09f4e6841104d.jpg",
     productName: "Jacket",
+    productSlug: "jacket",
     markedPrice: "150",
     sellingPrice: "120",
     vendor: "Elegant Apparel",
@@ -270,6 +294,7 @@ export const cardData = [
     imageUrl:
       "https://i.pinimg.com/236x/32/58/d8/3258d8326e0a01abd4f4c817f074dd73.jpg",
     productName: "Men's Ethnic Top",
+    productSlug: "men's_ethnic_top",
     markedPrice: "90",
     sellingPrice: "70",
     vendor: "Elegant Apparel",
@@ -282,6 +307,7 @@ export const cardData = [
     imageUrl:
       "https://i.pinimg.com/236x/fd/fd/d1/fdfdd1108aba0a75da70daf1e56ef3b8.jpg",
     productName: "Jeans",
+    productSlug: "jeans",
     markedPrice: "400",
     sellingPrice: "350",
     vendor: "Elegant Apparel",
@@ -294,6 +320,7 @@ export const cardData = [
     imageUrl:
       "https://i.pinimg.com/236x/bb/ea/16/bbea167d29b9b259c2dc32029c1f718e.jpg",
     productName: "Jeans ",
+    productSlug: "jeans",
     markedPrice: "300",
     sellingPrice: "280",
     vendor: "Elegant Apparel",
@@ -306,6 +333,7 @@ export const cardData = [
     imageUrl:
       "https://i.pinimg.com/236x/97/c6/65/97c6651d485ed4f26bc4ff7e76faebd7.jpg",
     productName: "Men's Sweater",
+    productSlug: "men's_sweater",
     markedPrice: "200",
     sellingPrice: "180",
     vendor: "TechWear Inc.",
@@ -318,6 +346,7 @@ export const cardData = [
     imageUrl:
       "https://i.pinimg.com/474x/6f/18/d7/6f18d7919759b9151ed9c41ec216a204.jpg",
     productName: "Rolex Men's Watch",
+    productSlug: "rolex_men's_watch",
     markedPrice: "120",
     sellingPrice: "100",
     vendor: "FitScale",
@@ -330,6 +359,7 @@ export const cardData = [
     imageUrl:
       "https://i.pinimg.com/236x/7d/a5/08/7da508aa0ea4c14605d1065373819b25.jpg",
     productName: "Casio Men's Watch",
+    productSlug: "casio_men's_watch",
     markedPrice: "80",
     sellingPrice: "60",
     vendor: "Watch Hub",
@@ -342,6 +372,7 @@ export const cardData = [
     imageUrl:
       "https://i.pinimg.com/236x/b7/6f/b6/b76fb68e929ae8925950b7ade9e086e3.jpg",
     productName: "Rayman Singlasses",
+    productSlug: "rayman_singlasses",
     markedPrice: "600",
     sellingPrice: "500",
     vendor: "Sunglasses Hub",
@@ -354,6 +385,7 @@ export const cardData = [
     imageUrl:
       "https://i.pinimg.com/236x/1e/4d/f1/1e4df1de38d8cddf6db4a5217ed4b210.jpg",
     productName: "Avaitor Sunglasses",
+    productSlug: "avaitor_sunglasses",
     markedPrice: "150",
     sellingPrice: "120",
     vendor: "Sunglasses Home",
@@ -366,6 +398,7 @@ export const cardData = [
     imageUrl:
       "https://i.pinimg.com/236x/c4/7e/b4/c47eb4605a87a3ce1d03394b864b1e94.jpg",
     productName: "Spaghetti Carbonara",
+    productSlug: "spaghetti_carbonara",
     markedPrice: "15",
     sellingPrice: "12",
     vendor: "Italian Delights",
@@ -373,12 +406,12 @@ export const cardData = [
     category: "Lunch",
     brand: "Italian Delights",
   },
-
   {
     id: 32,
     imageUrl:
       "https://i.pinimg.com/236x/7f/5d/73/7f5d73f7d2b7e6d276b28e39c644759c.jpg",
     productName: "Papads",
+    productSlug: "papads",
     markedPrice: "15",
     sellingPrice: "12",
     vendor: "Italian Delights",
@@ -391,6 +424,7 @@ export const cardData = [
     imageUrl:
       "https://i.pinimg.com/236x/21/47/b2/2147b2d09a1cb9de3a5954add0a56b7a.jpg",
     productName: "Stick Cheese Potato",
+    productSlug: "stick_cheese_potato",
     markedPrice: "15",
     sellingPrice: "12",
     vendor: "Italian Delights",
@@ -403,6 +437,7 @@ export const cardData = [
     imageUrl:
       "https://i.pinimg.com/564x/6c/3e/b1/6c3eb124e170c6fbd96f36c1caccab23.jpg",
     productName: "Jeera Aloo",
+    productSlug: "jeera_aloo",
     markedPrice: "15",
     sellingPrice: "12",
     vendor: "Italian Delights",
@@ -415,6 +450,7 @@ export const cardData = [
     imageUrl:
       "https://i.pinimg.com/474x/12/5e/ab/125eabdad3eb03b554d886cdb1f8e849.jpg",
     productName: "Sushi Platter",
+    productSlug: "sushi_platter",
     markedPrice: "20",
     sellingPrice: "18",
     vendor: "Tokyo Sushi House",
@@ -427,6 +463,7 @@ export const cardData = [
     imageUrl:
       "https://i.pinimg.com/236x/e6/1c/ef/e61cef37dffe3af9ce48d9e119176203.jpg",
     productName: "Steak Au Poivre",
+    productSlug: "steak_au_poivre",
     markedPrice: "30",
     sellingPrice: "25",
     vendor: "French Bistro",
@@ -439,6 +476,7 @@ export const cardData = [
     imageUrl:
       "https://i.pinimg.com/236x/78/a9/4b/78a94bd138ae5c3280cbc1d1eae54d8c.jpg",
     productName: "Chicken Tikka Masala",
+    productSlug: "chicken_tikka_masala",
     markedPrice: "18",
     sellingPrice: "15",
     vendor: "Spice Route",
@@ -451,6 +489,7 @@ export const cardData = [
     imageUrl:
       "https://i.pinimg.com/236x/f5/f4/9d/f5f49dea66fcf93b932c8238b68e4f5e.jpg",
     productName: "Margherita Pizza",
+    productSlug: "margherita_pizza",
     markedPrice: "12",
     sellingPrice: "10",
     vendor: "Pizza Planet",
@@ -463,6 +502,7 @@ export const cardData = [
     imageUrl:
       "https://i.pinimg.com/474x/a7/86/0e/a7860efcbcd2491a5f5f92a57082eaf7.jpg",
     productName: "Hamburger Deluxe",
+    productSlug: "hamburger_deluxe",
     markedPrice: "8",
     sellingPrice: "6",
     vendor: "Burger Joint",
@@ -475,6 +515,7 @@ export const cardData = [
     imageUrl:
       "https://i.pinimg.com/236x/93/cf/f1/93cff1a617e36a2f35ec7104cbb1ce1e.jpg",
     productName: "Chicken Rice",
+    productSlug: "chicken_rice",
     markedPrice: "8",
     sellingPrice: "6",
     vendor: "Delicious Kitchen",
@@ -487,6 +528,7 @@ export const cardData = [
     imageUrl:
       "https://i.pinimg.com/236x/0b/5e/b4/0b5eb439a0fe2c71aa7b427d3402e1ea.jpg",
     productName: "Chicken MoMo",
+    productSlug: "chicken_momo",
     markedPrice: "8",
     sellingPrice: "6",
     vendor: "Delicious Kitchen",
@@ -499,6 +541,7 @@ export const cardData = [
     imageUrl:
       "https://i.pinimg.com/564x/c0/b5/a5/c0b5a5417f085d65169ade3bc3eb3a79.jpg",
     productName: "Crepes Soufflees",
+    productSlug: "crepes_soufflees",
     markedPrice: "8",
     sellingPrice: "6",
     vendor: "Delicious Kitchen",
@@ -511,6 +554,7 @@ export const cardData = [
     imageUrl:
       "https://i.pinimg.com/236x/ae/12/51/ae1251fe90d10cd86db6f8983d4eef1c.jpg",
     productName: "Chocolate Pastry",
+    productSlug: "chocolate_pastry",
     markedPrice: "8",
     sellingPrice: "6",
     vendor: "Bakery Point",
@@ -523,6 +567,7 @@ export const cardData = [
     imageUrl:
       "https://i.pinimg.com/236x/ae/12/51/ae1251fe90d10cd86db6f8983d4eef1c.jpg",
     productName: "Cheese Cake",
+    productSlug: "cheese_cake",
     markedPrice: "8",
     sellingPrice: "6",
     vendor: "Bakery Point",
