@@ -34,7 +34,7 @@ const ProductAccordion = ({ product }) => {
       <h2 id="accordion-flush-heading-1">
         <button
           type="button"
-          className={`flex justify-between items-center py-5 w-full font-medium text-left border-b border-gray-200 dark:border-gray-700 ${
+          className={`hidden md:flex justify-between items-center py-5 w-full font-medium text-left border-b border-gray-200 dark:border-gray-700 ${
             openSection === 1
               ? "text-gray-900 dark:text-white"
               : "text-gray-500 dark:text-gray-400"
@@ -66,7 +66,7 @@ const ProductAccordion = ({ product }) => {
         className={openSection === 1 ? "" : "hidden"}
         aria-labelledby="accordion-flush-heading-1"
       >
-        <div className="py-2 border-b border-gray-200 dark:border-gray-700">
+        <div className="hidden md:block py-2 border-b border-gray-200 dark:border-gray-700">
           <div className="px-2">
             <div className="">
               <div className="flex justify-between items-start mb-2">
@@ -84,15 +84,20 @@ const ProductAccordion = ({ product }) => {
                       Milan Chowk, Bhairahawa
                     </p>
                   </div>
-                  <div className="flex gap-2">
+                  {/* <div className="flex gap-2">
                     <MdOutlinePhone className="text-gray-600" />
                     <p className="text-sm font-medium text-gray-400">
                       9849334422
                     </p>
-                  </div>
+                  </div> */}
                 </div>
-                <button className="bg-gray-800 h-[6vh] text-white px-2 py rounded-md cursor-pointer text-sm ">
-                  Send Message
+                <button className="bg-gray-800 dark:bg-gray-200 h-[6vh] text-white dark:text-gray-800 px-2  rounded-md cursor-pointer text-sm items-center ">
+                  <div className="flex gap-2 items-center">
+                    <MdOutlinePhone className="text-gray-200 dark:text-gray-800" />
+                    <p className="text-sm font-medium text-gray-200 dark:text-gray-800">
+                      9849334422
+                    </p>
+                  </div>
                 </button>
               </div>
             </div>
@@ -201,8 +206,8 @@ const ProductAccordion = ({ product }) => {
         className={openSection === 3 ? "" : "hidden"}
         aria-labelledby="accordion-flush-heading-3"
       >
-        <div className="py-2 border-b border-gray-200 dark:border-gray-700">
-          <div className="h-[20vh] overflow-y-scroll bg-white px-2 custom-hr-scroll">
+        <div className="py-2 bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700">
+          <div className="h-[20vh] overflow-y-scroll bg-white dark:bg-gray-800 px-2 custom-hr-scroll">
             <div className="border-b border-gray-200">
               <div className="flex justify-between items-start mb-2">
                 <span className="text-sm font-medium text-gray-400">

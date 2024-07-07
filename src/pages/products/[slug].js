@@ -6,6 +6,7 @@ import ProductAccordion from "../../app/components/ProductAccordion";
 import Layout from "../layout";
 import { useRouter } from "next/router";
 import { cardData } from "../../data.js";
+import { MdOutlineAddHome } from "react-icons/md";
 
 const ProductDetails = () => {
   const router = useRouter();
@@ -37,14 +38,32 @@ const ProductDetails = () => {
         <div className="bg-white dark:bg-gray-800 py-2">
           <div className="flex items-center flex-wrap md:px-4 px-2 ">
             {/* <div className=" "> */}
-            <div className=" w-full flex flex-col lg:flex-row md:px-10 justify-between">
+            <div className=" w-full flex flex-col lg:flex-row md:px-10 gap-2 md:justify-between">
               <div className="w-full md:w-auto mx-auto flex-[1.5] max-w-[500px] lg:w-auto lg:max-h-[800px]  lg:mx-auto justify-center items-center">
                 <ProductDetailsCarousel product={product} />
               </div>
 
               <div className="flex-[1] justify-end max-w-[700px]">
+                <div className="md:hidden flex justify-between items-start border-b border-t border-gray-200 dark:border-gray-700 py-2">
+                  <div className="text-sm font-medium text-gray-400">
+                    <div className="flex gap-1 items-center">
+                      <MdOutlineAddHome className="text-gray-600 dark:text-gray-200" />
+                      <p className="text-sm font-medium text-gray-400">
+                        {product.vendor}
+                      </p>
+                    </div>
+                    <div className="flex gap-1 items-center">
+                      {renderStars()}
+                    </div>
+                  </div>
+                  <div className="flex gap-1 items-center">
+                    <button className="bg-gray-800 h-[4vh] dark:bg-gray-200 dark:text-gray-800 text-white px-2 py rounded-md cursor-pointer text-sm ">
+                      Follow
+                    </button>
+                  </div>
+                </div>
                 {/* PRODUCT TITLE */}
-                <div className="text-[24px] text-gray-800  mb-2 leading-tight">
+                <div className="text-[24px] text-gray-800 dark:text-gray-200 mt-2 mb-2 leading-tight">
                   {product.productName}
                 </div>
 
@@ -59,7 +78,7 @@ const ProductDetails = () => {
                 {/* PRODUCT PRICE */}
                 <div className="flex items-center justify-between">
                   <div className="flex gap-2 items-center">
-                    <span className="text-2xl font-bold text-gray-800 mr-2">
+                    <span className="text-2xl font-bold text-gray-800 dark:text-gray-800 mr-2">
                       Rs. {product.sellingPrice}
                     </span>
                     <span className="text-xs text-slate-400 line-through mt-2">
