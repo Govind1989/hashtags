@@ -69,11 +69,13 @@ const ProductAccordion = ({ product }) => {
         <div className="hidden md:block py-2 border-b border-gray-200 dark:border-gray-700">
           <div className="px-2">
             <div className="">
-              <div className="flex justify-between items-start mb-2">
-                <span className="text-sm font-medium text-gray-400">
+              <div className="flex justify-between items-start mb-1">
+                <span className="text-md font-medium text-gray-400">
                   {product.vendor}
                 </span>
-                <div className="flex gap-1 items-center">{renderStars()}</div>
+                <button className="bg-gray-800 h-[4vh] dark:bg-gray-200 dark:text-gray-800 text-white px-2 py rounded-md cursor-pointer text-sm ">
+                  Follow
+                </button>
               </div>
 
               <div className="flex justify-between">
@@ -91,14 +93,9 @@ const ProductAccordion = ({ product }) => {
                     </p>
                   </div> */}
                 </div>
-                <button className="bg-gray-800 dark:bg-gray-200 h-[6vh] text-white dark:text-gray-800 px-2  rounded-md cursor-pointer text-sm items-center ">
-                  <div className="flex gap-2 items-center">
-                    <MdOutlinePhone className="text-gray-200 dark:text-gray-800" />
-                    <p className="text-sm font-medium text-gray-200 dark:text-gray-800">
-                      9849334422
-                    </p>
-                  </div>
-                </button>
+                {/* <button className="bg-gray-800 dark:bg-gray-200 h-[6vh] text-white dark:text-gray-800 px-2  rounded-md cursor-pointer text-sm items-center "> */}
+                <div className="flex gap-1 items-center">{renderStars()}</div>
+                {/* </button> */}
               </div>
             </div>
           </div>

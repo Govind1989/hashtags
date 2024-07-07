@@ -84,7 +84,7 @@ const SideBarMobile = ({ pathname }) => {
           >
             <MdOutlineMessage className="w-6 h-6 sm:w-8 sm:h-8 dark:text-gray-200" />
             <span className="absolute inset-0 flex items-center justify-center -mt-4 -mr-7 bg-gray-600 text-white rounded-full w-6 h-6 sm:w-8 sm:h-8">
-              <span className="text-xs sm:text-sm">3</span>
+              <span className="text-xs sm:text-sm">0</span>
             </span>
           </button>
         )}

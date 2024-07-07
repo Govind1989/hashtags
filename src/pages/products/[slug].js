@@ -107,12 +107,14 @@ const ProductDetails = () => {
                 </div>
 
                 {/* ADD TO CART BUTTON START */}
-                <button
-                  className="w-full py-4 rounded-full bg-black text-white text-lg font-medium transition-transform active:scale-95 mb-4 hover:opacity-75"
-                  onClick={() => alert("Added to cart")} // Add a function or logic for the onClick event
-                >
-                  Add to Cart
-                </button>
+                <div className="">
+                  <button
+                    className="w-full md:max-w-60 py-4 rounded-full bg-black text-white text-lg font-medium transition-transform active:scale-95 mb-4 hover:opacity-75"
+                    onClick={() => alert("Added to cart")} // Add a function or logic for the onClick event
+                  >
+                    Add to Cart
+                  </button>
+                </div>
                 {/* ADD TO CART BUTTON END */}
 
                 <ProductAccordion product={product} />

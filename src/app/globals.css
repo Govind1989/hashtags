@@ -64,6 +64,8 @@ p {
 
 .productCarousel.carousel-root .carousel {
   width: auto;
+  margin-top:auto;
+  margin-bottom:auto;
 }
 
 .productCarousel.carousel-root .carousel.carousel-slider {
@@ -75,6 +77,7 @@ p {
 }
 
 .productCarousel.carousel-root .carousel .thumbs-wrapper {
+  
   margin: 0;
 }
 

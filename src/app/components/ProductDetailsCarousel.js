@@ -47,6 +47,20 @@ const ProductDetailsCarousel = ({ product }) => {
             alt="Sample"
           />
         </div>
+        <div className="flex items-center h-[500px]">
+          <img
+            className="object-contain h-full"
+            src="https://images.unsplash.com/photo-1449247709967-d4461a6a6103?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&h=400&q=80"
+            alt="Sample"
+          />
+        </div>
+        <div className="flex items-center h-[500px]">
+          <img
+            className="object-contain h-full"
+            src="https://images.unsplash.com/photo-1449247709967-d4461a6a6103?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&h=400&q=80"
+            alt="Sample"
+          />
+        </div>
       </Carousel>
     </div>
   );
