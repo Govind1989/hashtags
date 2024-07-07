@@ -4,7 +4,7 @@ export const cardData = [
   {
     id: 1,
     imageUrl:
-      "https://i.pinimg.com/236x/7b/a2/61/7ba261004d2756510b2ceb30ed20f2c0.jpg",
+      "https://i.pinimg.com/564x/76/e6/09/76e609741463d711e53abfc3d73fc1ed.jpg",
     videoUrl:
       "https://videos.pexels.com/video-files/6467633/6467633-sd_960_506_25fps.mp4",
     productName: "Elegant Sofa",

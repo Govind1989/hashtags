@@ -37,12 +37,12 @@ const ProductDetails = () => {
         <div className="bg-white dark:bg-gray-800 py-2">
           <div className="flex items-center flex-wrap md:px-4 px-2 ">
             {/* <div className=" "> */}
-            <div className=" w-full flex flex-col lg:flex-row md:px-10 gap-[20px] lg:gap-[30px]">
-              <div className="w-full md:w-auto flex-[1.5] max-w-[500px] lg:max-w-full mx-auto lg:mx-0">
+            <div className=" w-full flex flex-col lg:flex-row md:px-10 justify-between">
+              <div className="w-full md:w-auto mx-auto flex-[1.5] max-w-[500px] lg:w-auto lg:max-h-[800px]  lg:mx-auto justify-center items-center">
                 <ProductDetailsCarousel product={product} />
               </div>
 
-              <div className="flex-[1]">
+              <div className="flex-[1] justify-end max-w-[700px]">
                 {/* PRODUCT TITLE */}
                 <div className="text-[24px] text-gray-800  mb-2 leading-tight">
                   {product.productName}
