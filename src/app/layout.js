@@ -11,12 +11,7 @@ import SideBarMobile from "./components/SideBarMobile";
 
 const inter = Inter({ subsets: ["latin"] });
 
-const Layout = ({ children }) => {
-  const [isSideBarOpen, setIsSideBarOpen] = useState(false);
-
-  const toggleSideBar = () => {
-    setIsSideBarOpen(!isSideBarOpen);
-  };
+const Layout = ({ children, isMessage = false }) => {
   return (
     <html lang="en">
       <head>
@@ -29,10 +24,10 @@ const Layout = ({ children }) => {
 
         <main className="z-10 px-2 bg-white dark:bg-gray-800">{children}</main>
         <aside>
-          <SideBarDesktop />
+          <SideBarDesktop isMessage={isMessage} />
         </aside>
         <div className="block md:hidden">
-          <SideBarMobile />
+          <SideBarMobile isMessage={isMessage} />
         </div>
 
         <Footer page="Home" />

@@ -2,17 +2,17 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import ReelsCarousel from "./ReelsCarousel.js";
-import { cardData, categoryData } from "../../data.js";
 
-import Masonry from "./Masonry.js";
+import { cardData, categoryData } from "../../../data.js";
 
-import CountDownTimer from "./CountDownTimer.js";
-import { MdAlarmOn, MdOutlineDiscount } from "react-icons/md";
-import { BsBookmarkPlus, BsBookmarkStar, BsPlusSquare } from "react-icons/bs";
+import Masonry from "../Masonry.js";
+
+import CountDownTimer from "../CountDownTimer.js";
+import { MdAlarmOn } from "react-icons/md";
+import { BsPlusSquare } from "react-icons/bs";
 import { FaSort } from "react-icons/fa";
-import Layout from "../../../src/pages/layout.js";
-const CategoryPage = ({ slug }) => {
+import Layout from "../../../pages/layout.js";
+const ProductsVendorPage = ({ slug }) => {
   const [item, setItem] = useState(0);
 
   const [active, setActive] = useState(0);
@@ -147,79 +147,8 @@ const CategoryPage = ({ slug }) => {
   // const categories = [...new Set(cardData.map((item) => item.category))];
   return (
     <>
-      <Layout isMessage={false}>
+      <Layout>
         <div className="bg-white dark:bg-gray-800 flex min-h-screen  flex-col p-4  justify-between ">
-          {/* Reels */}
-          <div className="grid grid-cols-6 gap-2">
-            <div className="lg:col-span-2 col-span-6 py-0 md:order-first ">
-              <div className="md:p-8  rounded-xl">
-                <div className="">
-                  <h1 className="text-sm font-bold text-gray-400 ">
-                    # {categoryInfo.title}
-                  </h1>
-                  <p className="text-gray-700 dark:text-gray-200">
-                    {categoryInfo.description}
-                  </p>
-                </div>
-
-                <div className="hidden xl:flex  md:flex-wrap overflow-x-auto md:justify-center custom-hr-scroll">
-                  <div className="w-full md:w-1/2 p-2 flex-shrink items-center justify-center whitespace-nowrap">
-                    <div className="w-full capitalize py-2 px-2 justify-center rounded-md text-sm font-medium whitespace-nowrap bg-white dark:bg-gray-700 shadow-md text-gray-800  transition-transform transform hover:scale-105 text-center flex flex-col items-center">
-                      <label className="group flex flex-col justify-center  items-center text-heading text-sm cursor-pointer">
-                        <span className="ms-2  -mt-0.5 text-gray-600 dark:text-gray-200">
-                          {categoryInfo.product_tags}+
-                        </span>
-                        <span className="ms-2  -mt-0.5 text-xs text-gray-400 dark:text-gray-200">
-                          Product Tags
-                        </span>
-                      </label>
-                    </div>
-                  </div>
-                  <div className="w-full md:w-1/2 p-2 flex-shrink items-center justify-center">
-                    <div className="w-full capitalize py-2 px-2 justify-center rounded-md text-sm font-medium whitespace-nowrap bg-white dark:bg-gray-700 shadow-md text-gray-800 transition-transform transform hover:scale-105 text-center flex flex-col items-center">
-                      <label className="group flex flex-col justify-center  items-center text-heading text-sm cursor-pointer">
-                        <span className="ms-2 text-sm  -mt-0.5 text-gray-600 dark:text-gray-200">
-                          {categoryInfo.brands}+
-                        </span>
-                        <span className="ms-2  -mt-0.5 text-xs text-gray-400 dark:text-gray-200">
-                          Brands
-                        </span>
-                      </label>
-                    </div>
-                  </div>
-                  <div className="w-full md:w-1/2 p-2 flex-shrink items-center justify-center">
-                    <div className="w-full capitalize py-2 px-2 justify-center rounded-md text-sm font-medium whitespace-nowrap bg-white dark:bg-gray-700 shadow-md text-gray-800 transition-transform transform hover:scale-105 text-center flex flex-col items-center">
-                      <label className="group flex flex-col whitespace-nowrap items-center text-heading text-sm cursor-pointer">
-                        <span className="ms-2 text-sm  -mt-0.5 text-gray-600 dark:text-gray-200">
-                          {categoryInfo.vendors}+
-                        </span>
-                        <span className="ms-2  -mt-0.5 text-xs text-gray-400 dark:text-gray-200">
-                          Vendors
-                        </span>
-                      </label>
-                    </div>
-                  </div>
-                  <div className="w-full md:w-1/2 p-2 flex-shrink items-center justify-center">
-                    <div className="w-full capitalize py-2 px-2 justify-center rounded-md text-sm font-medium whitespace-nowrap bg-white dark:bg-gray-700 shadow-md text-gray-800 transition-transform transform hover:scale-105 text-center flex flex-col items-center">
-                      <label className="group flex flex-col justify-center  items-center text-heading text-sm cursor-pointer">
-                        <span className="ms-2 text-sm  -mt-0.5 text-gray-600 dark:text-gray-200">
-                          {categoryInfo.campaigns}+
-                        </span>
-                        <span className="ms-2  -mt-0.5 text-xs text-gray-400 dark:text-gray-200">
-                          Campaigns
-                        </span>
-                      </label>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <hr className="w-full h-1 mt-2 md:mt-4 text-gray-400 block md:hidden" />
-            </div>
-            <div className="lg:col-span-4 col-span-6 md:order-last">
-              <ReelsCarousel />
-            </div>
-          </div>
-
           <div className="grid grid-cols-12 ml-0 md:ml-2 xl:ml-8 lg:ml-12 items-center">
             <div className="lg:col-span-1 md:col-span-2 col-span-3 py-0 justify-center md:order-first mt-1   ">
               <button
@@ -412,4 +341,4 @@ const CategoryPage = ({ slug }) => {
   );
 };
 
-export default CategoryPage;
+export default ProductsVendorPage;

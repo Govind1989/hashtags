@@ -10,7 +10,8 @@ import CartItems from "./CartItems";
 import { FaCoins } from "react-icons/fa";
 import Cart from "./Cart";
 
-const SideBarDesktop = ({ pathname }) => {
+const SideBarDesktop = ({ isMessage }) => {
+  // console.log(isMessage);
   const [isCart, setIsCart] = useState(false);
 
   const [isCalendar, setIsCalendar] = useState(false);
@@ -55,7 +56,7 @@ const SideBarDesktop = ({ pathname }) => {
         </button>
 
         {/* Conditionally render the message button */}
-        {pathname.startsWith("/products/") && (
+        {isMessage === true && (
           <button
             className=" bg-white bg-opacity-20 dark:bg-gray-800 dark:bg-opacity-20 backdrop-blur-sm py-2 px-2 shadow-lg md:shadow-none shadow-gray-600   relative flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 text-gray-800 rounded-md border-2 border-transparent hover:text-gray-400 focus:outline-none focus:text-gray-500 transition duration-150 ease-in-out"
             aria-label="Cart"

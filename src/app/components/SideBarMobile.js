@@ -12,7 +12,7 @@ import {
 import CartItems from "./CartItems";
 import Cart from "./Cart";
 
-const SideBarMobile = ({ pathname }) => {
+const SideBarMobile = ({ isMessage }) => {
   const [isSideBarOpen, setIsSideBarOpen] = useState(false);
   const [isCart, setIsCart] = useState(false);
   const [isCalendar, setIsCalendar] = useState(false);
@@ -74,7 +74,7 @@ const SideBarMobile = ({ pathname }) => {
           </span>
         </button>
         {/* Conditionally render the message button */}
-        {pathname.startsWith("/products/") && (
+        {isMessage === true && (
           <button
             className={`${
               isSideBarOpen ? "block" : "hidden"

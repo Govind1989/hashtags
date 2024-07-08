@@ -3,6 +3,8 @@ import { useRouter } from "next/router";
 import CategoryPage from "../app/components/CategoryPage";
 
 import NotFound from "../app/components/NotFound";
+import { cardData } from "../data.js";
+import VendorPage from "../app/components/VendorPage.js";
 
 const Index = () => {
   const router = useRouter();
@@ -24,12 +26,21 @@ const Index = () => {
     "holidays",
     "appointments",
   ]; // Add more as needed
+  if (slug) {
+    const vendorSlug = cardData.find((item) => item.vendorSlug === slug);
 
-  // Check if the slug is one of the valid categories
-  if (validCategories.includes(slug)) {
-    return <CategoryPage slug={slug} />;
-  } else {
-    return <NotFound slug={slug} />;
+    const vendorCategory = vendorSlug
+      ? vendorSlug.mainCategory.toLowerCase()
+      : null;
+
+    // Check if the slug matches a valid category or vendorSlug
+    if (validCategories.includes(slug)) {
+      return <CategoryPage slug={slug} />;
+    } else if (vendorSlug) {
+      return <VendorPage slug={slug} vendorCategory={vendorCategory} />;
+    } else {
+      return <NotFound slug={slug} />;
+    }
   }
 };
 

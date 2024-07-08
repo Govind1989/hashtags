@@ -34,7 +34,7 @@ const ProductDetails = () => {
   };
   return (
     <>
-      <Layout>
+      <Layout isMessage={true}>
         <div className="bg-white dark:bg-gray-800 py-2">
           <div className="flex items-center flex-wrap md:px-4 px-2 ">
             {/* <div className=" "> */}
