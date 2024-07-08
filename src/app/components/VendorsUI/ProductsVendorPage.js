@@ -21,15 +21,9 @@ const ProductsVendorPage = ({ slug }) => {
   const [isCollections, setIsCollections] = useState(false);
   const [isFlashSale, setIsFlashSale] = useState(false);
 
-  const formattedSlug =
-    slug.charAt(0).toUpperCase() + slug.slice(1).toLowerCase();
-  const categoryInfo = categoryData[formattedSlug];
-
-  // Filter cardData based on the mainCategory matching the uppercase version of slug
-  const filteredData = cardData.filter(
-    (item) => item.mainCategory.toLowerCase() === slug.toLowerCase()
-  );
-
+  const vendor = cardData.find((item) => item.vendorSlug === slug).vendor;
+  const filteredData = cardData.filter((item) => item.vendorSlug === slug);
+  console.log(filteredData);
   const categories = [...new Set(filteredData.map((item) => item.category))];
   const brands = [...new Set(filteredData.map((item) => item.brand))];
   // const collections = [...new Set(cardData.map((item) => item.collection))];
@@ -67,33 +61,16 @@ const ProductsVendorPage = ({ slug }) => {
         ...brands.map((item) => ({ type: "brands", item })),
       ];
     }
-    // if (selectedFilters.includes("collections")) {
-    //   filteredData = [...filteredData, ...collections.map(item => ({ type: 'collections', item }))];
-    // }
+
     if (selectedFilters.includes("vendors")) {
       filteredData = [
         ...filteredData,
         ...vendors.map((item) => ({ type: "vendors", item })),
       ];
     }
-    // Shuffle the filtered data array
-    // const shuffledData = shuffleArray(filteredData);
-    // return shuffledData;
 
     return filteredData;
   };
-  // Function to shuffle array items
-  // const shuffleArray = (array) => {
-  //   const shuffledArray = [...array];
-  //   for (let i = shuffledArray.length - 1; i > 0; i--) {
-  //     const j = Math.floor(Math.random() * (i + 1));
-  //     [shuffledArray[i], shuffledArray[j]] = [
-  //       shuffledArray[j],
-  //       shuffledArray[i],
-  //     ];
-  //   }
-  //   return shuffledArray;
-  // };
 
   const navMenu = getFilteredData();
 
@@ -135,7 +112,6 @@ const ProductsVendorPage = ({ slug }) => {
     mobiles: "Weekly",
   };
   const dealsTitleMap = {
-    foods: "Happy Hours",
     default: "Flash Deal",
   };
 
@@ -143,11 +119,10 @@ const ProductsVendorPage = ({ slug }) => {
   const countdownDuration = durationMap[slug.toLowerCase()] || "Daily";
   const countdownTitle =
     dealsTitleMap[slug.toLowerCase()] || dealsTitleMap.default;
-  // Extracting unique categories from cardData
-  // const categories = [...new Set(cardData.map((item) => item.category))];
+
   return (
     <>
-      <Layout>
+      <Layout isMessage={true} slug={vendor}>
         <div className="bg-white dark:bg-gray-800 flex min-h-screen  flex-col p-4  justify-between ">
           <div className="grid grid-cols-12 ml-0 md:ml-2 xl:ml-8 lg:ml-12 items-center">
             <div className="lg:col-span-1 md:col-span-2 col-span-3 py-0 justify-center md:order-first mt-1   ">
@@ -334,7 +309,7 @@ const ProductsVendorPage = ({ slug }) => {
           </div>
           {/* Masonary */}
           {/* Pass cardData (products) to Masonry component */}
-          <Masonry cardData={filteredData} slug={slug} />
+          <Masonry cardData={filteredData} />
         </div>
       </Layout>
     </>

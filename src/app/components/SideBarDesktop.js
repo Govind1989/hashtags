@@ -15,10 +15,6 @@ const SideBarDesktop = ({ isMessage }) => {
   const [isCart, setIsCart] = useState(false);
 
   const [isCalendar, setIsCalendar] = useState(false);
-  const [openSection, setOpenSection] = useState(0);
-  const toggleSection = (section) => {
-    setOpenSection(openSection === section ? null : section);
-  };
 
   const toggleCartMenu = () => {
     setIsCart(!isCart);

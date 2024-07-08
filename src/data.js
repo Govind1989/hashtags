@@ -617,6 +617,150 @@ export const cardData = [
     category: "Cakes & Pastry",
     brand: "Bakery Point",
   },
+  {
+    id: 45,
+    imageUrl:
+      "https://i.pinimg.com/236x/7d/92/97/7d929794f5f7a08d2d2b95276b707529.jpg",
+    videoUrl:
+      "https://videos.pexels.com/video-files/6467633/6467633-sd_960_506_25fps.mp4",
+    productName: "Elegant Sofa",
+    productSlug: "elegant_sofa",
+    markedPrice: "1400",
+    sellingPrice: "1000",
+    vendor: "Urban Furnishings",
+    vendorSlug: "urban_furnishings",
+    mainCategory: "Furnitures",
+    category: "Home Furnitures",
+    brand: "Elegance",
+  },
+  {
+    id: 46,
+    imageUrl:
+      "https://i.pinimg.com/236x/55/4c/fe/554cfe08070dfb7ca9c398b92841d917.jpg",
+    videoUrl:
+      "https://videos.pexels.com/video-files/6467633/6467633-sd_960_506_25fps.mp4",
+    productName: "Table Set",
+    productSlug: "table_set",
+    markedPrice: "1400",
+    sellingPrice: "1000",
+    vendor: "Urban Furnishings",
+    vendorSlug: "urban_furnishings",
+    mainCategory: "Furnitures",
+    category: "Office Furnitures",
+    brand: "Elegance",
+  },
+  {
+    id: 47,
+    imageUrl:
+      "https://i.pinimg.com/236x/49/d0/3b/49d03befc6c41f2ec0aebd0d30d7b525.jpg",
+    videoUrl:
+      "https://videos.pexels.com/video-files/6467633/6467633-sd_960_506_25fps.mp4",
+    productName: "Team Table Set",
+    productSlug: "team_table_set",
+    markedPrice: "1400",
+    sellingPrice: "1000",
+    vendor: "Urban Furnishings",
+    vendorSlug: "urban_furnishings",
+    mainCategory: "Furnitures",
+    category: "Office Furnitures",
+    brand: "Elegance",
+  },
+  {
+    id: 48,
+    imageUrl:
+      "https://i.pinimg.com/236x/f2/82/dc/f282dc5eb8efc39e86254caf15498330.jpg",
+    videoUrl:
+      "https://videos.pexels.com/video-files/6467633/6467633-sd_960_506_25fps.mp4",
+    productName: "Single Corporate Chair",
+    productSlug: "single_corporate_chair",
+    markedPrice: "1400",
+    sellingPrice: "1000",
+    vendor: "Urban Furnishings",
+    vendorSlug: "urban_furnishings",
+    mainCategory: "Furnitures",
+    category: "Office Chairs",
+    brand: "Elegance",
+  },
+  {
+    id: 49,
+    imageUrl:
+      "https://i.pinimg.com/236x/37/1b/53/371b536c969ccdc2aac39966326db332.jpg",
+    videoUrl:
+      "https://videos.pexels.com/video-files/6467633/6467633-sd_960_506_25fps.mp4",
+    productName: "Single Bamboo Chair",
+    productSlug: "single_bamboo_chair",
+    markedPrice: "1400",
+    sellingPrice: "1000",
+    vendor: "Urban Furnishings",
+    vendorSlug: "urban_furnishings",
+    mainCategory: "Furnitures",
+    category: "Chairs",
+    brand: "Elegance",
+  },
+  {
+    id: 50,
+    imageUrl:
+      "https://i.pinimg.com/236x/7c/d0/b3/7cd0b3450ff756506e29f02c6d37e606.jpg",
+    videoUrl:
+      "https://videos.pexels.com/video-files/6467633/6467633-sd_960_506_25fps.mp4",
+    productName: "Single Bamboo Table",
+    productSlug: "single_bamboo_table",
+    markedPrice: "1400",
+    sellingPrice: "1000",
+    vendor: "Urban Furnishings",
+    vendorSlug: "urban_furnishings",
+    mainCategory: "Furnitures",
+    category: "Tables",
+    brand: "Elegance",
+  },
+  {
+    id: 51,
+    imageUrl:
+      "https://i.pinimg.com/236x/fb/eb/3f/fbeb3f93bd1b260d4054107ea8de2b22.jpg",
+    videoUrl:
+      "https://videos.pexels.com/video-files/6467633/6467633-sd_960_506_25fps.mp4",
+    productName: "TV Cabinet",
+    productSlug: "tv_cabinet",
+    markedPrice: "1400",
+    sellingPrice: "1000",
+    vendor: "Urban Furnishings",
+    vendorSlug: "urban_furnishings",
+    mainCategory: "Furnitures",
+    category: "Design Blocks",
+    brand: "Elegance",
+  },
+  {
+    id: 52,
+    imageUrl:
+      "https://i.pinimg.com/474x/7e/ce/8b/7ece8b5a7e98189089f570518fe1f139.jpg",
+    videoUrl:
+      "https://videos.pexels.com/video-files/6467633/6467633-sd_960_506_25fps.mp4",
+    productName: "Bedroom Wooden Cabinet",
+    productSlug: "bedroom_Wooden_cabinet",
+    markedPrice: "1400",
+    sellingPrice: "1000",
+    vendor: "Urban Furnishings",
+    vendorSlug: "urban_furnishings",
+    mainCategory: "Furnitures",
+    category: "Design Blocks",
+    brand: "Elegance",
+  },
+  {
+    id: 53,
+    imageUrl:
+      "https://i.pinimg.com/236x/74/35/63/74356319261fc3f2e8944acdafaccf35.jpg",
+    videoUrl:
+      "https://videos.pexels.com/video-files/6467633/6467633-sd_960_506_25fps.mp4",
+    productName: "YingYang Books Shelf",
+    productSlug: "yingyang_books_shelf",
+    markedPrice: "1400",
+    sellingPrice: "1000",
+    vendor: "Urban Furnishings",
+    vendorSlug: "urban_furnishings",
+    mainCategory: "Furnitures",
+    category: "Design Blocks",
+    brand: "Elegance",
+  },
 ];
 
 // categoryData

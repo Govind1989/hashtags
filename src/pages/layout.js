@@ -11,10 +11,10 @@ import SideBarMobile from "../app/components/SideBarMobile";
 
 const inter = Inter({ subsets: ["latin"] });
 
-const Layout = ({ children, isMessage = false }) => {
+const Layout = ({ children, isMessage = false, slug }) => {
   return (
     <div className={inter.className}>
-      <NavBar page="Home" />
+      <NavBar page="Home" slug={slug} />
 
       <main className="z-10 px-2 bg-white dark:bg-gray-800">{children}</main>
       <aside>

@@ -31,7 +31,7 @@ const Card = ({
   };
 
   return (
-    <div className="inline-block w-full">
+    <div className="inline-block break-inside-avoid w-full">
       <div className="relative  min-h-50">
         {videoUrl ? (
           <video

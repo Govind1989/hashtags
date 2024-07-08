@@ -13,7 +13,7 @@ import Link from "next/link";
 import Category from "./Category";
 import ThemeToggle from "./ThemeToggle";
 
-const NavBar = ({ shopName }) => {
+const NavBar = ({ slug }) => {
   const [isLanguage, setIsLanguage] = useState(false);
   const [isMegaMenu, setIsMegaMenu] = useState(false);
   const [isCart, setIsCart] = useState(false);
@@ -82,8 +82,8 @@ const NavBar = ({ shopName }) => {
                 href="/"
               >
                 <div className="mt-0 text-lg sm:text-xl text-gray-800 dark:text-gray-200">
-                  {shopName ? (
-                    shopName
+                  {slug ? (
+                    slug
                   ) : (
                     <div className="flex">
                       <span>#</span>
