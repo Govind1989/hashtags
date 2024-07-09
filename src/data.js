@@ -847,3 +847,53 @@ export const categoryData = {
     campaigns: 40,
   },
 };
+
+export const responsive = {
+  desktop: {
+    breakpoint: { max: 3000, min: 1024 },
+    items: 4,
+  },
+  tablet: {
+    breakpoint: { max: 1023, min: 464 },
+    items: 2,
+  },
+  mobile: {
+    breakpoint: { max: 767, min: 0 },
+    items: 1,
+  },
+};
+
+export const CampaignCardsContent = [
+  {
+    title: "Loyalty Discounts",
+    description: "Get discount for every purchase with us.",
+    earning: "5% ",
+  },
+
+  {
+    title: "Big Buy Discount",
+    description: "Enjoy the best deals of the season. ",
+    earning: "10% ",
+  },
+
+  {
+    title: "Clearance Sale",
+    description: "Yes we are clearing our stock. ",
+    earning: "20% - 60%",
+  },
+  {
+    title: "Clearance Sale",
+    description: "Yes we are clearing our stock. ",
+    earning: "20% - 60%",
+  },
+  {
+    title: "Big Buy Discount",
+    description: "Enjoy the best deals of the season. ",
+    earning: "10% ",
+  },
+  {
+    title: "Loyalty Discounts",
+    description: "Get discount for every purchase with us.",
+    earning: "5% ",
+  },
+];

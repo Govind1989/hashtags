@@ -11,15 +11,18 @@ import {
 } from "react-icons/md";
 import CartItems from "./CartItems";
 import Cart from "./Cart";
+import Calendar from "./Calendar";
+import Message from "./Message";
 
 const SideBarMobile = ({ isMessage }) => {
   const [isSideBarOpen, setIsSideBarOpen] = useState(false);
   const [isCart, setIsCart] = useState(false);
   const [isCalendar, setIsCalendar] = useState(false);
-  const [openSection, setOpenSection] = useState(0);
-  const toggleSection = (section) => {
-    setOpenSection(openSection === section ? null : section);
-  };
+  const [isChat, setIsChat] = useState(false);
+  // const [openSection, setOpenSection] = useState(0);
+  // const toggleSection = (section) => {
+  //   setOpenSection(openSection === section ? null : section);
+  // };
 
   const toggleCartMenu = () => {
     setIsCart(!isCart);
@@ -27,11 +30,14 @@ const SideBarMobile = ({ isMessage }) => {
   const toggleCalendarMenu = () => {
     setIsCalendar(!isCalendar);
   };
+  const toggleChatMenu = () => {
+    setIsChat(!isChat);
+  };
 
   const toggleSideBar = () => {
-    if (!isCart) {
-      setIsSideBarOpen(!isSideBarOpen);
-    }
+    // if (!isCart) {
+    setIsSideBarOpen(!isSideBarOpen);
+    // }
   };
   return (
     <div>
@@ -80,7 +86,7 @@ const SideBarMobile = ({ isMessage }) => {
               isSideBarOpen ? "block" : "hidden"
             } bg-white bg-opacity-20 dark:bg-gray-800 dark:bg-opacity-20 backdrop-blur-sm py-2 px-2 shadow-lg md:shadow-none shadow-gray-600   relative flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 text-gray-800 rounded-md border-2 border-transparent hover:text-gray-400 focus:outline-none focus:text-gray-500 transition duration-150 ease-in-out`}
             aria-label="Cart"
-            onClick={toggleCartMenu}
+            onClick={toggleChatMenu}
           >
             <MdOutlineMessage className="w-6 h-6 sm:w-8 sm:h-8 dark:text-gray-200" />
             <span className="absolute inset-0 flex items-center justify-center -mt-4 -mr-7 bg-gray-600 text-white rounded-full w-6 h-6 sm:w-8 sm:h-8">
@@ -90,6 +96,9 @@ const SideBarMobile = ({ isMessage }) => {
         )}
       </div>
       <Cart isCart={isCart} />
+      <Calendar isCalendar={isCalendar} />
+      <Message isChat={isChat} />
+      {/* <Calendar isCalendar={isCalendar} /> */}
     </div>
   );
 };

@@ -123,12 +123,18 @@ const ProductsVendorPage = ({ slug }) => {
   return (
     <>
       <Layout isMessage={true} slug={vendor}>
-        <div className="bg-white dark:bg-gray-800 flex min-h-screen  flex-col p-4  justify-between ">
-          <div className="grid grid-cols-12 ml-0 md:ml-2 xl:ml-8 lg:ml-12 items-center">
-            <div className="lg:col-span-1 md:col-span-2 col-span-3 py-0 justify-center md:order-first mt-1   ">
+        <div className="bg-white dark:bg-gray-800 flex min-h-screen  flex-col px-2  justify-between ">
+          <div className="flex flex-row gap-0 w-full mt-2 md:px-4 items-center">
+            <div
+              className={`md:justify-center justify-start px-2 py-2 border-r-2 border-[#eae2b4] rounded-tl-xl rounded-bl-xl ${
+                isFilter
+                  ? "bg-gray-500 dark:bg-gray-500"
+                  : "bg-white dark:bg-gray-700"
+              } `}
+            >
               <button
                 onClick={toggleFilter}
-                className="flex flex-shrink-0 gap-2 px-6 py-4 shadow-lg bg-white dark:bg-gray-700 rounded-md items-center justify-center relative group"
+                className="flex flex-shrink-0 gap-2 px-2  rounded-md items-center mt-2 justify-center relative group "
               >
                 <span className="text-gray-800 dark:text-gray-200 text-sm hidden md:block ">
                   Filter
@@ -234,7 +240,7 @@ const ProductsVendorPage = ({ slug }) => {
               </button>
             </div>
 
-            <div className="lg:col-span-11 md:col-span-10 col-span-9 py-0 items-center ">
+            <div className="overflow-x-scroll flex-container">
               {!isCollections && !isFlashSale && (
                 <ul
                   className={`w-full flex flex-row md:justify-start justify-start items-center text-[#005761] dark:text-white overflow-hidden hover:overflow-x-scroll whitespace-nowrap flex-container`}

@@ -4,14 +4,10 @@ import React, { useState } from "react";
 import { MdOutlineArrowCircleRight, MdOutlineClose } from "react-icons/md";
 import CartItems from "./CartItems";
 import { FaCoins } from "react-icons/fa";
+import CalendarItems from "./CalendarItems";
 
-const Cart = ({ isCart }) => {
-  const [openSection, setOpenSection] = useState(0);
-  const toggleSection = (section) => {
-    setOpenSection(openSection === section ? null : section);
-  };
-
-  if (!isCart) return null;
+const Calendar = ({ isCalendar }) => {
+  if (!isCalendar) return null;
 
   return (
     <div
@@ -21,7 +17,7 @@ const Cart = ({ isCart }) => {
         className={`w-full px-2 md:px-4  bg-white rounded-md shadow-xl dark:bg-gray-800 transition transform ease-out duration-100 scale-90 h-screen sm:h-screen overflow-y-auto flex-container`}
       >
         <div className="flex justify-between p-2 ">
-          <div className="text-md font-bold uppercase">Products On Bag</div>
+          <div className="text-md font-bold uppercase">Services</div>
           {/* <button
             className="inline-block no-underline hover:text-black"
             onClick="#"
@@ -33,9 +29,10 @@ const Cart = ({ isCart }) => {
           {/* CART ITEMS START */}
           <div className="flex-[2]   ">
             <div>
-              <CartItems />
-              <CartItems />
-              <CartItems />
+              <CalendarItems />
+              <CalendarItems />
+              <CalendarItems />
+              <CalendarItems />
             </div>
             <div className="border-b pb-2 flex-[2]">
               <span className="text-[12px] text-gray-400">
@@ -116,20 +113,20 @@ const Cart = ({ isCart }) => {
                 </div>
               </div>
 
-              <div className="flex justify-between border-b py-2">
+              {/* <div className="flex justify-between border-b py-2">
                 <div className="uppercase text-sm md:text-sm font-medium text-gray-500 dark:text-gray-100">
                   Delivery Charge
                 </div>
                 <div className="text-sm md:text-md font-medium text-gray-900 dark:text-gray-200">
                   Rs.100
                 </div>
-              </div>
+              </div> */}
               <div className="flex justify-between py-2">
                 <div className="uppercase text-md md:text-md font-medium text-gray-900 dark:text-gray-200">
                   Total
                 </div>
                 <div className="text-sm md:text-lg font-medium text-gray-900 dark:text-gray-200">
-                  Rs.2600
+                  Rs.2500
                 </div>
               </div>
               <div className="text-sm md:text-sm py-5 border-t mt-5">
@@ -138,7 +135,7 @@ const Cart = ({ isCart }) => {
               </div>
             </div>
             {/* accordion */}
-            <div
+            {/* <div
               id="accordion-flush"
               data-accordion="collapse"
               data-active-classes="bg-white dark:bg-gray-900 text-gray-900 dark:text-white"
@@ -322,7 +319,7 @@ const Cart = ({ isCart }) => {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
 
             <button
               className="w-full py-4 my-6 rounded-full bg-black text-white text-lg font-medium transition-transform active:scale-95  hover:opacity-75 flex items-center gap-2 justify-center"
@@ -338,4 +335,4 @@ const Cart = ({ isCart }) => {
   );
 };
 
-export default Cart;
+export default Calendar;
