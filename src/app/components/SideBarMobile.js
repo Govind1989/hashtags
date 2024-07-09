@@ -14,7 +14,7 @@ import Cart from "./Cart";
 import Calendar from "./Calendar";
 import Message from "./Message";
 
-const SideBarMobile = ({ isMessage }) => {
+const SideBarMobile = ({ isMessage, slug }) => {
   const [isSideBarOpen, setIsSideBarOpen] = useState(false);
   const [isCart, setIsCart] = useState(false);
   const [isCalendar, setIsCalendar] = useState(false);
@@ -97,7 +97,7 @@ const SideBarMobile = ({ isMessage }) => {
       </div>
       <Cart isCart={isCart} />
       <Calendar isCalendar={isCalendar} />
-      <Message isChat={isChat} />
+      <Message isChat={isChat} slug={slug} />
       {/* <Calendar isCalendar={isCalendar} /> */}
     </div>
   );

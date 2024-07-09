@@ -12,7 +12,7 @@ import Cart from "./Cart";
 import Calendar from "./Calendar";
 import Message from "./Message";
 
-const SideBarDesktop = ({ isMessage }) => {
+const SideBarDesktop = ({ isMessage, slug }) => {
   // console.log(isMessage);
   const [isCart, setIsCart] = useState(false);
 
@@ -70,7 +70,7 @@ const SideBarDesktop = ({ isMessage }) => {
       </div>
       <Cart isCart={isCart} onClose={toggleCartMenu} />
       <Calendar isCalendar={isCalendar} onClose={toggleCalendarMenu} />
-      <Message isChat={isChat} onClose={toggleChatMenu} />
+      <Message isChat={isChat} onClose={toggleChatMenu} slug={slug} />
     </div>
   );
 };

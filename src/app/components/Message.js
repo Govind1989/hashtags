@@ -6,7 +6,7 @@ import CartItems from "./CartItems";
 import { FaCoins } from "react-icons/fa";
 import CalendarItems from "./CalendarItems";
 
-const Message = ({ isChat }) => {
+const Message = ({ isChat, onClose, slug }) => {
   if (!isChat) return null;
 
   return (
@@ -19,7 +19,7 @@ const Message = ({ isChat }) => {
         <div class="bg-white dark:bg-gray-800 shadow-md rounded-lg max-w-lg w-96">
           <div class="p-4 border-b bg-gray-200 dark:bg-gray-700  rounded-t-lg flex justify-between items-center">
             <p class="text-lg font-semibold text-black dark:text-gray-200 ">
-              Admin Bot
+              {slug}
             </p>
             <button
               id="close-chat"

@@ -68,7 +68,7 @@ export default function Home() {
           </button>
         </div>
         <ul
-          className={`w-full flex flex-row  justify-start items-center text-[#005761] overflow-hidden hover:overflow-x-scroll whitespace-nowrap flex-container`}
+          className={`w-full flex flex-row  justify-start items-center text-[#005761] overflow-x-scroll whitespace-nowrap flex-container`}
         >
           {menu.map((item, index) => {
             return (

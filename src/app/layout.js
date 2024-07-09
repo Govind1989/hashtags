@@ -11,7 +11,8 @@ import SideBarMobile from "./components/SideBarMobile";
 
 const inter = Inter({ subsets: ["latin"] });
 
-const Layout = ({ children, isMessage = false }) => {
+const Layout = ({ children, isMessage = false, slug }) => {
+  console.log(slug);
   return (
     <html lang="en">
       <head>
@@ -24,10 +25,10 @@ const Layout = ({ children, isMessage = false }) => {
 
         <main className="z-10 px-2 bg-white dark:bg-gray-800">{children}</main>
         <aside>
-          <SideBarDesktop isMessage={isMessage} />
+          <SideBarDesktop isMessage={isMessage} slug={slug} />
         </aside>
         <div className="block md:hidden">
-          <SideBarMobile isMessage={isMessage} />
+          <SideBarMobile isMessage={isMessage} slug={slug} />
         </div>
 
         <Footer page="Home" />

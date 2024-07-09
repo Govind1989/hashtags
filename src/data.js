@@ -848,6 +848,7 @@ export const categoryData = {
   },
 };
 
+// responsiveness
 export const responsive = {
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
@@ -862,7 +863,7 @@ export const responsive = {
     items: 1,
   },
 };
-
+// campaingscard
 export const CampaignCardsContent = [
   {
     title: "Loyalty Discounts",
@@ -895,5 +896,193 @@ export const CampaignCardsContent = [
     title: "Loyalty Discounts",
     description: "Get discount for every purchase with us.",
     earning: "5% ",
+  },
+];
+
+// CuratedCard
+export const curatedCardData = [
+  {
+    id: 1,
+    imageUrl:
+      "https://i.pinimg.com/564x/76/e6/09/76e609741463d711e53abfc3d73fc1ed.jpg",
+    videoUrl:
+      "https://videos.pexels.com/video-files/6467633/6467633-sd_960_506_25fps.mp4",
+    productName: "Elegant Sofa",
+    productSlug: "elegant_sofa",
+    markedPrice: "1400",
+    sellingPrice: "1000",
+    vendor: "Urban Furnishings",
+    vendorSlug: "urban_furnishings",
+    mainCategory: "Furnitures",
+    curatedMenu: "MostSelling",
+  },
+  {
+    id: 2,
+    imageUrl:
+      "https://i.pinimg.com/236x/ac/41/86/ac4186b14d6baecf0ca6138d770838e5.jpg",
+    productName: "Table Top",
+    productSlug: "table_top",
+    markedPrice: "1200",
+    sellingPrice: "800",
+    vendor: "Furniture Galore",
+    vendorSlug: "furniture_galore",
+    mainCategory: "Furnitures",
+    curatedMenu: "MostSelling",
+  },
+  {
+    id: 3,
+    imageUrl:
+      "https://i.pinimg.com/236x/75/3c/c1/753cc1e0775e2bebdb5cffaf842c3f7a.jpg",
+    productName: "Vintage Lamp",
+    productSlug: "vintage_lamp",
+    markedPrice: "900",
+    sellingPrice: "700",
+    vendor: "Home Decors",
+    vendorSlug: "home_decors",
+    mainCategory: "Furnitures",
+    curatedMenu: "MostSelling",
+  },
+  {
+    id: 4,
+    imageUrl:
+      "https://i.pinimg.com/236x/ce/5a/5c/ce5a5c8b0dfd91ed0eb52d9867d96d54.jpg",
+    productName: "Wooden Chair",
+    productSlug: "wooden_chair",
+    markedPrice: "1100",
+    sellingPrice: "900",
+    vendor: "Design Elements",
+    vendorSlug: "design_elements",
+    mainCategory: "Furnitures",
+    curatedMenu: "NewArrivals",
+  },
+  {
+    id: 5,
+    imageUrl:
+      "https://i.pinimg.com/236x/5a/fa/60/5afa60e00dd47a34a28e0b0664342af3.jpg",
+    productName: "Wooden Closet",
+    productSlug: "wooden_closet",
+    markedPrice: "1500",
+    sellingPrice: "1100",
+    vendor: "Furniture Hub",
+    vendorSlug: "furniture_hub",
+    mainCategory: "Furnitures",
+    curatedMenu: "NewArrivals",
+  },
+  {
+    id: 6,
+    imageUrl:
+      "https://i.pinimg.com/236x/7d/92/97/7d929794f5f7a08d2d2b95276b707529.jpg",
+    productName: "Royal Bed",
+    productSlug: "royal_bed",
+    markedPrice: "2000",
+    sellingPrice: "1800",
+    vendor: "Sleep Well",
+    vendorSlug: "sleep_well",
+    mainCategory: "Furnitures",
+    curatedMenu: "NewArrivals",
+  },
+  {
+    id: 7,
+    imageUrl:
+      "https://i.pinimg.com/236x/5d/86/ba/5d86ba2ad186a0a5fc7d02904129cabb.jpg",
+    productName: "Decorative Vase",
+    productSlug: "decorative_vase",
+    markedPrice: "600",
+    sellingPrice: "500",
+    vendor: "Decor Delights",
+    vendorSlug: "decor_delights",
+    mainCategory: "Furnitures",
+    curatedMenu: "NewArrivals",
+  },
+  {
+    id: 8,
+    imageUrl:
+      "https://i.pinimg.com/236x/5d/86/ba/5d86ba2ad186a0a5fc7d02904129cabb.jpg",
+    productName: "Dining Table",
+    productSlug: "dining_table",
+    markedPrice: "1300",
+    sellingPrice: "1100",
+    vendor: "Elegant Furnishings",
+    vendorSlug: "elegant_furnishings",
+    mainCategory: "Furnitures",
+    curatedMenu: "OnSale",
+  },
+  {
+    id: 9,
+    imageUrl:
+      "https://i.pinimg.com/236x/08/a1/d7/08a1d7d622e0cb84f7fafa0f6bfa6db7.jpg",
+    productName: "Coffee Table",
+    productSlug: "coffee_table",
+    markedPrice: "1800",
+    sellingPrice: "1500",
+    vendor: "Urban Outfitters",
+    vendorSlug: "urban_outfitters",
+    mainCategory: "Furnitures",
+    curatedMenu: "OnSale",
+  },
+  {
+    id: 10,
+    imageUrl:
+      "https://i.pinimg.com/236x/1f/e2/c4/1fe2c4f88ad35d5fc2341d6faebe19a9.jpg",
+    productName: "Classic Bookshelf",
+    productSlug: "classic_bookshelf",
+    markedPrice: "2200",
+    sellingPrice: "1900",
+    vendor: "Book Nook",
+    vendorSlug: "book_nook",
+    mainCategory: "Furnitures",
+    curatedMenu: "OnSale",
+  },
+  {
+    id: 11,
+    imageUrl:
+      "https://i.pinimg.com/236x/e4/d4/fc/e4d4fc6d987c07ec9f58924d96db0822.jpg",
+    productName: "Wooden Shelves",
+    productSlug: "wooden_shelves",
+    markedPrice: "2500",
+    sellingPrice: "2300",
+    vendor: "Akon Furniture",
+    vendorSlug: "akon_furniture",
+    mainCategory: "Furnitures",
+    curatedMenu: "OnSale",
+  },
+  {
+    id: 12,
+    imageUrl:
+      "https://i.pinimg.com/236x/c4/f6/fe/c4f6fe9685034afe9635c90c6afc0a86.jpg",
+    productName: "Luxury Sofa Set",
+    productSlug: "luxury_sofa_set",
+    markedPrice: "3000",
+    sellingPrice: "2700",
+    vendor: "Luxury Living",
+    vendorSlug: "luxury_living",
+    mainCategory: "Furnitures",
+    curatedMenu: "FreeShipping",
+  },
+  {
+    id: 8,
+    imageUrl:
+      "https://i.pinimg.com/236x/5d/86/ba/5d86ba2ad186a0a5fc7d02904129cabb.jpg",
+    productName: "Dining Table",
+    productSlug: "dining_table",
+    markedPrice: "1300",
+    sellingPrice: "1100",
+    vendor: "Elegant Furnishings",
+    vendorSlug: "elegant_furnishings",
+    mainCategory: "Furnitures",
+    curatedMenu: "FreeShipping",
+  },
+  {
+    id: 10,
+    imageUrl:
+      "https://i.pinimg.com/236x/1f/e2/c4/1fe2c4f88ad35d5fc2341d6faebe19a9.jpg",
+    productName: "Classic Bookshelf",
+    productSlug: "classic_bookshelf",
+    markedPrice: "2200",
+    sellingPrice: "1900",
+    vendor: "Book Nook",
+    vendorSlug: "book_nook",
+    mainCategory: "Furnitures",
+    curatedMenu: "FreeShipping",
   },
 ];
