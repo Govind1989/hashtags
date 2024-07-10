@@ -153,7 +153,7 @@ const ProductsVendorPage = ({ slug }) => {
         <div className="bg-white dark:bg-gray-800  min-h-screen  px-2 ">
           {/* banners */}
           <div className="w-full md:px-4 flex flex-wrap">
-            <div className="w-full px-2 lg:px-4 lg:w-8/12">
+            <div className="w-full px-2 lg:px-4  lg:w-8/12">
               <div className="relative mb-4 sm:mb-8 h-[370px] md:h-[462px]">
                 <img
                   src="https://demo.tailgrids.com/templates/planet/build/src/assets/ecom-images/headers/header-04/image-01.jpg"
@@ -186,7 +186,7 @@ const ProductsVendorPage = ({ slug }) => {
                 </div>
               </div>
             </div>
-            <div className="w-full px-4 lg:w-4/12">
+            <div className="w-full px-2 lg:w-4/12">
               <div className="-mx-6 flex flex-wrap">
                 <div className="w-full px-4 md:w-1/2 lg:w-full">
                   <div className="relative mb-4 h-[223px]">
@@ -248,7 +248,7 @@ const ProductsVendorPage = ({ slug }) => {
             </div>
           </div>
           {/* products */}
-          <div className="flex flex-row gap-0 w-full mt-2 md:px-4 items-center">
+          <div className="flex flex-row gap-0 w-full mt-2 md:px-8 items-center">
             <div
               className={`md:justify-center justify-start px-2 py-2 border-r-2 border-[#eae2b4] rounded-tl-xl rounded-bl-xl ${
                 isFilter
@@ -402,7 +402,7 @@ const ProductsVendorPage = ({ slug }) => {
           </div>
           <Masonry cardData={filteredData} />
           {/* Curated */}
-          <div className=" items-center py-2 md:px-4 h-auto">
+          <div className=" items-center py-0 md:px-6 h-auto">
             <div id="store" className="w-full top-0 md:px-4 sm:py-1">
               <div className="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 px-2 py-3">
                 <div
@@ -451,11 +451,11 @@ const ProductsVendorPage = ({ slug }) => {
             </div>
           </div>
           {/* about */}
-          <div className="bg-white py-2 md:px-4">
-            <div className="container mx-auto flex items-center flex-wrap pt-4 ">
-              <div id="store" className="w-full top-0 sm:px-4 sm:py-1">
-                <div className="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 px-2 py-3">
-                  <div className="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl">
+          <div className="bg-white dark:bg-gray-800 py-2 md:px-6">
+            <div className="w-full flex items-center flex-wrap pt-4 ">
+              <div id="store" className="w-full top-0  sm:py-1">
+                <div className="w-full  flex flex-wrap items-center justify-between mt-0  py-3">
+                  <div className="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 dark:text-gray-200 text-xl">
                     About
                   </div>
                   <div
@@ -465,17 +465,17 @@ const ProductsVendorPage = ({ slug }) => {
                     <div className="flex gap-1 items-center">
                       {renderStars()}
                     </div>
-                    <p className="text-gray-100 text-sm text-bold shadow-xs px-3 py-2 bg-gray-400 rounded-md">
+                    <p className="text-gray-100 text-sm text-bold shadow-xs px-3 py-2 bg-[#005761] rounded-md">
                       Avg. Rating: <span className="text-white">4/30</span>
                     </p>
                   </div>
                 </div>
               </div>
 
-              <div className="container mx-auto p-4">
+              <div className="w-full">
                 <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-6 gap-2">
-                  <div className="col-span-2 lg:col-span-2 p-4">
-                    <p className="mb-6 font-thin">
+                  <div className="col-span-2 lg:col-span-2 p-2">
+                    <p className="mb-6  text-gray-800 dark:text-gray-200">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       Fusce a bibendum ante. Morbi scelerisque posuere enim, at
                       dignissim eros semper vitae. Integer justo purus,
@@ -487,10 +487,10 @@ const ProductsVendorPage = ({ slug }) => {
                       augue, congue vel turpis ut, vestibulum blandit arcu.
                     </p>
                     <div className="flex space-x-4 ">
-                      <button className="bg-gray-800 text-white px-4 py-2 rounded-md cursor-pointer ">
+                      <button className="bg-gray-800 dark:bg-gray-200 text-white dark:text-gray-800 px-4 py-2 rounded-md cursor-pointer ">
                         Send Message
                       </button>
-                      <div className=" bg-gray-100 text-gray-800 items-center rounded-md justify-center flex">
+                      <div className=" bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 items-center rounded-md justify-center flex">
                         <FaPhone className="w-8 h-8 py-2 px-2" />
                         <button className=" px-2 py-2 rounded-md hover:shadow-md">
                           +123 456 7890
@@ -499,7 +499,7 @@ const ProductsVendorPage = ({ slug }) => {
                     </div>
                   </div>
 
-                  <div className="col-span-2 lg:col-span-2 bg-gray-300 mb-4 sm:mb-0 rounded-md shadow-md">
+                  <div className="col-span-2 lg:col-span-2  mb-4 sm:mb-0 rounded-md shadow-md">
                     <img
                       src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8ZnVybml0dXJlJTIwZGVzaWdufGVufDB8fDB8fHww"
                       alt="Image One"
@@ -507,7 +507,7 @@ const ProductsVendorPage = ({ slug }) => {
                     />
                   </div>
 
-                  <div className="col-span-2 lg:col-span-2 bg-gray-300  rounded-md shadow-md">
+                  <div className="col-span-2 lg:col-span-2   rounded-md shadow-md">
                     <img
                       src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZnVybml0dXJlJTIwZGVzaWdufGVufDB8fDB8fHww"
                       alt="Image One"
@@ -520,13 +520,13 @@ const ProductsVendorPage = ({ slug }) => {
           </div>
 
           {/* footer */}
-          <div className=" bg-white py-2 md:px-4 border-t border-gray-400">
+          <div className=" bg-white dark:bg-gray-800 py-2 md:px-4 border-t border-gray-400">
             <div className="container flex px-3 py-8 ">
               <div className="w-full mx-auto flex flex-wrap">
                 {/* Map Section */}
                 <div className="flex w-full lg:w-3/4">
                   <div className="w-full px-3 md:px-0">
-                    <h3 className="font-bold uppercase text-gray-900">
+                    <h3 className="font-bold uppercase text-gray-900 dark:text-gray-100">
                       Find Us
                     </h3>
                     <div className="py-4  ">
@@ -547,10 +547,10 @@ const ProductsVendorPage = ({ slug }) => {
                 <div className="flex w-full lg:w-1/4 lg:justify-end items-center lg:text-right mt-6 md:mt-0">
                   <div className="px-3 md:px-0">
                     <div className="py-2">
-                      <h3 className="uppercase text-left lg:text-right font-bold text-gray-900">
+                      <h3 className="uppercase text-left lg:text-right font-bold text-gray-900 dark:text-gray-200">
                         Address
                       </h3>
-                      <p className="text-gray-700">
+                      <p className="text-gray-700 dark:text-gray-400">
                         1234 Main St, Suite 100
                         <br />
                         Springfield, IL 62704

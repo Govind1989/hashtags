@@ -21,7 +21,7 @@ const Message = ({ isChat, onClose, slug }) => {
             <p class="text-lg font-semibold text-black dark:text-gray-200 ">
               {slug}
             </p>
-            <button
+            {/* <button
               id="close-chat"
               class="text-gray-300 hover:text-gray-400 focus:outline-none focus:text-gray-400"
             >
@@ -39,7 +39,7 @@ const Message = ({ isChat, onClose, slug }) => {
                   d="M6 18L18 6M6 6l12 12"
                 ></path>
               </svg>
-            </button>
+            </button> */}
           </div>
           <div id="chatbox" class="p-4 h-[30rem] overflow-y-auto">
             <div class="mb-2 text-right">

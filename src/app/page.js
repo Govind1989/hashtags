@@ -42,22 +42,22 @@ export default function Home() {
     <div className="w-full dark:bg-gray-800 px-2 items-center justify-center min-h-screen">
       <div className="flex flex-row gap-0 ">
         <div
-          className={`md:justify-center justify-start px-2 py-2 border-r-2 border-[#eae2b4] rounded-tl-xl rounded-bl-xl ${
+          className={`md:justify-center justify-start px-2 py-2 border-r-2 border-[#005761] rounded-tl-xl rounded-bl-xl ${
             isFilter
-              ? "bg-gray-500 dark:bg-gray-500"
-              : "bg-white dark:bg-gray-700"
+              ? "bg-gray-300 dark:bg-gray-600"
+              : "bg-white dark:bg-gray-800"
           } `}
         >
           <button
             onClick={toggleFilter}
             className={`flex flex-shrink-0 gap-2 px-2  rounded-md items-center mt-2 justify-center relative group `}
           >
-            <span className="text-gray-800 dark:text-gray-200 text-sm hidden md:block ">
+            <span className="text-[#005761] dark:text-gray-200 text-sm hidden md:block ">
               Categories
             </span>
             <svg
               aria-label="filter"
-              className="AR6 gUZ U9O kVc dark:text-gray-200"
+              className="AR6 gUZ U9O kVc text-[#005761]"
               height="16"
               role="img"
               viewBox="0 0 24 24"
