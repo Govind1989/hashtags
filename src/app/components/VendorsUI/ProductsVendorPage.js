@@ -19,6 +19,7 @@ import {
 } from "react-icons/fa";
 import Layout from "../../../pages/layout.js";
 import { IoStar, IoStarHalf, IoStarOutline } from "react-icons/io5";
+// import CollectionCarousel from "../CollectionCarouselbackup.js";
 const ProductsVendorPage = ({ slug }) => {
   const [item, setItem] = useState(0);
   const [rating, setRating] = useState(4);
@@ -151,7 +152,7 @@ const ProductsVendorPage = ({ slug }) => {
       <Layout isMessage={true} slug={slug}>
         {/* {slug} */}
         <div className="bg-white dark:bg-gray-800  min-h-screen  px-2 ">
-          {/* banners */}
+          {/* hero */}
           <div className="w-full md:px-4 flex flex-wrap">
             <div className="w-full px-2 lg:px-4  lg:w-8/12">
               <div className="relative mb-4 sm:mb-8 h-[370px] md:h-[462px]">
@@ -401,6 +402,9 @@ const ProductsVendorPage = ({ slug }) => {
             </div>
           </div>
           <Masonry cardData={filteredData} />
+
+          {/* flashDeals */}
+          <div className="py-2 md:px-4"></div>
           {/* Curated */}
           <div className=" items-center py-0 md:px-6 h-auto">
             <div id="store" className="w-full top-0 md:px-4 sm:py-1">
@@ -446,7 +450,7 @@ const ProductsVendorPage = ({ slug }) => {
                 <hr className="w-full h-1 mt-4 text-gray-400 block md:hidden" />
               </div>
               <div className="md:col-span-4 col-span-6 md:order-last">
-                <CuratedCarousel />
+                <CuratedCarousel type="curated" />
               </div>
             </div>
           </div>
@@ -517,6 +521,10 @@ const ProductsVendorPage = ({ slug }) => {
                 </div>
               </div>
             </div>
+          </div>
+          {/* collections */}
+          <div className="flex gap-4 py-4 md:px-6">
+            <CuratedCarousel type="collection" />
           </div>
 
           {/* footer */}
