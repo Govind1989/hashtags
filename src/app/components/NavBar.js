@@ -128,7 +128,61 @@ const NavBar = ({ slug }) => {
                         className="absolute left-0 top-full p-2 bg-gray-100 dark:bg-gray-700 rounded shadow z-50
                       w-screen hidden lg:block lg:w-full lg:left-0 lg:right-0"
                       >
-                        <p>Suggestions go here</p>
+                        <div className="flex flex-col">
+                          <div className="block  pb-2 ">
+                            <h3 className="text-heading sm:block  md:text-base   font-bold text-gray-400 text-sm">
+                              Most Searched Products (#)
+                            </h3>
+                            <div class="flex justify-start text-xs font-semibold text-gray-600 gap-2 flex-wrap">
+                              <span class="bg-gray-100 rounded-full px-3 py-1 ">
+                                #Men&apos;s Clothings
+                              </span>
+                              <span class="bg-gray-100 rounded-full px-3 py-1 ">
+                                #Formal Men&apos;s Wear
+                              </span>
+                              <span class="bg-gray-100 rounded-full px-3 py-1 ">
+                                #Sports Wear
+                              </span>
+                              <span class="bg-gray-100 rounded-full px-3 py-1 ">
+                                #Kid&apos;s Shoes
+                              </span>
+                              <span class="bg-gray-100 rounded-full px-3 py-1 ">
+                                #Bridal Dresses
+                              </span>
+                              <span class="bg-gray-100 rounded-full px-3 py-1 ">
+                                #Ethnic Wear for Men
+                              </span>
+                              <span class="bg-gray-100 rounded-full px-3 py-1 ">
+                                #Ethnic Wear for Women
+                              </span>
+                            </div>
+                          </div>
+                          <div className="block  pb-2 ">
+                            <h3 className="text-heading sm:block  md:text-base   font-bold text-gray-400 text-sm">
+                              Most Searched Vendors (@)
+                            </h3>
+                            <div class="flex justify-start text-xs font-semibold text-gray-600 gap-2 flex-wrap">
+                              <span class="bg-gray-100 rounded-full px-3 py-1 ">
+                                @Urban Furnitures
+                              </span>
+                              <span class="bg-gray-100 rounded-full px-3 py-1 ">
+                                @Akon Furnitures
+                              </span>
+                              <span class="bg-gray-100 rounded-full px-3 py-1 ">
+                                @H&M Furnitures
+                              </span>
+                              <span class="bg-gray-100 rounded-full px-3 py-1 ">
+                                @Urban Furnitures
+                              </span>
+                              <span class="bg-gray-100 rounded-full px-3 py-1 ">
+                                @Akon Furnitures
+                              </span>
+                              <span class="bg-gray-100 rounded-full px-3 py-1 ">
+                                @H&M Furnitures
+                              </span>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     )}
                   </div>
@@ -141,14 +195,14 @@ const NavBar = ({ slug }) => {
                     </button>
                   )}
                 </div>
-                {isInputClicked && !inputValue && (
+                {/* {isInputClicked && !inputValue && (
                   <div
                     className="absolute left-0 top-full p-2 bg-gray-100 dark:bg-gray-700 rounded shadow z-50
                       w-screen lg:w-full lg:hidden lg:left-0 lg:right-0"
                   >
-                    <p>Suggestions go here</p>
+                    <p>Search History</p>
                   </div>
-                )}
+                )} */}
               </div>
 
               <div className="flex flex-row gap-0 items-center">
@@ -219,14 +273,14 @@ const NavBar = ({ slug }) => {
                   onChange={handleInputChange}
                   onClick={handleInputClick}
                 />
-                {isInputClicked && !inputValue && (
+                {/* {isInputClicked && !inputValue && (
                   <div
                     className="absolute left-0 top-full p-2 bg-gray-100 dark:bg-gray-700 rounded shadow z-50
                       w-screen hidden lg:block lg:w-full lg:left-0 lg:right-0"
                   >
                     <p>Suggestions go here</p>
                   </div>
-                )}
+                )} */}
               </div>
               {isInputClicked && (
                 <button
@@ -243,7 +297,61 @@ const NavBar = ({ slug }) => {
               className="absolute left-0 top-full p-2 bg-gray-100 dark:bg-gray-700 rounded shadow z-50
                       w-screen lg:w-full lg:hidden lg:left-0 lg:right-0"
             >
-              <p>Suggestions go here</p>
+              <div className="flex flex-col">
+                <div className="block  pb-2 ">
+                  <h3 className="text-heading sm:block  md:text-base   font-bold text-gray-400 text-sm">
+                    Most Searched Products (#)
+                  </h3>
+                  <div class="flex justify-start text-xs font-semibold text-gray-600 gap-2 flex-wrap">
+                    <span class="bg-gray-100 rounded-full px-3 py-1 ">
+                      #Men&apos;s Clothings
+                    </span>
+                    <span class="bg-gray-100 rounded-full px-3 py-1 ">
+                      #Formal Men&apos;s Wear
+                    </span>
+                    <span class="bg-gray-100 rounded-full px-3 py-1 ">
+                      #Sports Wear
+                    </span>
+                    <span class="bg-gray-100 rounded-full px-3 py-1 ">
+                      #Kid&apos;s Shoes
+                    </span>
+                    <span class="bg-gray-100 rounded-full px-3 py-1 ">
+                      #Bridal Dresses
+                    </span>
+                    <span class="bg-gray-100 rounded-full px-3 py-1 ">
+                      #Ethnic Wear for Men
+                    </span>
+                    <span class="bg-gray-100 rounded-full px-3 py-1 ">
+                      #Ethnic Wear for Women
+                    </span>
+                  </div>
+                </div>
+                <div className="block  pb-2 ">
+                  <h3 className="text-heading sm:block  md:text-base   font-bold text-gray-400 text-sm">
+                    Most Searched Vendors (@)
+                  </h3>
+                  <div class="flex justify-start text-xs font-semibold text-gray-600 gap-2 flex-wrap">
+                    <span class="bg-gray-100 rounded-full px-3 py-1 ">
+                      @Urban Furnitures
+                    </span>
+                    <span class="bg-gray-100 rounded-full px-3 py-1 ">
+                      @Akon Furnitures
+                    </span>
+                    <span class="bg-gray-100 rounded-full px-3 py-1 ">
+                      @H&M Furnitures
+                    </span>
+                    <span class="bg-gray-100 rounded-full px-3 py-1 ">
+                      @Urban Furnitures
+                    </span>
+                    <span class="bg-gray-100 rounded-full px-3 py-1 ">
+                      @Akon Furnitures
+                    </span>
+                    <span class="bg-gray-100 rounded-full px-3 py-1 ">
+                      @H&M Furnitures
+                    </span>
+                  </div>
+                </div>
+              </div>
             </div>
           )}
         </div>
