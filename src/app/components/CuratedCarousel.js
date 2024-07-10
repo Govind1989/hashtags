@@ -5,6 +5,7 @@ import {
   curatedCardData,
   curatedResponsive,
   collectionResponsive,
+  flashdealResponsive,
 } from "../../data";
 import Reels from "./Reels";
 import CarouselCard from "./CarouselCard";
@@ -47,6 +48,29 @@ const CuratedCarousel = ({ type }) => {
               <CollectionCard />
               <CollectionCard />
               {/* ))} */}
+            </Carousel>
+          </div>
+        </div>
+      )}
+      {type === "flashdeal" && (
+        <div className="container mx-auto relative z-10">
+          <div className=" ">
+            <Carousel
+              responsive={flashdealResponsive}
+              containerClass=""
+              itemClass="px-[2px]"
+            >
+              {curatedCardData.map((item, index) => (
+                <CarouselCard
+                  key={index}
+                  imageUrl={item.imageUrl}
+                  productName={item.productName}
+                  productSlug={item.productSlug}
+                  markedPrice={item.markedPrice}
+                  sellingPrice={item.sellingPrice}
+                  vendor={item.vendor}
+                />
+              ))}
             </Carousel>
           </div>
         </div>

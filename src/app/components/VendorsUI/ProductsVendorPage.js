@@ -404,10 +404,30 @@ const ProductsVendorPage = ({ slug }) => {
           <Masonry cardData={filteredData} />
 
           {/* flashDeals */}
-          <div className="py-2 md:px-4"></div>
+          <div className="py-2 md:px-6">
+            <div
+              id="store"
+              className="w-full flex flex-wrap justify-between  top-0  sm:py-1"
+            >
+              <div className="w-full flex flex-wrap items-center justify-between mt-0 px-2 py-3">
+                <div
+                  className="uppercase  tracking-wide no-underline hover:no-underline font-bold text-gray-800 dark:text-gray-200 text-xl"
+                  href="#"
+                >
+                  {countdownTitle}
+                </div>
+                <div className="items-end mt-2">
+                  <CountDownTimer Duration={countdownDuration} />
+                </div>
+              </div>
+            </div>
+            <div className="w-full py-2">
+              <CuratedCarousel type="flashdeal" />
+            </div>
+          </div>
           {/* Curated */}
           <div className=" items-center py-0 md:px-6 h-auto">
-            <div id="store" className="w-full top-0 md:px-4 sm:py-1">
+            <div id="store" className="w-full top-0 md:px-0 sm:py-1">
               <div className="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 px-2 py-3">
                 <div
                   className="uppercase  tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl"
@@ -454,11 +474,17 @@ const ProductsVendorPage = ({ slug }) => {
               </div>
             </div>
           </div>
+
+          {/* collections */}
+          <div className="flex gap-4 py-4 md:px-6">
+            <CuratedCarousel type="collection" />
+          </div>
+
           {/* about */}
-          <div className="bg-white dark:bg-gray-800 py-2 md:px-6">
-            <div className="w-full flex items-center flex-wrap pt-4 ">
+          <div className="bg-white dark:bg-gray-800 py-4 md:px-6">
+            <div className="w-full flex items-center flex-wrap ">
               <div id="store" className="w-full top-0  sm:py-1">
-                <div className="w-full  flex flex-wrap items-center justify-between mt-0  py-3">
+                <div className="w-full  flex flex-wrap items-center justify-between mt-0">
                   <div className="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 dark:text-gray-200 text-xl">
                     About
                   </div>
@@ -522,11 +548,6 @@ const ProductsVendorPage = ({ slug }) => {
               </div>
             </div>
           </div>
-          {/* collections */}
-          <div className="flex gap-4 py-4 md:px-6">
-            <CuratedCarousel type="collection" />
-          </div>
-
           {/* footer */}
           <div className=" bg-white dark:bg-gray-800 py-2 md:px-4 border-t border-gray-400">
             <div className="container flex px-3 py-8 ">

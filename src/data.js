@@ -1115,3 +1115,17 @@ export const collectionResponsive = {
     items: 1,
   },
 };
+export const flashdealResponsive = {
+  desktop: {
+    breakpoint: { max: 3000, min: 1024 },
+    items: 4,
+  },
+  tablet: {
+    breakpoint: { max: 1023, min: 464 },
+    items: 3,
+  },
+  mobile: {
+    breakpoint: { max: 767, min: 0 },
+    items: 2,
+  },
+};
