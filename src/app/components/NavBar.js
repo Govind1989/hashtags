@@ -12,6 +12,7 @@ import {
 import Link from "next/link";
 import Category from "./Category";
 import ThemeToggle from "./ThemeToggle";
+import { cardData } from "../../data";
 
 const NavBar = ({ slug }) => {
   const [isLanguage, setIsLanguage] = useState(false);
@@ -22,6 +23,7 @@ const NavBar = ({ slug }) => {
   const [inputValue, setInputValue] = useState("");
   const [isInputClicked, setIsInputClicked] = useState(false);
 
+  const shopName = cardData.find((item) => item.vendorSlug === slug).vendor;
   const handleInputChange = (e) => {
     setInputValue(e.target.value);
   };
@@ -51,6 +53,7 @@ const NavBar = ({ slug }) => {
   const toggleCalendarMenu = () => {
     setIsCalendar(!isCalendar);
   };
+
   // const handleClick = (e, index) => {
   //   setItem({ name: e.target.textContent.toLowerCase() });
   //   setActive(index);
@@ -82,8 +85,8 @@ const NavBar = ({ slug }) => {
                 href="/"
               >
                 <div className="mt-0 text-lg sm:text-xl text-gray-800 dark:text-gray-200">
-                  {slug ? (
-                    slug
+                  {shopName ? (
+                    shopName
                   ) : (
                     <div className="flex">
                       <span>#</span>

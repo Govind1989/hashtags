@@ -26,7 +26,6 @@ const validCategories = [
   "appointments",
 ];
 const VendorPage = ({ slug, vendorCategory }) => {
-  // console.log(slug);
   const CategoryComponent = categoryComponents[vendorCategory];
 
   //   If the category is valid and the component exists, render it

@@ -12,7 +12,7 @@ import SideBarMobile from "./components/SideBarMobile";
 const inter = Inter({ subsets: ["latin"] });
 
 const Layout = ({ children, isMessage = false, slug }) => {
-  console.log(slug);
+  // console.log(slug);
   return (
     <html lang="en">
       <head>

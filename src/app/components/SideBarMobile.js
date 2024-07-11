@@ -1,15 +1,14 @@
 "use client";
 import React, { useState } from "react";
-import { FaCoins } from "react-icons/fa";
+
 import {
   MdCalendarMonth,
   MdOutlineAdd,
-  MdOutlineArrowCircleRight,
   MdOutlineClose,
   MdOutlineMessage,
   MdOutlineShoppingBag,
 } from "react-icons/md";
-import CartItems from "./CartItems";
+
 import Cart from "./Cart";
 import Calendar from "./Calendar";
 import Message from "./Message";

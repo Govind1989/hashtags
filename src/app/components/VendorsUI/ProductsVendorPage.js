@@ -29,7 +29,7 @@ const ProductsVendorPage = ({ slug }) => {
   const [isCollections, setIsCollections] = useState(false);
   const [isFlashSale, setIsFlashSale] = useState(false);
 
-  const vendor = cardData.find((item) => item.vendorSlug === slug).vendor;
+  const shopName = cardData.find((item) => item.vendorSlug === slug).vendor;
   const filteredData = cardData.filter((item) => item.vendorSlug === slug);
 
   const categories = [...new Set(filteredData.map((item) => item.category))];
