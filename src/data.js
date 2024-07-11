@@ -233,6 +233,8 @@ export const cardData = [
     id: 16,
     imageUrl: [
       "https://i.pinimg.com/236x/d8/90/d6/d890d69768fbe7da81690c64031355fb.jpg",
+      "https://i.pinimg.com/236x/23/b8/31/23b8311e658312dfc7f310baa7da904f.jpg",
+      "https://i.pinimg.com/236x/dd/df/84/dddf84130ffab1eb6458724523fefa11.jpg",
     ],
     productName: "Cozy Armchair",
     productSlug: "cozy_armchair",
