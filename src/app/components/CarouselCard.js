@@ -6,8 +6,10 @@ import {
   MdOutlineAddHome,
   MdOutlineShoppingBag,
 } from "react-icons/md";
+import ProductCollectionCard from "./ProductCollectionCard";
 
 const CarouselCard = ({
+  type,
   productSlug,
   imageUrl,
   videoUrl,
@@ -20,7 +22,7 @@ const CarouselCard = ({
   const [addtoCart, setIAddToCart] = useState(false);
   const [showHoverContent, setShowHoverContent] = useState(false);
   // const slug = generateSlug(productName);
-
+  // console.log(imageUrl);
   const toggleHoverContent = () => {
     setShowHoverContent(!showHoverContent);
   };
@@ -32,7 +34,7 @@ const CarouselCard = ({
 
   return (
     <div className="inline-block break-inside-avoid w-full">
-      <div className="relative h-64 md:h-80 lg:h-96 overflow-hidden">
+      <div className="relative h-64 md:h-80 lg:h-96 ">
         {videoUrl ? (
           <video
             className="rounded-md w-full h-full object-cover"
@@ -43,11 +45,27 @@ const CarouselCard = ({
             muted
           />
         ) : (
-          <img
-            className="rounded-md w-full h-full object-cover"
-            src={imageUrl}
-            alt={productName}
-          />
+          <>
+            {imageUrl.length === 1 ? (
+              <img
+                className="rounded-md w-full h-auto"
+                src={imageUrl[0]}
+                alt={productName}
+              />
+            ) : (
+              <div className="relative">
+                <ProductCollectionCard
+                  type="productCollection"
+                  imageUrl={imageUrl}
+                  productName={productName}
+                  productSlug={productSlug}
+                  markedPrice={markedPrice}
+                  sellingPrice={sellingPrice}
+                  vendor={vendor}
+                />
+              </div>
+            )}
+          </>
         )}
         <div
           className={`flex flex-col h-auto justify-end absolute inset-0 bg-black ${
@@ -103,7 +121,6 @@ const CarouselCard = ({
             </div>
           </div>
         </div>
-
         {Discount && (
           <div
             className={`text-sm absolute top-3 right-0 ${
@@ -114,11 +131,13 @@ const CarouselCard = ({
           </div>
         )}
       </div>
-      <div className="no-space-y">
-        <div onClick={toggleHoverContent} className="cursor-pointer">
-          <MdMoreHoriz className="w-6 h-6 text-black dark:text-gray-400" />
+      {type !== "productCollection" && (
+        <div className="no-space-y">
+          <div onClick={toggleHoverContent} className="cursor-pointer">
+            <MdMoreHoriz className="w-6 h-6 text-black dark:text-gray-400" />
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 };

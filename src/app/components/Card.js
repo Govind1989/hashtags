@@ -6,6 +6,9 @@ import {
   MdOutlineAddHome,
   MdOutlineShoppingBag,
 } from "react-icons/md";
+import CuratedCarousel from "./CuratedCarousel";
+import ProductCollectionCard from "./ProductCollectionCard";
+import ProductCollectionCarousel from "./ProductCollectionCarousel";
 
 const Card = ({
   productSlug,
@@ -32,7 +35,7 @@ const Card = ({
 
   return (
     <div className="inline-block break-inside-avoid w-full">
-      <div className="relative  min-h-50">
+      <div className="relative min-h-50">
         {videoUrl ? (
           <video
             className="rounded-md w-full max-w-42 h-auto"
@@ -40,14 +43,26 @@ const Card = ({
             alt={productName}
             autoPlay
             loop
+            playsInline // Ensure video plays inline on mobile browsers
             muted
           />
         ) : (
-          <img
-            className="rounded-md w-full h-auto"
-            src={imageUrl}
-            alt={productName}
-          />
+          <>
+            {imageUrl.length === 1 ? (
+              <img
+                className="rounded-md w-full h-auto"
+                src={imageUrl[0]}
+                alt={productName}
+              />
+            ) : (
+              <div className="">
+                <ProductCollectionCarousel
+                  imageUrl={imageUrl}
+                  showHoverContent={showHoverContent}
+                />
+              </div>
+            )}
+          </>
         )}
         <div
           className={`flex flex-col h-auto  justify-end absolute inset-0 bg-black  ${

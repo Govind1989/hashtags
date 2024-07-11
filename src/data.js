@@ -3,10 +3,11 @@
 export const cardData = [
   {
     id: 1,
-    imageUrl:
+    imageUrl: [
       "https://i.pinimg.com/564x/76/e6/09/76e609741463d711e53abfc3d73fc1ed.jpg",
+    ],
     videoUrl:
-      "https://videos.pexels.com/video-files/6467633/6467633-sd_960_506_25fps.mp4",
+      "https://media.istockphoto.com/id/1383559876/video/young-woman-reading-a-paperback-book.mp4?s=mp4-640x640-is&k=20&c=Go-aNF6NEk-JYhsTYrAJdXohirbQvhOPYw6R2ol756Y=",
     productName: "Elegant Sofa",
     productSlug: "elegant_sofa",
     markedPrice: "1400",
@@ -19,8 +20,11 @@ export const cardData = [
   },
   {
     id: 2,
-    imageUrl:
-      "https://i.pinimg.com/236x/ac/41/86/ac4186b14d6baecf0ca6138d770838e5.jpg",
+    imageUrl: [
+      "https://i.pinimg.com/564x/76/e6/09/76e609741463d711e53abfc3d73fc1ed.jpg",
+      "https://i.pinimg.com/564x/7f/85/2c/7f852cf62b4898de1c58f87bc55ff929.jpg",
+    ],
+    videoUrl: "",
     productName: "Table Top",
     productSlug: "table_top",
     markedPrice: "1200",
@@ -33,8 +37,9 @@ export const cardData = [
   },
   {
     id: 3,
-    imageUrl:
+    imageUrl: [
       "https://i.pinimg.com/236x/75/3c/c1/753cc1e0775e2bebdb5cffaf842c3f7a.jpg",
+    ],
     productName: "Vintage Lamp",
     productSlug: "vintage_lamp",
     markedPrice: "900",
@@ -47,8 +52,9 @@ export const cardData = [
   },
   {
     id: 4,
-    imageUrl:
+    imageUrl: [
       "https://i.pinimg.com/236x/ce/5a/5c/ce5a5c8b0dfd91ed0eb52d9867d96d54.jpg",
+    ],
     productName: "Wooden Chair",
     productSlug: "wooden_chair",
     markedPrice: "1100",
@@ -61,8 +67,9 @@ export const cardData = [
   },
   {
     id: 5,
-    imageUrl:
+    imageUrl: [
       "https://i.pinimg.com/236x/5a/fa/60/5afa60e00dd47a34a28e0b0664342af3.jpg",
+    ],
     productName: "Wooden Closet",
     productSlug: "wooden_closet",
     markedPrice: "1500",
@@ -75,8 +82,9 @@ export const cardData = [
   },
   {
     id: 6,
-    imageUrl:
+    imageUrl: [
       "https://i.pinimg.com/236x/7d/92/97/7d929794f5f7a08d2d2b95276b707529.jpg",
+    ],
     productName: "Royal Bed",
     productSlug: "royal_bed",
     markedPrice: "2000",
@@ -89,8 +97,9 @@ export const cardData = [
   },
   {
     id: 7,
-    imageUrl:
+    imageUrl: [
       "https://i.pinimg.com/236x/5d/86/ba/5d86ba2ad186a0a5fc7d02904129cabb.jpg",
+    ],
     productName: "Decorative Vase",
     productSlug: "decorative_vase",
     markedPrice: "600",
@@ -103,8 +112,9 @@ export const cardData = [
   },
   {
     id: 8,
-    imageUrl:
+    imageUrl: [
       "https://i.pinimg.com/236x/5d/86/ba/5d86ba2ad186a0a5fc7d02904129cabb.jpg",
+    ],
     productName: "Dining Table",
     productSlug: "dining_table",
     markedPrice: "1300",
@@ -117,8 +127,9 @@ export const cardData = [
   },
   {
     id: 9,
-    imageUrl:
+    imageUrl: [
       "https://i.pinimg.com/236x/08/a1/d7/08a1d7d622e0cb84f7fafa0f6bfa6db7.jpg",
+    ],
     productName: "Coffee Table",
     productSlug: "coffee_table",
     markedPrice: "1800",
@@ -131,8 +142,9 @@ export const cardData = [
   },
   {
     id: 10,
-    imageUrl:
+    imageUrl: [
       "https://i.pinimg.com/236x/1f/e2/c4/1fe2c4f88ad35d5fc2341d6faebe19a9.jpg",
+    ],
     productName: "Classic Bookshelf",
     productSlug: "classic_bookshelf",
     markedPrice: "2200",
@@ -145,8 +157,9 @@ export const cardData = [
   },
   {
     id: 11,
-    imageUrl:
+    imageUrl: [
       "https://i.pinimg.com/236x/e4/d4/fc/e4d4fc6d987c07ec9f58924d96db0822.jpg",
+    ],
     productName: "Wooden Shelves",
     productSlug: "wooden_shelves",
     markedPrice: "2500",
@@ -159,8 +172,9 @@ export const cardData = [
   },
   {
     id: 12,
-    imageUrl:
+    imageUrl: [
       "https://i.pinimg.com/236x/c4/f6/fe/c4f6fe9685034afe9635c90c6afc0a86.jpg",
+    ],
     productName: "Luxury Sofa Set",
     productSlug: "luxury_sofa_set",
     markedPrice: "3000",
@@ -173,8 +187,9 @@ export const cardData = [
   },
   {
     id: 13,
-    imageUrl:
+    imageUrl: [
       "https://i.pinimg.com/236x/9c/e1/c3/9ce1c34732c856b234fffbbd184e349c.jpg",
+    ],
     productName: "Sofa Set",
     productSlug: "sofa_set",
     markedPrice: "900",
@@ -186,8 +201,9 @@ export const cardData = [
   },
   {
     id: 14,
-    imageUrl:
+    imageUrl: [
       "https://i.pinimg.com/236x/4b/ae/62/4bae6221913e340161fcda55165835f0.jpg",
+    ],
     productName: "Office Desk",
     productSlug: "office_desk",
     markedPrice: "1600",
@@ -200,8 +216,9 @@ export const cardData = [
   },
   {
     id: 15,
-    imageUrl:
+    imageUrl: [
       "https://i.pinimg.com/236x/48/ed/3a/48ed3a66e40d9f5a78b9a8799b18c6af.jpg",
+    ],
     productName: "Modern Armchair",
     productSlug: "modern_armchair",
     markedPrice: "500",
@@ -214,8 +231,9 @@ export const cardData = [
   },
   {
     id: 16,
-    imageUrl:
+    imageUrl: [
       "https://i.pinimg.com/236x/d8/90/d6/d890d69768fbe7da81690c64031355fb.jpg",
+    ],
     productName: "Cozy Armchair",
     productSlug: "cozy_armchair",
     markedPrice: "1800",
@@ -228,8 +246,9 @@ export const cardData = [
   },
   {
     id: 17,
-    imageUrl:
+    imageUrl: [
       "https://i.pinimg.com/236x/d8/90/d6/d890d69768fbe7da81690c64031355fb.jpg",
+    ],
     productName: "Office Table",
     productSlug: "office_table",
     markedPrice: "1800",
@@ -242,9 +261,9 @@ export const cardData = [
   },
   {
     id: 18,
-    imageUrl:
+    imageUrl: [
       "https://i.pinimg.com/236x/57/c8/04/57c80445adbe0e09b6f68cca09aa9051.jpg",
-    productName: "Office Chairs",
+    ],
     productSlug: "office_chairs",
     markedPrice: "1800",
     sellingPrice: "1500",
@@ -256,8 +275,9 @@ export const cardData = [
   },
   {
     id: 19,
-    imageUrl:
+    imageUrl: [
       "https://i.pinimg.com/236x/30/4b/dc/304bdce25513536430e4ae8d30478835.jpg",
+    ],
     productName: "Men's Blazer",
     productSlug: "men's_blazer",
     markedPrice: "180",
@@ -270,8 +290,9 @@ export const cardData = [
   },
   {
     id: 20,
-    imageUrl:
+    imageUrl: [
       "https://i.pinimg.com/236x/ed/f9/47/edf94700281731272dd4fa1093fb13fc.jpg",
+    ],
     productName: "Women Poncho",
     productSlug: "women_poncho",
     markedPrice: "250",
@@ -284,8 +305,9 @@ export const cardData = [
   },
   {
     id: 21,
-    imageUrl:
+    imageUrl: [
       "https://i.pinimg.com/236x/74/c8/56/74c856c7899d078486377bb2be09dfed.jpg",
+    ],
     productName: "Shirt",
     productSlug: "shirt",
     markedPrice: "120",
@@ -298,8 +320,9 @@ export const cardData = [
   },
   {
     id: 22,
-    imageUrl:
+    imageUrl: [
       "https://i.pinimg.com/236x/3b/a2/72/3ba2729e75a5f9f253a09f4e6841104d.jpg",
+    ],
     productName: "Jacket",
     productSlug: "jacket",
     markedPrice: "150",
@@ -311,8 +334,9 @@ export const cardData = [
   },
   {
     id: 23,
-    imageUrl:
+    imageUrl: [
       "https://i.pinimg.com/236x/32/58/d8/3258d8326e0a01abd4f4c817f074dd73.jpg",
+    ],
     productName: "Men's Ethnic Top",
     productSlug: "men's_ethnic_top",
     markedPrice: "90",
@@ -325,8 +349,9 @@ export const cardData = [
   },
   {
     id: 24,
-    imageUrl:
+    imageUrl: [
       "https://i.pinimg.com/236x/fd/fd/d1/fdfdd1108aba0a75da70daf1e56ef3b8.jpg",
+    ],
     productName: "Jeans",
     productSlug: "jeans",
     markedPrice: "400",
@@ -339,8 +364,9 @@ export const cardData = [
   },
   {
     id: 25,
-    imageUrl:
+    imageUrl: [
       "https://i.pinimg.com/236x/bb/ea/16/bbea167d29b9b259c2dc32029c1f718e.jpg",
+    ],
     productName: "Jeans ",
     productSlug: "jeans",
     markedPrice: "300",
@@ -353,8 +379,9 @@ export const cardData = [
   },
   {
     id: 26,
-    imageUrl:
+    imageUrl: [
       "https://i.pinimg.com/236x/97/c6/65/97c6651d485ed4f26bc4ff7e76faebd7.jpg",
+    ],
     productName: "Men's Sweater",
     productSlug: "men's_sweater",
     markedPrice: "200",
@@ -367,8 +394,9 @@ export const cardData = [
   },
   {
     id: 27,
-    imageUrl:
+    imageUrl: [
       "https://i.pinimg.com/474x/6f/18/d7/6f18d7919759b9151ed9c41ec216a204.jpg",
+    ],
     productName: "Rolex Men's Watch",
     productSlug: "rolex_men's_watch",
     markedPrice: "120",
@@ -381,8 +409,9 @@ export const cardData = [
   },
   {
     id: 28,
-    imageUrl:
+    imageUrl: [
       "https://i.pinimg.com/236x/7d/a5/08/7da508aa0ea4c14605d1065373819b25.jpg",
+    ],
     productName: "Casio Men's Watch",
     productSlug: "casio_men's_watch",
     markedPrice: "80",
@@ -395,8 +424,9 @@ export const cardData = [
   },
   {
     id: 29,
-    imageUrl:
+    imageUrl: [
       "https://i.pinimg.com/236x/b7/6f/b6/b76fb68e929ae8925950b7ade9e086e3.jpg",
+    ],
     productName: "Rayman Singlasses",
     productSlug: "rayman_singlasses",
     markedPrice: "600",
@@ -409,8 +439,9 @@ export const cardData = [
   },
   {
     id: 30,
-    imageUrl:
+    imageUrl: [
       "https://i.pinimg.com/236x/1e/4d/f1/1e4df1de38d8cddf6db4a5217ed4b210.jpg",
+    ],
     productName: "Avaitor Sunglasses",
     productSlug: "avaitor_sunglasses",
     markedPrice: "150",
@@ -423,8 +454,9 @@ export const cardData = [
   },
   {
     id: 31,
-    imageUrl:
+    imageUrl: [
       "https://i.pinimg.com/236x/c4/7e/b4/c47eb4605a87a3ce1d03394b864b1e94.jpg",
+    ],
     productName: "Spaghetti Carbonara",
     productSlug: "spaghetti_carbonara",
     markedPrice: "15",
@@ -437,8 +469,9 @@ export const cardData = [
   },
   {
     id: 32,
-    imageUrl:
+    imageUrl: [
       "https://i.pinimg.com/236x/7f/5d/73/7f5d73f7d2b7e6d276b28e39c644759c.jpg",
+    ],
     productName: "Papads",
     productSlug: "papads",
     markedPrice: "15",
@@ -451,8 +484,9 @@ export const cardData = [
   },
   {
     id: 33,
-    imageUrl:
+    imageUrl: [
       "https://i.pinimg.com/236x/21/47/b2/2147b2d09a1cb9de3a5954add0a56b7a.jpg",
+    ],
     productName: "Stick Cheese Potato",
     productSlug: "stick_cheese_potato",
     markedPrice: "15",
@@ -465,8 +499,9 @@ export const cardData = [
   },
   {
     id: 34,
-    imageUrl:
+    imageUrl: [
       "https://i.pinimg.com/564x/6c/3e/b1/6c3eb124e170c6fbd96f36c1caccab23.jpg",
+    ],
     productName: "Jeera Aloo",
     productSlug: "jeera_aloo",
     markedPrice: "15",
@@ -479,8 +514,9 @@ export const cardData = [
   },
   {
     id: 35,
-    imageUrl:
+    imageUrl: [
       "https://i.pinimg.com/474x/12/5e/ab/125eabdad3eb03b554d886cdb1f8e849.jpg",
+    ],
     productName: "Sushi Platter",
     productSlug: "sushi_platter",
     markedPrice: "20",
@@ -493,8 +529,9 @@ export const cardData = [
   },
   {
     id: 36,
-    imageUrl:
+    imageUrl: [
       "https://i.pinimg.com/236x/e6/1c/ef/e61cef37dffe3af9ce48d9e119176203.jpg",
+    ],
     productName: "Steak Au Poivre",
     productSlug: "steak_au_poivre",
     markedPrice: "30",
@@ -507,8 +544,9 @@ export const cardData = [
   },
   {
     id: 37,
-    imageUrl:
+    imageUrl: [
       "https://i.pinimg.com/236x/78/a9/4b/78a94bd138ae5c3280cbc1d1eae54d8c.jpg",
+    ],
     productName: "Chicken Tikka Masala",
     productSlug: "chicken_tikka_masala",
     markedPrice: "18",
@@ -521,8 +559,9 @@ export const cardData = [
   },
   {
     id: 38,
-    imageUrl:
+    imageUrl: [
       "https://i.pinimg.com/236x/f5/f4/9d/f5f49dea66fcf93b932c8238b68e4f5e.jpg",
+    ],
     productName: "Margherita Pizza",
     productSlug: "margherita_pizza",
     markedPrice: "12",
@@ -535,8 +574,9 @@ export const cardData = [
   },
   {
     id: 39,
-    imageUrl:
+    imageUrl: [
       "https://i.pinimg.com/474x/a7/86/0e/a7860efcbcd2491a5f5f92a57082eaf7.jpg",
+    ],
     productName: "Hamburger Deluxe",
     productSlug: "hamburger_deluxe",
     markedPrice: "8",
@@ -549,8 +589,9 @@ export const cardData = [
   },
   {
     id: 40,
-    imageUrl:
+    imageUrl: [
       "https://i.pinimg.com/236x/93/cf/f1/93cff1a617e36a2f35ec7104cbb1ce1e.jpg",
+    ],
     productName: "Chicken Rice",
     productSlug: "chicken_rice",
     markedPrice: "8",
@@ -563,8 +604,9 @@ export const cardData = [
   },
   {
     id: 41,
-    imageUrl:
+    imageUrl: [
       "https://i.pinimg.com/236x/0b/5e/b4/0b5eb439a0fe2c71aa7b427d3402e1ea.jpg",
+    ],
     productName: "Chicken MoMo",
     productSlug: "chicken_momo",
     markedPrice: "8",
@@ -577,8 +619,9 @@ export const cardData = [
   },
   {
     id: 42,
-    imageUrl:
+    imageUrl: [
       "https://i.pinimg.com/564x/c0/b5/a5/c0b5a5417f085d65169ade3bc3eb3a79.jpg",
+    ],
     productName: "Crepes Soufflees",
     productSlug: "crepes_soufflees",
     markedPrice: "8",
@@ -591,8 +634,9 @@ export const cardData = [
   },
   {
     id: 43,
-    imageUrl:
+    imageUrl: [
       "https://i.pinimg.com/236x/ae/12/51/ae1251fe90d10cd86db6f8983d4eef1c.jpg",
+    ],
     productName: "Chocolate Pastry",
     productSlug: "chocolate_pastry",
     markedPrice: "8",
@@ -605,8 +649,9 @@ export const cardData = [
   },
   {
     id: 44,
-    imageUrl:
+    imageUrl: [
       "https://i.pinimg.com/236x/ae/12/51/ae1251fe90d10cd86db6f8983d4eef1c.jpg",
+    ],
     productName: "Cheese Cake",
     productSlug: "cheese_cake",
     markedPrice: "8",
@@ -619,10 +664,11 @@ export const cardData = [
   },
   {
     id: 45,
-    imageUrl:
+    imageUrl: [
       "https://i.pinimg.com/236x/7d/92/97/7d929794f5f7a08d2d2b95276b707529.jpg",
-    videoUrl:
-      "https://videos.pexels.com/video-files/6467633/6467633-sd_960_506_25fps.mp4",
+      "https://i.pinimg.com/236x/7d/92/97/7d929794f5f7a08d2d2b95276b707529.jpg",
+    ],
+
     productName: "Elegant Sofa",
     productSlug: "elegant_sofa",
     markedPrice: "1400",
@@ -635,10 +681,10 @@ export const cardData = [
   },
   {
     id: 46,
-    imageUrl:
+    imageUrl: [
       "https://i.pinimg.com/236x/55/4c/fe/554cfe08070dfb7ca9c398b92841d917.jpg",
-    videoUrl:
-      "https://videos.pexels.com/video-files/6467633/6467633-sd_960_506_25fps.mp4",
+    ],
+    videoUrl: "",
     productName: "Table Set",
     productSlug: "table_set",
     markedPrice: "1400",
@@ -651,10 +697,10 @@ export const cardData = [
   },
   {
     id: 47,
-    imageUrl:
+    imageUrl: [
       "https://i.pinimg.com/236x/49/d0/3b/49d03befc6c41f2ec0aebd0d30d7b525.jpg",
-    videoUrl:
-      "https://videos.pexels.com/video-files/6467633/6467633-sd_960_506_25fps.mp4",
+    ],
+    videoUrl: "",
     productName: "Team Table Set",
     productSlug: "team_table_set",
     markedPrice: "1400",
@@ -667,10 +713,10 @@ export const cardData = [
   },
   {
     id: 48,
-    imageUrl:
+    imageUrl: [
       "https://i.pinimg.com/236x/f2/82/dc/f282dc5eb8efc39e86254caf15498330.jpg",
-    videoUrl:
-      "https://videos.pexels.com/video-files/6467633/6467633-sd_960_506_25fps.mp4",
+    ],
+    videoUrl: "",
     productName: "Single Corporate Chair",
     productSlug: "single_corporate_chair",
     markedPrice: "1400",
@@ -683,10 +729,11 @@ export const cardData = [
   },
   {
     id: 49,
-    imageUrl:
+    imageUrl: [
       "https://i.pinimg.com/236x/37/1b/53/371b536c969ccdc2aac39966326db332.jpg",
+    ],
     videoUrl:
-      "https://videos.pexels.com/video-files/6467633/6467633-sd_960_506_25fps.mp4",
+      "https://media.istockphoto.com/id/1383559876/video/young-woman-reading-a-paperback-book.mp4?s=mp4-640x640-is&k=20&c=Go-aNF6NEk-JYhsTYrAJdXohirbQvhOPYw6R2ol756Y=",
     productName: "Single Bamboo Chair",
     productSlug: "single_bamboo_chair",
     markedPrice: "1400",
@@ -699,10 +746,10 @@ export const cardData = [
   },
   {
     id: 50,
-    imageUrl:
+    imageUrl: [
       "https://i.pinimg.com/236x/7c/d0/b3/7cd0b3450ff756506e29f02c6d37e606.jpg",
-    videoUrl:
-      "https://videos.pexels.com/video-files/6467633/6467633-sd_960_506_25fps.mp4",
+    ],
+    videoUrl: "",
     productName: "Single Bamboo Table",
     productSlug: "single_bamboo_table",
     markedPrice: "1400",
@@ -715,10 +762,10 @@ export const cardData = [
   },
   {
     id: 51,
-    imageUrl:
+    imageUrl: [
       "https://i.pinimg.com/236x/fb/eb/3f/fbeb3f93bd1b260d4054107ea8de2b22.jpg",
-    videoUrl:
-      "https://videos.pexels.com/video-files/6467633/6467633-sd_960_506_25fps.mp4",
+    ],
+    videoUrl: "",
     productName: "TV Cabinet",
     productSlug: "tv_cabinet",
     markedPrice: "1400",
@@ -731,10 +778,10 @@ export const cardData = [
   },
   {
     id: 52,
-    imageUrl:
+    imageUrl: [
       "https://i.pinimg.com/474x/7e/ce/8b/7ece8b5a7e98189089f570518fe1f139.jpg",
-    videoUrl:
-      "https://videos.pexels.com/video-files/6467633/6467633-sd_960_506_25fps.mp4",
+    ],
+    videoUrl: "",
     productName: "Bedroom Wooden Cabinet",
     productSlug: "bedroom_Wooden_cabinet",
     markedPrice: "1400",
@@ -747,10 +794,10 @@ export const cardData = [
   },
   {
     id: 53,
-    imageUrl:
+    imageUrl: [
       "https://i.pinimg.com/236x/74/35/63/74356319261fc3f2e8944acdafaccf35.jpg",
-    videoUrl:
-      "https://videos.pexels.com/video-files/6467633/6467633-sd_960_506_25fps.mp4",
+    ],
+    videoUrl: "",
     productName: "YingYang Books Shelf",
     productSlug: "yingyang_books_shelf",
     markedPrice: "1400",
@@ -903,10 +950,10 @@ export const CampaignCardsContent = [
 export const curatedCardData = [
   {
     id: 1,
-    imageUrl:
+    imageUrl: [
       "https://i.pinimg.com/564x/76/e6/09/76e609741463d711e53abfc3d73fc1ed.jpg",
-    videoUrl:
-      "https://videos.pexels.com/video-files/6467633/6467633-sd_960_506_25fps.mp4",
+    ],
+    videoUrl: "",
     productName: "Elegant Sofa",
     productSlug: "elegant_sofa",
     markedPrice: "1400",
@@ -918,8 +965,9 @@ export const curatedCardData = [
   },
   {
     id: 2,
-    imageUrl:
+    imageUrl: [
       "https://i.pinimg.com/236x/ac/41/86/ac4186b14d6baecf0ca6138d770838e5.jpg",
+    ],
     productName: "Table Top",
     productSlug: "table_top",
     markedPrice: "1200",
@@ -931,8 +979,9 @@ export const curatedCardData = [
   },
   {
     id: 3,
-    imageUrl:
+    imageUrl: [
       "https://i.pinimg.com/236x/75/3c/c1/753cc1e0775e2bebdb5cffaf842c3f7a.jpg",
+    ],
     productName: "Vintage Lamp",
     productSlug: "vintage_lamp",
     markedPrice: "900",
@@ -944,8 +993,9 @@ export const curatedCardData = [
   },
   {
     id: 4,
-    imageUrl:
+    imageUrl: [
       "https://i.pinimg.com/236x/ce/5a/5c/ce5a5c8b0dfd91ed0eb52d9867d96d54.jpg",
+    ],
     productName: "Wooden Chair",
     productSlug: "wooden_chair",
     markedPrice: "1100",
@@ -957,8 +1007,9 @@ export const curatedCardData = [
   },
   {
     id: 5,
-    imageUrl:
+    imageUrl: [
       "https://i.pinimg.com/236x/5a/fa/60/5afa60e00dd47a34a28e0b0664342af3.jpg",
+    ],
     productName: "Wooden Closet",
     productSlug: "wooden_closet",
     markedPrice: "1500",
@@ -970,8 +1021,9 @@ export const curatedCardData = [
   },
   {
     id: 6,
-    imageUrl:
+    imageUrl: [
       "https://i.pinimg.com/236x/7d/92/97/7d929794f5f7a08d2d2b95276b707529.jpg",
+    ],
     productName: "Royal Bed",
     productSlug: "royal_bed",
     markedPrice: "2000",
@@ -983,8 +1035,9 @@ export const curatedCardData = [
   },
   {
     id: 7,
-    imageUrl:
+    imageUrl: [
       "https://i.pinimg.com/236x/5d/86/ba/5d86ba2ad186a0a5fc7d02904129cabb.jpg",
+    ],
     productName: "Decorative Vase",
     productSlug: "decorative_vase",
     markedPrice: "600",
@@ -996,8 +1049,9 @@ export const curatedCardData = [
   },
   {
     id: 8,
-    imageUrl:
+    imageUrl: [
       "https://i.pinimg.com/236x/5d/86/ba/5d86ba2ad186a0a5fc7d02904129cabb.jpg",
+    ],
     productName: "Dining Table",
     productSlug: "dining_table",
     markedPrice: "1300",
@@ -1009,8 +1063,9 @@ export const curatedCardData = [
   },
   {
     id: 9,
-    imageUrl:
+    imageUrl: [
       "https://i.pinimg.com/236x/08/a1/d7/08a1d7d622e0cb84f7fafa0f6bfa6db7.jpg",
+    ],
     productName: "Coffee Table",
     productSlug: "coffee_table",
     markedPrice: "1800",
@@ -1022,8 +1077,9 @@ export const curatedCardData = [
   },
   {
     id: 10,
-    imageUrl:
+    imageUrl: [
       "https://i.pinimg.com/236x/1f/e2/c4/1fe2c4f88ad35d5fc2341d6faebe19a9.jpg",
+    ],
     productName: "Classic Bookshelf",
     productSlug: "classic_bookshelf",
     markedPrice: "2200",
@@ -1035,8 +1091,9 @@ export const curatedCardData = [
   },
   {
     id: 11,
-    imageUrl:
+    imageUrl: [
       "https://i.pinimg.com/236x/e4/d4/fc/e4d4fc6d987c07ec9f58924d96db0822.jpg",
+    ],
     productName: "Wooden Shelves",
     productSlug: "wooden_shelves",
     markedPrice: "2500",
@@ -1048,8 +1105,9 @@ export const curatedCardData = [
   },
   {
     id: 12,
-    imageUrl:
+    imageUrl: [
       "https://i.pinimg.com/236x/c4/f6/fe/c4f6fe9685034afe9635c90c6afc0a86.jpg",
+    ],
     productName: "Luxury Sofa Set",
     productSlug: "luxury_sofa_set",
     markedPrice: "3000",
@@ -1061,8 +1119,9 @@ export const curatedCardData = [
   },
   {
     id: 8,
-    imageUrl:
+    imageUrl: [
       "https://i.pinimg.com/236x/5d/86/ba/5d86ba2ad186a0a5fc7d02904129cabb.jpg",
+    ],
     productName: "Dining Table",
     productSlug: "dining_table",
     markedPrice: "1300",
@@ -1074,8 +1133,9 @@ export const curatedCardData = [
   },
   {
     id: 10,
-    imageUrl:
+    imageUrl: [
       "https://i.pinimg.com/236x/1f/e2/c4/1fe2c4f88ad35d5fc2341d6faebe19a9.jpg",
+    ],
     productName: "Classic Bookshelf",
     productSlug: "classic_bookshelf",
     markedPrice: "2200",
@@ -1127,5 +1187,19 @@ export const flashdealResponsive = {
   mobile: {
     breakpoint: { max: 767, min: 0 },
     items: 2,
+  },
+};
+export const productCollectionResponsive = {
+  desktop: {
+    breakpoint: { max: 3000, min: 1024 },
+    items: 1,
+  },
+  tablet: {
+    breakpoint: { max: 1023, min: 464 },
+    items: 1,
+  },
+  mobile: {
+    breakpoint: { max: 767, min: 0 },
+    items: 1,
   },
 };

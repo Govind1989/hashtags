@@ -43,6 +43,7 @@ const Masonry = ({ cardData, slug, page }) => {
           <Card
             key={index}
             imageUrl={item.imageUrl}
+            videoUrl={item.videoUrl}
             productName={item.productName}
             productSlug={item.productSlug}
             markedPrice={item.markedPrice}

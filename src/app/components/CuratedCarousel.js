@@ -6,12 +6,22 @@ import {
   curatedResponsive,
   collectionResponsive,
   flashdealResponsive,
+  productCollectionResponsive,
 } from "../../data";
 import Reels from "./Reels";
 import CarouselCard from "./CarouselCard";
 import CollectionCard from "./CollectionCard";
+import ProductCollectionCard from "./ProductCollectionCard";
+import ProductCollectionCarousel from "./ProductCollectionCarousel";
 
-const CuratedCarousel = ({ type }) => {
+const CuratedCarousel = ({
+  type,
+  imageUrl,
+  productName,
+  markedPrice,
+  sellingPrice,
+  vendor,
+}) => {
   return (
     <div className="container mx-auto relative z-10">
       {type === "curated" && (
@@ -75,6 +85,27 @@ const CuratedCarousel = ({ type }) => {
           </div>
         </div>
       )}
+      {/* {type === "productCollection" && (
+        <div className="container mx-auto relative z-10">
+          <div className=" ">
+            <Carousel
+              responsive={productCollectionResponsive}
+              containerClass=""
+              itemClass="px-[2px]"
+            >
+              {imageUrl.map((url, index) => (
+                <ProductCollectionCarousel
+                  key={index}
+                  imageUrl={url}
+                  
+                  
+                />
+              ))}
+             
+            </Carousel>
+          </div>
+        </div>
+      )} */}
     </div>
   );
 };
